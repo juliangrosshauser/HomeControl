@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B1BEAA085181DEB5287B6E7 /* Pods_HomeControlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D2244F903855E659624DEB /* Pods_HomeControlTests.framework */; };
+		B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95E46F21BEEB4AE00481E51 /* SetupController.swift */; };
 		B9F61EB31BED651900D60722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F61EAD1BED651900D60722 /* Assets.xcassets */; };
 		B9F61EB41BED651900D60722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F61EAE1BED651900D60722 /* LaunchScreen.storyboard */; };
 		B9F61EB61BED651900D60722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F61EB21BED651900D60722 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 		8A17133836ACF19967C29189 /* Pods-HomeControlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeControlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeControlTests/Pods-HomeControlTests.release.xcconfig"; sourceTree = "<group>"; };
 		90AFDC43826A017C36F8162F /* Pods-HomeControlTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeControlTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeControlTests/Pods-HomeControlTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4D2244F903855E659624DEB /* Pods_HomeControlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeControlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95E46F21BEEB4AE00481E51 /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
 		B9F61E7A1BED644D00D60722 /* HomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F61E8E1BED644D00D60722 /* HomeControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F61E991BED644D00D60722 /* HomeControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				B9F61EB21BED651900D60722 /* AppDelegate.swift */,
+				B95E46F21BEEB4AE00481E51 /* SetupController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F61EB61BED651900D60722 /* AppDelegate.swift in Sources */,
+				B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
