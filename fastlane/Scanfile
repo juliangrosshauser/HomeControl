@@ -1,0 +1,3 @@
+scheme "HomeControl"
+clean true
+open_report true
