@@ -1,0 +1,4 @@
+blades:
+  - source: Assets/AppIcon.png
+    mount: HomeControl/Resources/Assets.xcassets/AppIcon.appiconset
+    contents: true
