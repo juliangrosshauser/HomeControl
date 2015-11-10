@@ -7,6 +7,7 @@ pod 'Moya', '~> 4.0'
 pod 'CocoaLumberjack/Swift', '~> 2.2'
 pod 'Locksmith', '~> 2.0'
 pod 'Static', git: 'https://github.com/venmo/Static'
+pod 'SWXMLHash', '~> 2.0'
 
 target :HomeControlTests do
   pod 'RxBlocking', '~> 2.0.0-beta'

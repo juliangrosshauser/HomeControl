@@ -18,6 +18,7 @@ PODS:
     - RxSwift (~> 2.0.0-beta)
   - RxSwift (2.0.0-beta.2)
   - Static (0.2.0)
+  - SWXMLHash (2.0.2)
 
 DEPENDENCIES:
   - CocoaLumberjack/Swift (~> 2.2)
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - RxBlocking (~> 2.0.0-beta)
   - RxCocoa (~> 2.0.0-beta)
   - Static (from `https://github.com/venmo/Static`)
+  - SWXMLHash (~> 2.0)
 
 EXTERNAL SOURCES:
   Static:
@@ -45,5 +47,6 @@ SPEC CHECKSUMS:
   RxCocoa: ee39aa3ab24a8dde3832669f8e1e2c7652925e0c
   RxSwift: 795720c22352cf1f62669ef3695b5df7e195103b
   Static: b48f14dbacee91ac877bdf37c607f7524b1213ee
+  SWXMLHash: 9e6bd7db2e8275eaf3d2082265623d6e749e169d
 
 COCOAPODS: 0.39.0
