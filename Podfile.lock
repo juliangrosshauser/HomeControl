@@ -12,6 +12,13 @@ PODS:
     - Moya/Core (= 4.4.0)
   - Moya/Core (4.4.0):
     - Alamofire (~> 3.0)
+  - Nimble (3.0.0)
+  - Quick (0.8.0)
+  - Realm (0.96.2):
+    - Realm/Headers (= 0.96.2)
+  - Realm/Headers (0.96.2)
+  - RealmSwift (0.96.2):
+    - Realm (= 0.96.2)
   - RxBlocking (2.0.0-beta.2):
     - RxSwift (~> 2.0.0-beta)
   - RxCocoa (2.0.0-beta.2):
@@ -24,6 +31,9 @@ DEPENDENCIES:
   - CocoaLumberjack/Swift (~> 2.2)
   - Locksmith (~> 2.0)
   - Moya (~> 4.0)
+  - Nimble (~> 3.0)
+  - Quick (~> 0.8)
+  - RealmSwift (~> 0.96)
   - RxBlocking (~> 2.0.0-beta)
   - RxCocoa (~> 2.0.0-beta)
   - Static (from `https://github.com/venmo/Static`)
@@ -43,6 +53,10 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
   Locksmith: 7f2b68448449a7712348f9a4ed60604c1cc8dfa6
   Moya: 0ade653ca4bc83bec120493130ecc32f137e5683
+  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
+  Realm: 3ce8448151c571e90b85002d984d7f93f54fc8a3
+  RealmSwift: 485599fe54e35461c4a0daa7d01d8fbf11424873
   RxBlocking: ffb518856fb7712dcef7e18406ccb8c2854b3104
   RxCocoa: ee39aa3ab24a8dde3832669f8e1e2c7652925e0c
   RxSwift: 795720c22352cf1f62669ef3695b5df7e195103b
