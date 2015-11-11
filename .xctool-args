@@ -1,0 +1,7 @@
+[
+  "-workspace", "HomeControl.xcworkspace",
+  "-scheme", "HomeControl",
+  "-configuration", "Debug",
+  "-sdk", "iphonesimulator",
+  "-destination", "name=iPhone 6s Plus"
+]
