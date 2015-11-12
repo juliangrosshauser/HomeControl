@@ -40,6 +40,7 @@
 		90AFDC43826A017C36F8162F /* Pods-HomeControlTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeControlTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeControlTests/Pods-HomeControlTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4D2244F903855E659624DEB /* Pods_HomeControlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeControlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95E46F21BEEB4AE00481E51 /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
+		B9BF05641BF4093A00A42D85 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		B9F61E7A1BED644D00D60722 /* HomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F61E8E1BED644D00D60722 /* HomeControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F61E991BED644D00D60722 /* HomeControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,12 +99,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B9BF05631BF4093A00A42D85 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				B9BF05641BF4093A00A42D85 /* Common.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
 		B9F61E711BED644D00D60722 = {
 			isa = PBXGroup;
 			children = (
 				B9F61EAB1BED651900D60722 /* HomeControl */,
 				B9F61EB71BED652500D60722 /* HomeControlTests */,
 				B9F61EBB1BED652E00D60722 /* HomeControlUITests */,
+				B9BF05631BF4093A00A42D85 /* Configurations */,
 				B9F61E7B1BED644D00D60722 /* Products */,
 				4D2909CE1495006431DE7E5A /* Pods */,
 				12C581FC2C8138E6253F745E /* Frameworks */,
@@ -457,6 +467,7 @@
 /* Begin XCBuildConfiguration section */
 		B9F61EA01BED644D00D60722 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9BF05641BF4093A00A42D85 /* Common.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -502,6 +513,7 @@
 		};
 		B9F61EA11BED644D00D60722 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9BF05641BF4093A00A42D85 /* Common.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

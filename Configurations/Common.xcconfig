@@ -1,0 +1,3 @@
+// Get provisioning profile from an environment variable
+// This allows tools like fastlane to set a custom profile
+PROVISIONING_PROFILE = "$(PROFILE_UDID)";
