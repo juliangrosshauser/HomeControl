@@ -1,5 +1,5 @@
 [
-  "-workspace", "HomeControl.xcworkspace",
+  "-project", "HomeControl.xcodeproj",
   "-scheme", "HomeControl",
   "-configuration", "Debug",
   "-sdk", "iphonesimulator",

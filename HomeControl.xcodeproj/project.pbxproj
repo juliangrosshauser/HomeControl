@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B1BEAA085181DEB5287B6E7 /* Pods_HomeControlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D2244F903855E659624DEB /* Pods_HomeControlTests.framework */; };
 		B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95E46F21BEEB4AE00481E51 /* SetupController.swift */; };
 		B9F61EB31BED651900D60722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F61EAD1BED651900D60722 /* Assets.xcassets */; };
 		B9F61EB41BED651900D60722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F61EAE1BED651900D60722 /* LaunchScreen.storyboard */; };
 		B9F61EB61BED651900D60722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F61EB21BED651900D60722 /* AppDelegate.swift */; };
-		C02CB3D4746C53133C763830 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A307233F3F5A8FF9CBFEDD /* Pods.framework */; };
+		B9FCDB281BF54A150048CE85 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FCDB241BF54A150048CE85 /* Alamofire.framework */; };
+		B9FCDB291BF54A150048CE85 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FCDB251BF54A150048CE85 /* Locksmith.framework */; };
+		B9FCDB2A1BF54A150048CE85 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FCDB261BF54A150048CE85 /* ReactiveCocoa.framework */; };
+		B9FCDB2B1BF54A150048CE85 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FCDB271BF54A150048CE85 /* Result.framework */; };
+		B9FCDB341BF54C4B0048CE85 /* ReactiveCocoa.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B9FCDB2F1BF54A8D0048CE85 /* ReactiveCocoa.framework.dSYM */; };
+		B9FCDB351BF54C4E0048CE85 /* Result.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B9FCDB301BF54A8D0048CE85 /* Result.framework.dSYM */; };
+		B9FCDB361BF54C510048CE85 /* Alamofire.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B9FCDB2D1BF54A8D0048CE85 /* Alamofire.framework.dSYM */; };
+		B9FCDB381BF54C650048CE85 /* Locksmith.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B9FCDB2E1BF54A8D0048CE85 /* Locksmith.framework.dSYM */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,13 +38,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B9FCDB331BF54BB10048CE85 /* Carthage - Copy Debug Symbols */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				B9FCDB341BF54C4B0048CE85 /* ReactiveCocoa.framework.dSYM in Carthage - Copy Debug Symbols */,
+				B9FCDB351BF54C4E0048CE85 /* Result.framework.dSYM in Carthage - Copy Debug Symbols */,
+				B9FCDB361BF54C510048CE85 /* Alamofire.framework.dSYM in Carthage - Copy Debug Symbols */,
+				B9FCDB381BF54C650048CE85 /* Locksmith.framework.dSYM in Carthage - Copy Debug Symbols */,
+			);
+			name = "Carthage - Copy Debug Symbols";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		44D7BC7A498726DE7313DE72 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		80D281128014A5BC4FDBB3F2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		84A307233F3F5A8FF9CBFEDD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A17133836ACF19967C29189 /* Pods-HomeControlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeControlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeControlTests/Pods-HomeControlTests.release.xcconfig"; sourceTree = "<group>"; };
-		90AFDC43826A017C36F8162F /* Pods-HomeControlTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeControlTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeControlTests/Pods-HomeControlTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A4D2244F903855E659624DEB /* Pods_HomeControlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeControlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95E46F21BEEB4AE00481E51 /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
 		B9F61E7A1BED644D00D60722 /* HomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F61E8E1BED644D00D60722 /* HomeControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +66,14 @@
 		B9F61EB21BED651900D60722 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9F61EB91BED652500D60722 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9F61EBD1BED652E00D60722 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9FCDB241BF54A150048CE85 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		B9FCDB251BF54A150048CE85 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
+		B9FCDB261BF54A150048CE85 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		B9FCDB271BF54A150048CE85 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		B9FCDB2D1BF54A8D0048CE85 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		B9FCDB2E1BF54A8D0048CE85 /* Locksmith.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Locksmith.framework.dSYM; path = Carthage/Build/iOS/Locksmith.framework.dSYM; sourceTree = "<group>"; };
+		B9FCDB2F1BF54A8D0048CE85 /* ReactiveCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveCocoa.framework.dSYM; path = Carthage/Build/iOS/ReactiveCocoa.framework.dSYM; sourceTree = "<group>"; };
+		B9FCDB301BF54A8D0048CE85 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/iOS/Result.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +81,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C02CB3D4746C53133C763830 /* Pods.framework in Frameworks */,
+				B9FCDB2A1BF54A150048CE85 /* ReactiveCocoa.framework in Frameworks */,
+				B9FCDB2B1BF54A150048CE85 /* Result.framework in Frameworks */,
+				B9FCDB281BF54A150048CE85 /* Alamofire.framework in Frameworks */,
+				B9FCDB291BF54A150048CE85 /* Locksmith.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +92,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B1BEAA085181DEB5287B6E7 /* Pods_HomeControlTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,26 +105,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12C581FC2C8138E6253F745E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				84A307233F3F5A8FF9CBFEDD /* Pods.framework */,
-				A4D2244F903855E659624DEB /* Pods_HomeControlTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4D2909CE1495006431DE7E5A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				80D281128014A5BC4FDBB3F2 /* Pods.debug.xcconfig */,
-				44D7BC7A498726DE7313DE72 /* Pods.release.xcconfig */,
-				90AFDC43826A017C36F8162F /* Pods-HomeControlTests.debug.xcconfig */,
-				8A17133836ACF19967C29189 /* Pods-HomeControlTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		B9F61E711BED644D00D60722 = {
 			isa = PBXGroup;
 			children = (
@@ -105,8 +112,7 @@
 				B9F61EB71BED652500D60722 /* HomeControlTests */,
 				B9F61EBB1BED652E00D60722 /* HomeControlUITests */,
 				B9F61E7B1BED644D00D60722 /* Products */,
-				4D2909CE1495006431DE7E5A /* Pods */,
-				12C581FC2C8138E6253F745E /* Frameworks */,
+				B9FCDB2C1BF54A730048CE85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +186,21 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B9FCDB2C1BF54A730048CE85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9FCDB261BF54A150048CE85 /* ReactiveCocoa.framework */,
+				B9FCDB271BF54A150048CE85 /* Result.framework */,
+				B9FCDB241BF54A150048CE85 /* Alamofire.framework */,
+				B9FCDB251BF54A150048CE85 /* Locksmith.framework */,
+				B9FCDB2F1BF54A8D0048CE85 /* ReactiveCocoa.framework.dSYM */,
+				B9FCDB301BF54A8D0048CE85 /* Result.framework.dSYM */,
+				B9FCDB2D1BF54A8D0048CE85 /* Alamofire.framework.dSYM */,
+				B9FCDB2E1BF54A8D0048CE85 /* Locksmith.framework.dSYM */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,12 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9F61EA21BED644D00D60722 /* Build configuration list for PBXNativeTarget "HomeControl" */;
 			buildPhases = (
-				63C75C427FE96470ED3E4D08 /* Check Pods Manifest.lock */,
 				B9F61E761BED644D00D60722 /* Sources */,
 				B9F61E771BED644D00D60722 /* Frameworks */,
 				B9F61E781BED644D00D60722 /* Resources */,
-				3C9C97A5384DCCD716F48CBE /* Embed Pods Frameworks */,
-				C50D8D0CE8791A9087351093 /* Copy Pods Resources */,
+				B9FCDB321BF54B1E0048CE85 /* Carthage - Copy Frameworks */,
+				B9FCDB331BF54BB10048CE85 /* Carthage - Copy Debug Symbols */,
 			);
 			buildRules = (
 			);
@@ -207,12 +227,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9F61EA51BED644D00D60722 /* Build configuration list for PBXNativeTarget "HomeControlTests" */;
 			buildPhases = (
-				A2751614263EA368E15E7004 /* Check Pods Manifest.lock */,
 				B9F61E8A1BED644D00D60722 /* Sources */,
 				B9F61E8B1BED644D00D60722 /* Frameworks */,
 				B9F61E8C1BED644D00D60722 /* Resources */,
-				4CF53B3BB8E5BB58B0F059DF /* Embed Pods Frameworks */,
-				BD9F72015EE3A205F57A0FD8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -312,95 +329,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3C9C97A5384DCCD716F48CBE /* Embed Pods Frameworks */ = {
+		B9FCDB321BF54B1E0048CE85 /* Carthage - Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Locksmith.framework",
 			);
-			name = "Embed Pods Frameworks";
+			name = "Carthage - Copy Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4CF53B3BB8E5BB58B0F059DF /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HomeControlTests/Pods-HomeControlTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		63C75C427FE96470ED3E4D08 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A2751614263EA368E15E7004 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BD9F72015EE3A205F57A0FD8 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HomeControlTests/Pods-HomeControlTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C50D8D0CE8791A9087351093 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -540,9 +485,12 @@
 		};
 		B9F61EA31BED644D00D60722 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80D281128014A5BC4FDBB3F2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliangrosshauser.HomeControl;
@@ -552,9 +500,12 @@
 		};
 		B9F61EA41BED644D00D60722 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44D7BC7A498726DE7313DE72 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliangrosshauser.HomeControl;
@@ -564,22 +515,31 @@
 		};
 		B9F61EA61BED644D00D60722 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90AFDC43826A017C36F8162F /* Pods-HomeControlTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliangrosshauser.HomeControlTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HomeControl.app/HomeControl";
 			};
 			name = Debug;
 		};
 		B9F61EA71BED644D00D60722 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A17133836ACF19967C29189 /* Pods-HomeControlTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliangrosshauser.HomeControlTests;
@@ -591,10 +551,16 @@
 		B9F61EA91BED644D00D60722 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliangrosshauser.HomeControlUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_TARGET_NAME = HomeControl;
 				USES_XCTRUNNER = YES;
 			};
@@ -603,6 +569,11 @@
 		B9F61EAA1BED644D00D60722 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliangrosshauser.HomeControlUITests;
