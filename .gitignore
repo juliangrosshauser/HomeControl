@@ -3,6 +3,3 @@ xcuserdata
 *.xccheckout
 *.xcassets
 Pods
-Assets
-build
-docs

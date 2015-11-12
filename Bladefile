@@ -1,7 +1,0 @@
-blades:
-  - source: Assets/AppIcon.png
-    mount: HomeControl/Resources/Assets.xcassets/AppIcon.appiconset
-    contents: true
-  - source: Assets/Logo.png
-    mount: HomeControl/Resources/Assets.xcassets/Logo.imageset
-    contents: true
