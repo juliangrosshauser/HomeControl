@@ -11,12 +11,6 @@ import UIKit
 extension UIImage {
     enum Asset: String {
         case Logo = "Logo"
-
-        var image: UIImage {
-            let image = UIImage(named: self.rawValue)
-            assert(image != nil, "No image named \"\(self.rawValue)\" found in asset catalog")
-            return image!
-        }
     }
 
     convenience init(asset: Asset) {
