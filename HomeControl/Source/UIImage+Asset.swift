@@ -19,7 +19,8 @@ extension UIImage {
         }
     }
 
-    convenience init!(asset: Asset) {
-        self.init(named: asset.rawValue)
+    convenience init(asset: Asset) {
+        assert(UIImage(named: asset.rawValue) != nil, "No image named \"\(asset.rawValue)\" found in asset catalog")
+        self.init(named: asset.rawValue)!
     }
 }
