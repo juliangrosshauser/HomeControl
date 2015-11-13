@@ -56,6 +56,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B909816D1BF56D9200B822A8 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		B909816F1BF56D9200B822A8 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		B90981711BF56D9200B822A8 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		B90981741BF56D9200B822A8 /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
+		B909818F1BF56D9200B822A8 /* iOS-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
+		B90981901BF56D9200B822A8 /* iOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
 		B95E46F21BEEB4AE00481E51 /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
 		B9F61E7A1BED644D00D60722 /* HomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F61E8E1BED644D00D60722 /* HomeControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,12 +111,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B909816A1BF56D9200B822A8 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				B909816C1BF56D9200B822A8 /* Base */,
+				B909818E1BF56D9200B822A8 /* iOS */,
+			);
+			name = Configurations;
+			path = Carthage/Checkouts/xcconfigs;
+			sourceTree = "<group>";
+		};
+		B909816C1BF56D9200B822A8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B909816D1BF56D9200B822A8 /* Common.xcconfig */,
+				B909816E1BF56D9200B822A8 /* Configurations */,
+				B90981731BF56D9200B822A8 /* Targets */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B909816E1BF56D9200B822A8 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				B909816F1BF56D9200B822A8 /* Debug.xcconfig */,
+				B90981711BF56D9200B822A8 /* Release.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		B90981731BF56D9200B822A8 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				B90981741BF56D9200B822A8 /* Application.xcconfig */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		B909818E1BF56D9200B822A8 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B909818F1BF56D9200B822A8 /* iOS-Application.xcconfig */,
+				B90981901BF56D9200B822A8 /* iOS-Base.xcconfig */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		B9F61E711BED644D00D60722 = {
 			isa = PBXGroup;
 			children = (
 				B9F61EAB1BED651900D60722 /* HomeControl */,
 				B9F61EB71BED652500D60722 /* HomeControlTests */,
 				B9F61EBB1BED652E00D60722 /* HomeControlUITests */,
+				B909816A1BF56D9200B822A8 /* Configurations */,
 				B9F61E7B1BED644D00D60722 /* Products */,
 				B9FCDB2C1BF54A730048CE85 /* Frameworks */,
 			);
@@ -402,6 +455,7 @@
 /* Begin XCBuildConfiguration section */
 		B9F61EA01BED644D00D60722 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B909816F1BF56D9200B822A8 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -447,6 +501,7 @@
 		};
 		B9F61EA11BED644D00D60722 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B90981711BF56D9200B822A8 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -485,6 +540,7 @@
 		};
 		B9F61EA31BED644D00D60722 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B909818F1BF56D9200B822A8 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -500,6 +556,7 @@
 		};
 		B9F61EA41BED644D00D60722 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B909818F1BF56D9200B822A8 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -515,6 +572,7 @@
 		};
 		B9F61EA61BED644D00D60722 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B909818F1BF56D9200B822A8 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -533,6 +591,7 @@
 		};
 		B9F61EA71BED644D00D60722 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B909818F1BF56D9200B822A8 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -550,6 +609,7 @@
 		};
 		B9F61EA91BED644D00D60722 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B909818F1BF56D9200B822A8 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -568,6 +628,7 @@
 		};
 		B9F61EAA1BED644D00D60722 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B909818F1BF56D9200B822A8 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
