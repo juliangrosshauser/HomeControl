@@ -17,10 +17,6 @@ extension RawRepresentable where Self: HexadecimalColorType, RawValue: UnsignedI
 }
 
 extension UIColor {
-    enum Name: UInt32 {
-        case Primary = 0x60CAFAFF
-    }
-
     convenience init(hexadecimalColor: UInt32) {
         let red = CGFloat(hexadecimalColor >> 24 & 0xFF) / 255
         let green = CGFloat(hexadecimalColor >> 16 & 0xFF) / 255
