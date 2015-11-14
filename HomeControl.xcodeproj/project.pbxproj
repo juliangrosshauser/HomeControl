@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95E46F21BEEB4AE00481E51 /* SetupController.swift */; };
 		B9E728DD1BF69C8800A1F648 /* UIImage+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E728DC1BF69C8800A1F648 /* UIImage+Asset.swift */; };
+		B9E728DF1BF6A89F00A1F648 /* UIColor+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E728DE1BF6A89F00A1F648 /* UIColor+Name.swift */; };
 		B9F61EB31BED651900D60722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F61EAD1BED651900D60722 /* Assets.xcassets */; };
 		B9F61EB41BED651900D60722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F61EAE1BED651900D60722 /* LaunchScreen.storyboard */; };
 		B9F61EB61BED651900D60722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F61EB21BED651900D60722 /* AppDelegate.swift */; };
@@ -65,6 +66,7 @@
 		B90981901BF56D9200B822A8 /* iOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
 		B95E46F21BEEB4AE00481E51 /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
 		B9E728DC1BF69C8800A1F648 /* UIImage+Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Asset.swift"; sourceTree = "<group>"; };
+		B9E728DE1BF6A89F00A1F648 /* UIColor+Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Name.swift"; sourceTree = "<group>"; };
 		B9F61E7A1BED644D00D60722 /* HomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F61E8E1BED644D00D60722 /* HomeControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F61E991BED644D00D60722 /* HomeControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +207,7 @@
 			children = (
 				B9F61EB21BED651900D60722 /* AppDelegate.swift */,
 				B95E46F21BEEB4AE00481E51 /* SetupController.swift */,
+				B9E728DE1BF6A89F00A1F648 /* UIColor+Name.swift */,
 				B9E728DC1BF69C8800A1F648 /* UIImage+Asset.swift */,
 			);
 			path = Source;
@@ -412,6 +415,7 @@
 			files = (
 				B9E728DD1BF69C8800A1F648 /* UIImage+Asset.swift in Sources */,
 				B9F61EB61BED651900D60722 /* AppDelegate.swift in Sources */,
+				B9E728DF1BF6A89F00A1F648 /* UIColor+Name.swift in Sources */,
 				B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
