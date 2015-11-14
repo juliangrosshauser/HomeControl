@@ -8,6 +8,14 @@
 
 import UIKit
 
+public protocol HexadecimalColorType {
+    var hexadecimalColor: UInt32 { get }
+}
+
+extension RawRepresentable where Self: HexadecimalColorType, RawValue: UnsignedIntegerType {
+    var hexadecimalColor: UInt32 { return UInt32(self.rawValue.toUIntMax()) }
+}
+
 extension UIColor {
     enum Name: UInt32 {
         case Primary = 0x60CAFAFF
@@ -21,7 +29,7 @@ extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
 
-    convenience init(named name: Name) {
-        self.init(hexadecimalColor: name.rawValue)
+    convenience init(named name: HexadecimalColorType) {
+        self.init(hexadecimalColor: name.hexadecimalColor)
     }
 }
