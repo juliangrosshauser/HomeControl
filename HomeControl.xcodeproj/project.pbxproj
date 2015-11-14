@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95E46F21BEEB4AE00481E51 /* SetupController.swift */; };
-		B9EA33481BF7BF2F004D871F /* ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EA33471BF7BF2F004D871F /* ColorName.swift */; };
-		B9EA33EB1BF7C996004D871F /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EA33EA1BF7C996004D871F /* ImageAsset.swift */; };
-		B9EA33F81BF7D133004D871F /* ConvenienceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EA33F71BF7D131004D871F /* ConvenienceKit.framework */; };
-		B9EA33FA1BF7D163004D871F /* ConvenienceKit.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B9EA33F61BF7D0FE004D871F /* ConvenienceKit.framework.dSYM */; };
+		B9F10AFE1BF7FFB400AB23D9 /* UIColor+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */; };
+		B9F10B001BF8004200AB23D9 /* UIImage+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */; };
 		B9F61EB31BED651900D60722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F61EAD1BED651900D60722 /* Assets.xcassets */; };
 		B9F61EB41BED651900D60722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F61EAE1BED651900D60722 /* LaunchScreen.storyboard */; };
 		B9F61EB61BED651900D60722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F61EB21BED651900D60722 /* AppDelegate.swift */; };
@@ -49,7 +47,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				B9EA33FA1BF7D163004D871F /* ConvenienceKit.framework.dSYM in Carthage - Copy Debug Symbols */,
 				B9FCDB341BF54C4B0048CE85 /* ReactiveCocoa.framework.dSYM in Carthage - Copy Debug Symbols */,
 				B9FCDB351BF54C4E0048CE85 /* Result.framework.dSYM in Carthage - Copy Debug Symbols */,
 				B9FCDB361BF54C510048CE85 /* Alamofire.framework.dSYM in Carthage - Copy Debug Symbols */,
@@ -68,10 +65,8 @@
 		B909818F1BF56D9200B822A8 /* iOS-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
 		B90981901BF56D9200B822A8 /* iOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
 		B95E46F21BEEB4AE00481E51 /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
-		B9EA33471BF7BF2F004D871F /* ColorName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorName.swift; sourceTree = "<group>"; };
-		B9EA33EA1BF7C996004D871F /* ImageAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
-		B9EA33F61BF7D0FE004D871F /* ConvenienceKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ConvenienceKit.framework.dSYM; path = Carthage/Build/iOS/ConvenienceKit.framework.dSYM; sourceTree = "<group>"; };
-		B9EA33F71BF7D131004D871F /* ConvenienceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ConvenienceKit.framework; path = Carthage/Build/iOS/ConvenienceKit.framework; sourceTree = "<group>"; };
+		B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Name.swift"; sourceTree = "<group>"; };
+		B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Asset.swift"; sourceTree = "<group>"; };
 		B9F61E7A1BED644D00D60722 /* HomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F61E8E1BED644D00D60722 /* HomeControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F61E991BED644D00D60722 /* HomeControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9EA33F81BF7D133004D871F /* ConvenienceKit.framework in Frameworks */,
 				B9FCDB2A1BF54A150048CE85 /* ReactiveCocoa.framework in Frameworks */,
 				B9FCDB2B1BF54A150048CE85 /* Result.framework in Frameworks */,
 				B9FCDB281BF54A150048CE85 /* Alamofire.framework in Frameworks */,
@@ -213,8 +207,8 @@
 			children = (
 				B9F61EB21BED651900D60722 /* AppDelegate.swift */,
 				B95E46F21BEEB4AE00481E51 /* SetupController.swift */,
-				B9EA33471BF7BF2F004D871F /* ColorName.swift */,
-				B9EA33EA1BF7C996004D871F /* ImageAsset.swift */,
+				B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */,
+				B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -254,12 +248,10 @@
 		B9FCDB2C1BF54A730048CE85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B9EA33F71BF7D131004D871F /* ConvenienceKit.framework */,
 				B9FCDB261BF54A150048CE85 /* ReactiveCocoa.framework */,
 				B9FCDB271BF54A150048CE85 /* Result.framework */,
 				B9FCDB241BF54A150048CE85 /* Alamofire.framework */,
 				B9FCDB251BF54A150048CE85 /* Locksmith.framework */,
-				B9EA33F61BF7D0FE004D871F /* ConvenienceKit.framework.dSYM */,
 				B9FCDB2F1BF54A8D0048CE85 /* ReactiveCocoa.framework.dSYM */,
 				B9FCDB301BF54A8D0048CE85 /* Result.framework.dSYM */,
 				B9FCDB2D1BF54A8D0048CE85 /* Alamofire.framework.dSYM */,
@@ -402,7 +394,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/ConvenienceKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
@@ -422,10 +413,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9EA33EB1BF7C996004D871F /* ImageAsset.swift in Sources */,
-				B9EA33481BF7BF2F004D871F /* ColorName.swift in Sources */,
 				B9F61EB61BED651900D60722 /* AppDelegate.swift in Sources */,
 				B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */,
+				B9F10B001BF8004200AB23D9 /* UIImage+Asset.swift in Sources */,
+				B9F10AFE1BF7FFB400AB23D9 /* UIColor+Name.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
