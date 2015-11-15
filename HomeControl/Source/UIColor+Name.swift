@@ -11,6 +11,9 @@ import UIKit
 extension UIColor {
     enum Name: UInt32 {
         case Primary = 0x60CAFAFF
+        case Gray = 0xCECECEFF
+        case LightGray = 0xF4F4F4FF
+        case DarkGray = 0x404040FF
     }
 
     convenience init(hexadecimalColor: UInt32) {
