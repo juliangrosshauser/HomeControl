@@ -11,6 +11,10 @@ import UIKit
 extension UIImage {
     enum Asset: String {
         case Logo = "Logo"
+        case Server = "Server"
+        case User = "User"
+        case Lock = "Lock"
+        case Login = "Login"
     }
 
     convenience init(asset: Asset) {
