@@ -33,6 +33,25 @@ private class TextField: UITextField {
     }
 }
 
+private extension UILabel {
+    convenience init(text: String) {
+        self.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        self.text = text
+        font = UIFont.systemFontOfSize(12)
+        textColor = UIColor(named: .DarkGray)
+    }
+}
+
+private extension UIStackView {
+    convenience init(arrangedSubviews views: [UIView], spacing: CGFloat, alignment: UIStackViewAlignment = .Center) {
+        self.init(arrangedSubviews: views)
+        translatesAutoresizingMaskIntoConstraints = false
+        axis = .Vertical
+        self.alignment = alignment
+        self.spacing = spacing
+    }
+}
+
 class SetupController: UIViewController {
 
     //MARK: Properties
