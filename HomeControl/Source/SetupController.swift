@@ -60,6 +60,21 @@ class SetupController: UIViewController {
     private let usernameTextField = TextField(placeholder: "Username", asset: .User)
     private let passwordTextField = TextField(placeholder: "Password", asset: .Lock)
 
+    private let loadButton: UIButton = {
+        let loadButton = UIButton(type: .System)
+        let image = UIImage(asset: .Login).imageWithRenderingMode(.AlwaysTemplate)
+        loadButton.setImage(image, forState: .Normal)
+        loadButton.tintColor = .whiteColor()
+        loadButton.backgroundColor = UIColor(named: .Primary)
+        let padding: CGFloat = 40
+        loadButton.widthAnchor.constraintEqualToConstant(image.size.width + padding).active = true
+        loadButton.heightAnchor.constraintEqualToConstant(image.size.height + padding).active = true
+        loadButton.layer.cornerRadius = (image.size.width + padding) / 2
+        return loadButton
+    }()
+
+    private let wrapperStackView = UIStackView(arrangedSubviews: [], spacing: 100)
+
     //MARK: UIViewController
 
     override func viewDidLoad() {
