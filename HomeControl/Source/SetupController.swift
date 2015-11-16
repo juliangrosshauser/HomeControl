@@ -77,23 +77,25 @@ class SetupController: UIViewController {
 
     //MARK: UIViewController
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func loadView() {
+        let view = UIView()
 
-        view.backgroundColor = UIColor(red: 9/256, green: 178/256, blue: 226/256, alpha: 1)
+        let serverAddressLabel = UILabel(text: "Server Address")
+        let serverAddressStackView = UIStackView(arrangedSubviews: [serverAddressLabel, serverAddressTextField], spacing: 10, alignment: .Leading)
 
-        let logo = UIImage(named: "Logo")
-        let logoView = UIImageView(image: logo)
-        logoView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
-        logoView.center.x = view.center.x
-        logoView.center.y = view.center.y - 170
-        view.addSubview(logoView)
+        let usernameLabel = UILabel(text: "Username")
+        let passwordLabel = UILabel(text: "Password")
+        let usernamePasswordStackView = UIStackView(arrangedSubviews: [usernameLabel, usernameTextField, passwordLabel, passwordTextField], spacing: 10, alignment: .Leading)
 
-        serverAddressTextField.center = view.center
-        let server = UIImage(named: "Server")
-        let serverView = UIImageView(image: server)
-        serverAddressTextField.leftView = serverView
-        serverAddressTextField.leftViewMode = .Always
-        view.addSubview(serverAddressTextField)
+        let textFieldsStackView = UIStackView(arrangedSubviews: [serverAddressStackView, usernamePasswordStackView], spacing: 50)
+
+        wrapperStackView.addArrangedSubview(textFieldsStackView)
+        wrapperStackView.addArrangedSubview(loadButton)
+        view.addSubview(wrapperStackView)
+
+        NSLayoutConstraint(item: wrapperStackView, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0).active = true
+        NSLayoutConstraint(item: wrapperStackView, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0).active = true
+
+        self.view = view
     }
 }
