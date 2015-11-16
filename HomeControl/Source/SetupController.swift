@@ -98,4 +98,9 @@ class SetupController: UIViewController {
 
         self.view = view
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "HomeControl"
+    }
 }
