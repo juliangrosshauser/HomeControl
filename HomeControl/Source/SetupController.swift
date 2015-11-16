@@ -56,12 +56,9 @@ class SetupController: UIViewController {
 
     //MARK: Properties
 
-    private let serverAddressTextField: UITextField = {
-        let serverAddressTextField = UITextField(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
-        serverAddressTextField.borderStyle = .RoundedRect
-        serverAddressTextField.placeholder = "Server Address"
-        return serverAddressTextField
-    }()
+    private let serverAddressTextField = TextField(placeholder: "192.168.0.100", asset: .Server)
+    private let usernameTextField = TextField(placeholder: "Username", asset: .User)
+    private let passwordTextField = TextField(placeholder: "Password", asset: .Lock)
 
     //MARK: UIViewController
 
