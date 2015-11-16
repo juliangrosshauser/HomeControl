@@ -103,4 +103,16 @@ class SetupController: UIViewController {
         super.viewDidLoad()
         title = "HomeControl"
     }
+
+    override func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        guard traitCollection.verticalSizeClass != previousTraitCollection?.verticalSizeClass || traitCollection.horizontalSizeClass != previousTraitCollection?.horizontalSizeClass else { return }
+        if traitCollection.verticalSizeClass == .Compact {
+            guard wrapperStackView.axis != .Horizontal else { return }
+            wrapperStackView.axis = .Horizontal
+        } else {
+            guard wrapperStackView.axis != .Vertical else { return }
+            wrapperStackView.axis = .Vertical
+        }
+    }
 }
