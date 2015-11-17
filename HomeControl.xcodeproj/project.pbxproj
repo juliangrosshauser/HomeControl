@@ -15,14 +15,6 @@
 		B9F61EB31BED651900D60722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F61EAD1BED651900D60722 /* Assets.xcassets */; };
 		B9F61EB41BED651900D60722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F61EAE1BED651900D60722 /* LaunchScreen.storyboard */; };
 		B9F61EB61BED651900D60722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F61EB21BED651900D60722 /* AppDelegate.swift */; };
-		B9FCDB281BF54A150048CE85 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FCDB241BF54A150048CE85 /* Alamofire.framework */; };
-		B9FCDB291BF54A150048CE85 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FCDB251BF54A150048CE85 /* Locksmith.framework */; };
-		B9FCDB2A1BF54A150048CE85 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FCDB261BF54A150048CE85 /* ReactiveCocoa.framework */; };
-		B9FCDB2B1BF54A150048CE85 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FCDB271BF54A150048CE85 /* Result.framework */; };
-		B9FCDB341BF54C4B0048CE85 /* ReactiveCocoa.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B9FCDB2F1BF54A8D0048CE85 /* ReactiveCocoa.framework.dSYM */; };
-		B9FCDB351BF54C4E0048CE85 /* Result.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B9FCDB301BF54A8D0048CE85 /* Result.framework.dSYM */; };
-		B9FCDB361BF54C510048CE85 /* Alamofire.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B9FCDB2D1BF54A8D0048CE85 /* Alamofire.framework.dSYM */; };
-		B9FCDB381BF54C650048CE85 /* Locksmith.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B9FCDB2E1BF54A8D0048CE85 /* Locksmith.framework.dSYM */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,23 +33,6 @@
 			remoteInfo = HomeControl;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		B9FCDB331BF54BB10048CE85 /* Carthage - Copy Debug Symbols */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				B9FCDB341BF54C4B0048CE85 /* ReactiveCocoa.framework.dSYM in Carthage - Copy Debug Symbols */,
-				B9FCDB351BF54C4E0048CE85 /* Result.framework.dSYM in Carthage - Copy Debug Symbols */,
-				B9FCDB361BF54C510048CE85 /* Alamofire.framework.dSYM in Carthage - Copy Debug Symbols */,
-				B9FCDB381BF54C650048CE85 /* Locksmith.framework.dSYM in Carthage - Copy Debug Symbols */,
-			);
-			name = "Carthage - Copy Debug Symbols";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B909816D1BF56D9200B822A8 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
@@ -80,14 +55,6 @@
 		B9F61EB21BED651900D60722 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9F61EB91BED652500D60722 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9F61EBD1BED652E00D60722 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9FCDB241BF54A150048CE85 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		B9FCDB251BF54A150048CE85 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
-		B9FCDB261BF54A150048CE85 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
-		B9FCDB271BF54A150048CE85 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		B9FCDB2D1BF54A8D0048CE85 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
-		B9FCDB2E1BF54A8D0048CE85 /* Locksmith.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Locksmith.framework.dSYM; path = Carthage/Build/iOS/Locksmith.framework.dSYM; sourceTree = "<group>"; };
-		B9FCDB2F1BF54A8D0048CE85 /* ReactiveCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveCocoa.framework.dSYM; path = Carthage/Build/iOS/ReactiveCocoa.framework.dSYM; sourceTree = "<group>"; };
-		B9FCDB301BF54A8D0048CE85 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/iOS/Result.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9FCDB2A1BF54A150048CE85 /* ReactiveCocoa.framework in Frameworks */,
-				B9FCDB2B1BF54A150048CE85 /* Result.framework in Frameworks */,
-				B9FCDB281BF54A150048CE85 /* Alamofire.framework in Frameworks */,
-				B9FCDB291BF54A150048CE85 /* Locksmith.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +136,6 @@
 				B9F61EBB1BED652E00D60722 /* HomeControlUITests */,
 				B909816A1BF56D9200B822A8 /* Configurations */,
 				B9F61E7B1BED644D00D60722 /* Products */,
-				B9FCDB2C1BF54A730048CE85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -251,21 +213,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		B9FCDB2C1BF54A730048CE85 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B9FCDB261BF54A150048CE85 /* ReactiveCocoa.framework */,
-				B9FCDB271BF54A150048CE85 /* Result.framework */,
-				B9FCDB241BF54A150048CE85 /* Alamofire.framework */,
-				B9FCDB251BF54A150048CE85 /* Locksmith.framework */,
-				B9FCDB2F1BF54A8D0048CE85 /* ReactiveCocoa.framework.dSYM */,
-				B9FCDB301BF54A8D0048CE85 /* Result.framework.dSYM */,
-				B9FCDB2D1BF54A8D0048CE85 /* Alamofire.framework.dSYM */,
-				B9FCDB2E1BF54A8D0048CE85 /* Locksmith.framework.dSYM */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,8 +223,6 @@
 				B9F61E761BED644D00D60722 /* Sources */,
 				B9F61E771BED644D00D60722 /* Frameworks */,
 				B9F61E781BED644D00D60722 /* Resources */,
-				B9FCDB321BF54B1E0048CE85 /* Carthage - Copy Frameworks */,
-				B9FCDB331BF54BB10048CE85 /* Carthage - Copy Debug Symbols */,
 			);
 			buildRules = (
 			);
@@ -392,27 +337,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B9FCDB321BF54B1E0048CE85 /* Carthage - Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Locksmith.framework",
-			);
-			name = "Carthage - Copy Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9F61E761BED644D00D60722 /* Sources */ = {
