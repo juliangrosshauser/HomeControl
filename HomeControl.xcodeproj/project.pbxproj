@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B91ED9721BFA9C5B0070EB8E /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91ED9711BFA9C5B0070EB8E /* Box.swift */; };
 		B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95E46F21BEEB4AE00481E51 /* SetupController.swift */; };
 		B9F10AFE1BF7FFB400AB23D9 /* UIColor+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */; };
 		B9F10B001BF8004200AB23D9 /* UIImage+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */; };
@@ -64,6 +65,7 @@
 		B90981741BF56D9200B822A8 /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
 		B909818F1BF56D9200B822A8 /* iOS-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
 		B90981901BF56D9200B822A8 /* iOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
+		B91ED9711BFA9C5B0070EB8E /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		B95E46F21BEEB4AE00481E51 /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
 		B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Name.swift"; sourceTree = "<group>"; };
 		B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Asset.swift"; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				B9F61EB21BED651900D60722 /* AppDelegate.swift */,
 				B95E46F21BEEB4AE00481E51 /* SetupController.swift */,
+				B91ED9711BFA9C5B0070EB8E /* Box.swift */,
 				B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */,
 				B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */,
 			);
@@ -415,6 +418,7 @@
 			files = (
 				B9F61EB61BED651900D60722 /* AppDelegate.swift in Sources */,
 				B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */,
+				B91ED9721BFA9C5B0070EB8E /* Box.swift in Sources */,
 				B9F10B001BF8004200AB23D9 /* UIImage+Asset.swift in Sources */,
 				B9F10AFE1BF7FFB400AB23D9 /* UIColor+Name.swift in Sources */,
 			);
