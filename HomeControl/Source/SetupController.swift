@@ -8,7 +8,7 @@
 
 import UIKit
 
-private class TextField: UITextField {
+private final class TextField: UITextField {
     convenience init(placeholder: String, asset: UIImage.Asset) {
         self.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         widthAnchor.constraintEqualToConstant(300).active = true
