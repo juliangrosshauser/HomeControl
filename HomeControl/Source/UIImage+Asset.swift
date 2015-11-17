@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIImage {
-    enum Asset: String {
+public extension UIImage {
+    public enum Asset: String {
         case Logo = "Logo"
         case Server = "Server"
         case User = "User"
@@ -17,7 +17,7 @@ extension UIImage {
         case Login = "Login"
     }
 
-    convenience init(asset: Asset) {
+    public convenience init(asset: Asset) {
         assert(UIImage(named: asset.rawValue) != nil, "No image named \"\(asset.rawValue)\" found in asset catalog")
         self.init(named: asset.rawValue)!
     }

@@ -9,7 +9,7 @@
 import UIKit
 
 private final class TextField: UITextField {
-    convenience init(placeholder: String, asset: UIImage.Asset) {
+    private convenience init(placeholder: String, asset: UIImage.Asset) {
         self.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         widthAnchor.constraintEqualToConstant(300).active = true
         heightAnchor.constraintEqualToConstant(50).active = true
@@ -26,7 +26,7 @@ private final class TextField: UITextField {
         leftViewMode = .Always
     }
 
-    override func leftViewRectForBounds(bounds: CGRect) -> CGRect {
+    private override func leftViewRectForBounds(bounds: CGRect) -> CGRect {
         var rect = super.leftViewRectForBounds(bounds)
         rect.origin.x += 10
         return rect
@@ -34,7 +34,7 @@ private final class TextField: UITextField {
 }
 
 private extension UILabel {
-    convenience init(text: String) {
+    private convenience init(text: String) {
         self.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         self.text = text
         font = UIFont.systemFontOfSize(12)
@@ -43,7 +43,7 @@ private extension UILabel {
 }
 
 private extension UIStackView {
-    convenience init(arrangedSubviews views: [UIView], spacing: CGFloat, alignment: UIStackViewAlignment = .Center) {
+    private convenience init(arrangedSubviews views: [UIView], spacing: CGFloat, alignment: UIStackViewAlignment = .Center) {
         self.init(arrangedSubviews: views)
         translatesAutoresizingMaskIntoConstraints = false
         axis = .Vertical
