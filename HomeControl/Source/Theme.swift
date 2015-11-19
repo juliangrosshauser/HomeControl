@@ -37,6 +37,15 @@ public struct Theme: Equatable {
         }
     }
 
+    public var barStyle: UIBarStyle {
+        switch variant {
+        case .Light:
+            return .Black
+        case .Dark:
+            return .Default
+        }
+    }
+
     //MARK: Initialization
 
     public init(variant: Variant, primaryColor: UIColor.Name) {
