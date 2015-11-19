@@ -48,9 +48,13 @@ public struct Theme: Equatable {
 
     //MARK: Initialization
 
-    public init(variant: Variant, primaryColor: UIColor.Name) {
+    public init(variant: Variant, primaryColor: UIColor) {
         self.variant = variant
-        self.primaryColor = UIColor(named: primaryColor)
+        self.primaryColor = primaryColor
+    }
+
+    public init(variant: Variant, primaryColorName: UIColor.Name) {
+        self.init(variant: variant, primaryColor: UIColor(named: primaryColorName))
     }
 }
 
