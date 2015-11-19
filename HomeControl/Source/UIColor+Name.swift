@@ -14,6 +14,9 @@ public extension UIColor {
         case Gray = 0xCECECEFF
         case LightGray = 0xF4F4F4FF
         case DarkGray = 0x404040FF
+        
+        case LightBackground = 0xFFFFFFFF
+        case DarkBackground = 0x040028FF
     }
 
     public convenience init(hexadecimalColor: UInt32) {
