@@ -10,8 +10,8 @@ import UIKit
 
 public struct Theme: Equatable {
     public enum Variant: Int {
-        case Light = 0
-        case Dark = 1
+        case Light
+        case Dark
     }
 
     //MARK: Properties
