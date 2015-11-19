@@ -15,13 +15,13 @@ private final class TextField: UITextField {
         heightAnchor.constraintEqualToConstant(50).active = true
         borderStyle = .RoundedRect
         self.placeholder = placeholder
-        textColor = UIColor(named: .DarkGray)
+        textColor = ThemeManager.currentTheme.gray
 
         let image = UIImage(asset: asset).imageWithRenderingMode(.AlwaysTemplate)
         let imageView = UIImageView(image: image)
         imageView.frame = CGRect(x: 0, y: 0, width: imageView.frame.width + 5, height: imageView.frame.height)
         imageView.contentMode = .Left
-        imageView.tintColor = UIColor(named: .DarkGray)
+        imageView.tintColor = ThemeManager.currentTheme.gray
         leftView = imageView
         leftViewMode = .Always
     }
@@ -38,7 +38,7 @@ private extension UILabel {
         self.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         self.text = text
         font = UIFont.systemFontOfSize(12)
-        textColor = UIColor(named: .DarkGray)
+        textColor = ThemeManager.currentTheme.gray
     }
 }
 
@@ -65,7 +65,7 @@ class SetupController: UIViewController {
         let image = UIImage(asset: .Login).imageWithRenderingMode(.AlwaysTemplate)
         loadButton.setImage(image, forState: .Normal)
         loadButton.tintColor = .whiteColor()
-        loadButton.backgroundColor = UIColor(named: .Primary)
+        loadButton.backgroundColor = ThemeManager.currentTheme.primaryColor
         let padding: CGFloat = 40
         loadButton.widthAnchor.constraintEqualToConstant(image.size.width + padding).active = true
         loadButton.heightAnchor.constraintEqualToConstant(image.size.height + padding).active = true

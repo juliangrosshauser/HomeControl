@@ -17,23 +17,23 @@ public struct Theme: Equatable {
     //MARK: Properties
 
     public let variant: Variant
-    public let primaryColor: UIColor.Name
+    public let primaryColor: UIColor
 
-    public var backgroundColor: UIColor.Name {
+    public var backgroundColor: UIColor {
         switch variant {
         case .Light:
-            return .LightBackground
+            return UIColor(named: .LightBackground)
         case .Dark:
-            return .DarkBackground
+            return UIColor(named: .DarkBackground)
         }
     }
 
-    public var gray: UIColor.Name {
+    public var gray: UIColor {
         switch variant {
         case .Light:
-            return .DarkGray
+            return UIColor(named: .DarkGray)
         case .Dark:
-            return .LightGray
+            return UIColor(named: .LightGray)
         }
     }
 
@@ -41,7 +41,7 @@ public struct Theme: Equatable {
 
     public init(variant: Variant, primaryColor: UIColor.Name) {
         self.variant = variant
-        self.primaryColor = primaryColor
+        self.primaryColor = UIColor(named: primaryColor)
     }
 }
 
