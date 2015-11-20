@@ -18,6 +18,7 @@
 		B95A467B1BFBF5540057225E /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95A46661BFBF4D50057225E /* Locksmith.framework */; };
 		B95A467C1BFBF5540057225E /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B95A46661BFBF4D50057225E /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95E46F21BEEB4AE00481E51 /* SetupController.swift */; };
+		B984D10F1BFFDC0F0081158E /* NSUserDefaults+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B984D10E1BFFDC0F0081158E /* NSUserDefaults+UIColor.swift */; };
 		B9F10AFE1BF7FFB400AB23D9 /* UIColor+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */; };
 		B9F10B001BF8004200AB23D9 /* UIImage+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */; };
 		B9F61EB31BED651900D60722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F61EAD1BED651900D60722 /* Assets.xcassets */; };
@@ -283,6 +284,7 @@
 		B95A46481BFBF4CD0057225E /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		B95A465D1BFBF4D50057225E /* Locksmith.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Locksmith.xcodeproj; path = Carthage/Checkouts/Locksmith/Locksmith.xcodeproj; sourceTree = "<group>"; };
 		B95E46F21BEEB4AE00481E51 /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
+		B984D10E1BFFDC0F0081158E /* NSUserDefaults+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+UIColor.swift"; sourceTree = "<group>"; };
 		B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Name.swift"; sourceTree = "<group>"; };
 		B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Asset.swift"; sourceTree = "<group>"; };
 		B9F61E7A1BED644D00D60722 /* HomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -478,6 +480,7 @@
 				B91ED9711BFA9C5B0070EB8E /* Box.swift */,
 				B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */,
 				B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */,
+				B984D10E1BFFDC0F0081158E /* NSUserDefaults+UIColor.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -858,6 +861,7 @@
 				B9F10B001BF8004200AB23D9 /* UIImage+Asset.swift in Sources */,
 				B9F10AFE1BF7FFB400AB23D9 /* UIColor+Name.swift in Sources */,
 				B91ED9741BFAA1EE0070EB8E /* Theme.swift in Sources */,
+				B984D10F1BFFDC0F0081158E /* NSUserDefaults+UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
