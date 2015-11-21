@@ -56,6 +56,8 @@ class SetupController: UIViewController {
 
     //MARK: Properties
 
+    private let viewModel: SetupViewModel
+
     private let serverAddressTextField = TextField(placeholder: "192.168.0.100", asset: .Server)
     private let usernameTextField = TextField(placeholder: "Username", asset: .User)
     private let passwordTextField = TextField(placeholder: "Password", asset: .Lock)
@@ -74,6 +76,17 @@ class SetupController: UIViewController {
     }()
 
     private let wrapperStackView = UIStackView(arrangedSubviews: [], spacing: 100)
+
+    //MARK: Initialization
+
+    init(viewModel: SetupViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     //MARK: UIViewController
 
