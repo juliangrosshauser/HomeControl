@@ -17,7 +17,11 @@ public struct Theme: Equatable {
     //MARK: Properties
 
     public let variant: Variant
-    public let primaryColor: UIColor
+    public let primaryColorName: ColorName
+
+    public var primaryColor: UIColor {
+        return UIColor(named: primaryColorName)
+    }
 
     public var backgroundColor: UIColor {
         switch variant {
@@ -48,18 +52,14 @@ public struct Theme: Equatable {
 
     //MARK: Initialization
 
-    public init(variant: Variant, primaryColor: UIColor) {
+    public init(variant: Variant, primaryColorName: ColorName) {
         self.variant = variant
-        self.primaryColor = primaryColor
-    }
-
-    public init(variant: Variant, primaryColorName: UIColor.Name) {
-        self.init(variant: variant, primaryColor: UIColor(named: primaryColorName))
+        self.primaryColorName = primaryColorName
     }
 }
 
 //MARK: Equatable
 
 public func == (lhs: Theme, rhs: Theme) -> Bool {
-    return lhs.variant == rhs.variant && lhs.primaryColor == rhs.primaryColor
+    return lhs.variant == rhs.variant && lhs.primaryColorName == rhs.primaryColorName
 }

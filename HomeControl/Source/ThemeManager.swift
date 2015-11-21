@@ -40,14 +40,15 @@ public class ThemeManager {
     private class func saveTheme(theme: Theme) {
         self.theme = theme
         userDefaults.setInteger(theme.variant.rawValue, forKey: themeVariantKey)
-        userDefaults.setColor(theme.primaryColor, forKey: themePrimaryColorKey)
+        userDefaults.setInteger(Int(theme.primaryColorName.rawValue), forKey: themePrimaryColorKey)
     }
 
     private class func loadTheme() -> Theme? {
         if let variantValue = userDefaults.valueForKey(themeVariantKey)?.integerValue,
            variant = Theme.Variant(rawValue: variantValue),
-           primaryColor = userDefaults.colorForKey(themePrimaryColorKey) {
-            return Theme(variant: variant, primaryColor: primaryColor)
+           primaryColorNameValue = userDefaults.valueForKey(themePrimaryColorKey)?.integerValue,
+           primaryColorName = ColorName(rawValue: UInt32(primaryColorNameValue)) {
+            return Theme(variant: variant, primaryColorName: primaryColorName)
         }
 
         return nil
