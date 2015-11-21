@@ -115,6 +115,8 @@ class SetupController: UIViewController {
         viewModel.username <~ usernameTextField.rac_textSignal().toSignalProducer().map({ $0 as! String }).flatMapError { _ in SignalProducer.empty }
         viewModel.password <~ passwordTextField.rac_textSignal().toSignalProducer().map({ $0 as! String }).flatMapError { _ in SignalProducer.empty }
 
+        viewModel.loadButtonEnabled.producer.startWithNext { [unowned self] in self.loadButton.enabled = $0 }
+
         self.view = view
     }
 
