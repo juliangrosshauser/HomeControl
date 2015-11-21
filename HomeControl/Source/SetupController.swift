@@ -64,7 +64,7 @@ class SetupController: UIViewController {
         let loadButton = UIButton(type: .System)
         let image = UIImage(asset: .Login).imageWithRenderingMode(.AlwaysTemplate)
         loadButton.setImage(image, forState: .Normal)
-        loadButton.tintColor = .whiteColor()
+        loadButton.tintColor = ThemeManager.currentTheme.backgroundColor
         loadButton.backgroundColor = ThemeManager.currentTheme.primaryColor
         let padding: CGFloat = 40
         loadButton.widthAnchor.constraintEqualToConstant(image.size.width + padding).active = true
@@ -79,6 +79,7 @@ class SetupController: UIViewController {
 
     override func loadView() {
         let view = UIView()
+        view.backgroundColor = ThemeManager.currentTheme.backgroundColor
 
         let serverAddressLabel = UILabel(text: "Server Address")
         let serverAddressStackView = UIStackView(arrangedSubviews: [serverAddressLabel, serverAddressTextField], spacing: 10, alignment: .Leading)
