@@ -23,32 +23,9 @@ public struct Theme: Equatable {
         return UIColor(named: primaryColorName)
     }
 
-    public var backgroundColor: UIColor {
-        switch variant {
-        case .Light:
-            return UIColor(named: .LightBackground)
-        case .Dark:
-            return UIColor(named: .DarkBackground)
-        }
-    }
-
-    public var gray: UIColor {
-        switch variant {
-        case .Light:
-            return UIColor(named: .DarkGray)
-        case .Dark:
-            return UIColor(named: .LightGray)
-        }
-    }
-
-    public var barStyle: UIBarStyle {
-        switch variant {
-        case .Light:
-            return .Black
-        case .Dark:
-            return .Default
-        }
-    }
+    public let backgroundColor = UIColor.whiteColor()
+    public let gray = UIColor(named: .Gray)
+    public let barStyle = UIBarStyle.Black
 
     //MARK: Initialization
 
