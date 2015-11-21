@@ -9,16 +9,6 @@
 import UIKit
 
 public extension UIColor {
-    public enum Name: UInt32 {
-        case Primary = 0x60CAFAFF
-        case Gray = 0xCECECEFF
-        case LightGray = 0xF4F4F4FF
-        case DarkGray = 0x404040FF
-        
-        case LightBackground = 0xFFFFFFFF
-        case DarkBackground = 0x040028FF
-    }
-
     public convenience init(hexadecimalColor: UInt32) {
         let red = CGFloat(hexadecimalColor >> 24 & 0xFF) / 255
         let green = CGFloat(hexadecimalColor >> 16 & 0xFF) / 255
@@ -27,7 +17,7 @@ public extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
 
-    public convenience init(named name: Name) {
+    public convenience init(named name: ColorName) {
         self.init(hexadecimalColor: name.rawValue)
     }
 }
