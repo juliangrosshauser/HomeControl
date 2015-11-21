@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 private final class TextField: UITextField {
     private convenience init(placeholder: String, asset: UIImage.Asset) {
@@ -109,6 +110,10 @@ class SetupController: UIViewController {
 
         NSLayoutConstraint(item: wrapperStackView, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0).active = true
         NSLayoutConstraint(item: wrapperStackView, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0).active = true
+
+        viewModel.serverAddress <~ serverAddressTextField.rac_textSignal().toSignalProducer().map({ $0 as! String }).flatMapError { _ in SignalProducer.empty }
+        viewModel.username <~ usernameTextField.rac_textSignal().toSignalProducer().map({ $0 as! String }).flatMapError { _ in SignalProducer.empty }
+        viewModel.password <~ passwordTextField.rac_textSignal().toSignalProducer().map({ $0 as! String }).flatMapError { _ in SignalProducer.empty }
 
         self.view = view
     }
