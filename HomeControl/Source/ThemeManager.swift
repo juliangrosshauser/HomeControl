@@ -16,17 +16,12 @@ public class ThemeManager {
     private static let themeVariantKey = "ThemeVariant"
     private static let themePrimaryColorKey = "ThemePrimaryColor"
     private static var theme: Theme?
+    private static let defaultTheme = Theme(variant: .Light, primaryColorName: .Blue)
 
     public class var currentTheme: Theme {
         get {
             if let theme = theme { return theme }
-
-            if let savedTheme = loadTheme() {
-                theme = savedTheme
-            } else {
-                theme = Theme(variant: .Light, primaryColorName: .Primary)
-            }
-
+            theme = loadTheme() ?? defaultTheme
             return theme!
         }
 
