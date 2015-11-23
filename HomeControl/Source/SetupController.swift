@@ -114,9 +114,9 @@ class SetupController: UIViewController {
         loadButton.addTarget(self, action: "loadButtonTouchDown:", forControlEvents: .TouchDown)
         loadButton.addTarget(self, action: "loadButtonTouchUpInside:", forControlEvents: .TouchUpInside)
 
-        viewModel.serverAddress <~ serverAddressTextField.rac_textSignal().toSignalProducer().map({ $0 as! String }).flatMapError { _ in SignalProducer.empty }
-        viewModel.username <~ usernameTextField.rac_textSignal().toSignalProducer().map({ $0 as! String }).flatMapError { _ in SignalProducer.empty }
-        viewModel.password <~ passwordTextField.rac_textSignal().toSignalProducer().map({ $0 as! String }).flatMapError { _ in SignalProducer.empty }
+        viewModel.serverAddress <~ serverAddressTextField.rac_textSignalProducer()
+        viewModel.username <~ usernameTextField.rac_textSignalProducer()
+        viewModel.password <~ passwordTextField.rac_textSignalProducer()
 
         viewModel.loadButtonEnabled.producer.startWithNext { [unowned self] in self.loadButton.enabled = $0 }
 
