@@ -111,6 +111,9 @@ class SetupController: UIViewController {
         NSLayoutConstraint(item: wrapperStackView, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0).active = true
         NSLayoutConstraint(item: wrapperStackView, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0).active = true
 
+        loadButton.addTarget(self, action: "loadButtonTouchDown:", forControlEvents: .TouchDown)
+        loadButton.addTarget(self, action: "loadButtonTouchUpInside:", forControlEvents: .TouchUpInside)
+
         viewModel.serverAddress <~ serverAddressTextField.rac_textSignal().toSignalProducer().map({ $0 as! String }).flatMapError { _ in SignalProducer.empty }
         viewModel.username <~ usernameTextField.rac_textSignal().toSignalProducer().map({ $0 as! String }).flatMapError { _ in SignalProducer.empty }
         viewModel.password <~ passwordTextField.rac_textSignal().toSignalProducer().map({ $0 as! String }).flatMapError { _ in SignalProducer.empty }
@@ -135,5 +138,21 @@ class SetupController: UIViewController {
             guard wrapperStackView.axis != .Vertical else { return }
             wrapperStackView.axis = .Vertical
         }
+    }
+
+    //MARK: Button Actions
+
+    @objc
+    private func loadButtonTouchDown(button: UIButton) {
+        UIView.animateWithDuration(0.1) {
+            button.layer.transform = CATransform3DMakeScale(0.8, 0.8, 1)
+        }
+    }
+
+    @objc
+    private func loadButtonTouchUpInside(button: UIButton) {
+        UIView.animateWithDuration(0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .CurveEaseInOut, animations: {
+            button.layer.transform = CATransform3DIdentity
+        }, completion: nil)
     }
 }
