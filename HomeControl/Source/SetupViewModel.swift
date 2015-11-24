@@ -8,6 +8,11 @@
 
 import ReactiveCocoa
 
+enum SetupError: ErrorType {
+    case EncodingError
+    case DownloadError(NSError)
+}
+
 class SetupViewModel {
 
     //MARK: Properties
