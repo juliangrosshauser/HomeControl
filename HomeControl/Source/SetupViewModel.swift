@@ -23,12 +23,18 @@ class SetupViewModel {
     let password = MutableProperty("")
     let loadButtonEnabled = MutableProperty(false)
 
+    var downloadAction: Action<Void, Void, SetupError>!
+
     //MARK: Initialization
 
     init() {
         loadButtonEnabled <~ combineLatest(serverAddress.producer, username.producer, password.producer).map { (serverAddressText, usernameText, passwordText) in
             if serverAddressText.isEmpty || usernameText.isEmpty || passwordText.isEmpty { return false }
             return true
+        }
+
+        downloadAction = Action(enabledIf: loadButtonEnabled) { [unowned self] in
+            self.downloadStructureFile()
         }
     }
 
