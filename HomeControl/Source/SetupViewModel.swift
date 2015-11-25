@@ -24,7 +24,7 @@ class SetupViewModel {
     let password = MutableProperty("")
     let loadButtonEnabled = MutableProperty(false)
 
-    var downloadAction: Action<Void, Void, SetupError>!
+    var downloadAction: Action<Void, String, SetupError>!
 
     //MARK: Initialization
 
@@ -41,7 +41,7 @@ class SetupViewModel {
 
     //MARK: Download Structure File
 
-    private func downloadStructureFile() -> SignalProducer<Void, SetupError> {
+    private func downloadStructureFile() -> SignalProducer<String, SetupError> {
         guard let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first,
             structureFilePath = NSURL.fileURLWithPath(documentDirectory).URLByAppendingPathComponent("LoxAPP2.xml").path else {
                 return SignalProducer(error: .FileError(nil))
@@ -73,6 +73,7 @@ class SetupViewModel {
                     observer.sendFailed(.DownloadError(error))
                 }
 
+                observer.sendNext(structureFilePath)
                 observer.sendCompleted()
             }
         }
