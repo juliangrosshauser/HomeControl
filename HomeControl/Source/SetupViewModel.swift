@@ -12,6 +12,7 @@ import Alamofire
 enum SetupError: ErrorType {
     case EncodingError
     case DownloadError(NSError)
+    case FileError(ErrorType?)
 }
 
 class SetupViewModel {
@@ -41,6 +42,21 @@ class SetupViewModel {
     //MARK: Download Structure File
 
     private func downloadStructureFile() -> SignalProducer<Void, SetupError> {
+        guard let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first,
+            structureFilePath = NSURL.fileURLWithPath(documentDirectory).URLByAppendingPathComponent("LoxAPP2.xml").path else {
+                return SignalProducer(error: .FileError(nil))
+        }
+
+        let fileManager = NSFileManager.defaultManager()
+
+        if fileManager.fileExistsAtPath(structureFilePath) {
+            do {
+                try fileManager.removeItemAtPath(structureFilePath)
+            } catch {
+                return SignalProducer(error: .FileError(error))
+            }
+        }
+
         guard let encodedServerAddress = serverAddress.value.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()),
                   credentialData = "\(username.value):\(password.value)".dataUsingEncoding(NSUTF8StringEncoding) else {
                 return SignalProducer(error: .EncodingError)
