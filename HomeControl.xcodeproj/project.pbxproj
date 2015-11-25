@@ -23,6 +23,8 @@
 		B984D1271BFFF98A0081158E /* ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B984D1261BFFF98A0081158E /* ColorName.swift */; };
 		B985B5A71BF986EC003C715B /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985B5A61BF986EC003C715B /* ThemeManager.swift */; };
 		B99594631C0279D1007EE098 /* UITextField+RAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99594621C0279D1007EE098 /* UITextField+RAC.swift */; };
+		B99BA6F01C053A2900C8C62C /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99BA6DB1C0539A000C8C62C /* SWXMLHash.framework */; };
+		B99BA6F41C053A7900C8C62C /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B99BA6DB1C0539A000C8C62C /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9F10AFE1BF7FFB400AB23D9 /* UIColor+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */; };
 		B9F10B001BF8004200AB23D9 /* UIImage+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */; };
 		B9F61EB31BED651900D60722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F61EAD1BED651900D60722 /* Assets.xcassets */; };
@@ -241,6 +243,62 @@
 			remoteGlobalIDString = 0EC25C581BA385AA004191AF;
 			remoteInfo = "Locksmith iOS";
 		};
+		B99BA6DA1C0539A000C8C62C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B99BA6BF1C0539A000C8C62C /* SWXMLHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD6083EF196CA106000B4F8D;
+			remoteInfo = "SWXMLHash iOS";
+		};
+		B99BA6DC1C0539A000C8C62C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B99BA6BF1C0539A000C8C62C /* SWXMLHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD6083FA196CA106000B4F8D;
+			remoteInfo = "SWXMLHash iOS Tests";
+		};
+		B99BA6DE1C0539A000C8C62C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B99BA6BF1C0539A000C8C62C /* SWXMLHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD9D052C1A757D8B003CCB21;
+			remoteInfo = "SWXMLHash OSX";
+		};
+		B99BA6E01C0539A000C8C62C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B99BA6BF1C0539A000C8C62C /* SWXMLHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD9D05361A757D8B003CCB21;
+			remoteInfo = "SWXMLHash OSX Tests";
+		};
+		B99BA6E21C0539A000C8C62C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B99BA6BF1C0539A000C8C62C /* SWXMLHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDDEC74C1BF6311A00AB138B;
+			remoteInfo = "SWXMLHash tvOS";
+		};
+		B99BA6E41C0539A000C8C62C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B99BA6BF1C0539A000C8C62C /* SWXMLHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDDEC7551BF6311B00AB138B;
+			remoteInfo = "SWXMLHash tvOS Tests";
+		};
+		B99BA6E61C0539A000C8C62C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B99BA6BF1C0539A000C8C62C /* SWXMLHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDDEC7681BF6316C00AB138B;
+			remoteInfo = "SWXMLHash watchOS";
+		};
+		B99BA6E81C0539D700C8C62C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B99BA6BF1C0539A000C8C62C /* SWXMLHash.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CD6083EE196CA106000B4F8D;
+			remoteInfo = "SWXMLHash iOS";
+		};
 		B9F61E8F1BED644D00D60722 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B9F61E721BED644D00D60722 /* Project object */;
@@ -264,6 +322,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B99BA6F41C053A7900C8C62C /* SWXMLHash.framework in Embed Frameworks */,
 				B95A46701BFBF4F20057225E /* ReactiveCocoa.framework in Embed Frameworks */,
 				B95A467C1BFBF5540057225E /* Locksmith.framework in Embed Frameworks */,
 				B95A46781BFBF5330057225E /* Alamofire.framework in Embed Frameworks */,
@@ -293,6 +352,7 @@
 		B984D1261BFFF98A0081158E /* ColorName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorName.swift; sourceTree = "<group>"; };
 		B985B5A61BF986EC003C715B /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		B99594621C0279D1007EE098 /* UITextField+RAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+RAC.swift"; sourceTree = "<group>"; };
+		B99BA6BF1C0539A000C8C62C /* SWXMLHash.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SWXMLHash.xcodeproj; path = Carthage/Checkouts/SWXMLHash/SWXMLHash.xcodeproj; sourceTree = "<group>"; };
 		B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Name.swift"; sourceTree = "<group>"; };
 		B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Asset.swift"; sourceTree = "<group>"; };
 		B9F61E7A1BED644D00D60722 /* HomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,6 +374,7 @@
 				B95A466F1BFBF4F20057225E /* ReactiveCocoa.framework in Frameworks */,
 				B95A46731BFBF52C0057225E /* Result.framework in Frameworks */,
 				B95A46771BFBF5330057225E /* Alamofire.framework in Frameworks */,
+				B99BA6F01C053A2900C8C62C /* SWXMLHash.framework in Frameworks */,
 				B95A467B1BFBF5540057225E /* Locksmith.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +496,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B99BA6C01C0539A000C8C62C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B99BA6DB1C0539A000C8C62C /* SWXMLHash.framework */,
+				B99BA6DD1C0539A000C8C62C /* SWXMLHash iOS Tests.xctest */,
+				B99BA6DF1C0539A000C8C62C /* SWXMLHash.framework */,
+				B99BA6E11C0539A000C8C62C /* SWXMLHash OSX Tests.xctest */,
+				B99BA6E31C0539A000C8C62C /* SWXMLHash.framework */,
+				B99BA6E51C0539A000C8C62C /* SWXMLHash tvOS Tests.xctest */,
+				B99BA6E71C0539A000C8C62C /* SWXMLHash.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B9F61E711BED644D00D60722 = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +521,7 @@
 				B95A46481BFBF4CD0057225E /* ReactiveCocoa.xcodeproj */,
 				B95A462D1BFBF4C20057225E /* Result.xcodeproj */,
 				B95A460E1BFBF46C0057225E /* Alamofire.xcodeproj */,
+				B99BA6BF1C0539A000C8C62C /* SWXMLHash.xcodeproj */,
 				B95A465D1BFBF4D50057225E /* Locksmith.xcodeproj */,
 			);
 			sourceTree = "<group>";
@@ -547,6 +623,7 @@
 				B95A46721BFBF4F20057225E /* PBXTargetDependency */,
 				B95A46761BFBF52C0057225E /* PBXTargetDependency */,
 				B95A467A1BFBF5330057225E /* PBXTargetDependency */,
+				B99BA6E91C0539D700C8C62C /* PBXTargetDependency */,
 				B95A467E1BFBF5540057225E /* PBXTargetDependency */,
 			);
 			name = HomeControl;
@@ -640,6 +717,10 @@
 				{
 					ProductGroup = B95A462E1BFBF4C20057225E /* Products */;
 					ProjectRef = B95A462D1BFBF4C20057225E /* Result.xcodeproj */;
+				},
+				{
+					ProductGroup = B99BA6C01C0539A000C8C62C /* Products */;
+					ProjectRef = B99BA6BF1C0539A000C8C62C /* SWXMLHash.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -834,6 +915,55 @@
 			remoteRef = B95A466D1BFBF4D50057225E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		B99BA6DB1C0539A000C8C62C /* SWXMLHash.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SWXMLHash.framework;
+			remoteRef = B99BA6DA1C0539A000C8C62C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B99BA6DD1C0539A000C8C62C /* SWXMLHash iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SWXMLHash iOS Tests.xctest";
+			remoteRef = B99BA6DC1C0539A000C8C62C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B99BA6DF1C0539A000C8C62C /* SWXMLHash.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SWXMLHash.framework;
+			remoteRef = B99BA6DE1C0539A000C8C62C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B99BA6E11C0539A000C8C62C /* SWXMLHash OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SWXMLHash OSX Tests.xctest";
+			remoteRef = B99BA6E01C0539A000C8C62C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B99BA6E31C0539A000C8C62C /* SWXMLHash.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SWXMLHash.framework;
+			remoteRef = B99BA6E21C0539A000C8C62C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B99BA6E51C0539A000C8C62C /* SWXMLHash tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SWXMLHash tvOS Tests.xctest";
+			remoteRef = B99BA6E41C0539A000C8C62C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B99BA6E71C0539A000C8C62C /* SWXMLHash.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SWXMLHash.framework;
+			remoteRef = B99BA6E61C0539A000C8C62C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -917,6 +1047,11 @@
 			isa = PBXTargetDependency;
 			name = "Locksmith iOS";
 			targetProxy = B95A467D1BFBF5540057225E /* PBXContainerItemProxy */;
+		};
+		B99BA6E91C0539D700C8C62C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SWXMLHash iOS";
+			targetProxy = B99BA6E81C0539D700C8C62C /* PBXContainerItemProxy */;
 		};
 		B9F61E901BED644D00D60722 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
