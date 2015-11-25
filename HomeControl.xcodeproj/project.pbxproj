@@ -10,6 +10,7 @@
 		B91ED9721BFA9C5B0070EB8E /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91ED9711BFA9C5B0070EB8E /* Box.swift */; };
 		B91ED9741BFAA1EE0070EB8E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91ED9731BFAA1EE0070EB8E /* Theme.swift */; };
 		B92F3E681C012F2000B3CD32 /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92F3E671C012F2000B3CD32 /* SetupViewModel.swift */; };
+		B94E25751C067C7600B52062 /* LoxoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E25741C067C7600B52062 /* LoxoneManager.swift */; };
 		B95A466F1BFBF4F20057225E /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95A46561BFBF4CD0057225E /* ReactiveCocoa.framework */; };
 		B95A46701BFBF4F20057225E /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B95A46561BFBF4CD0057225E /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B95A46731BFBF52C0057225E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95A463D1BFBF4C20057225E /* Result.framework */; };
@@ -343,6 +344,7 @@
 		B91ED9711BFA9C5B0070EB8E /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		B91ED9731BFAA1EE0070EB8E /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B92F3E671C012F2000B3CD32 /* SetupViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
+		B94E25741C067C7600B52062 /* LoxoneManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoxoneManager.swift; sourceTree = "<group>"; };
 		B95A460E1BFBF46C0057225E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Carthage/Checkouts/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		B95A462D1BFBF4C20057225E /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = "<group>"; };
 		B95A46481BFBF4CD0057225E /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
@@ -561,6 +563,7 @@
 				B9F61EB21BED651900D60722 /* AppDelegate.swift */,
 				B95E46F21BEEB4AE00481E51 /* SetupController.swift */,
 				B92F3E671C012F2000B3CD32 /* SetupViewModel.swift */,
+				B94E25741C067C7600B52062 /* LoxoneManager.swift */,
 				B985B5A61BF986EC003C715B /* ThemeManager.swift */,
 				B91ED9731BFAA1EE0070EB8E /* Theme.swift */,
 				B91ED9711BFA9C5B0070EB8E /* Box.swift */,
@@ -999,6 +1002,7 @@
 			files = (
 				B9F61EB61BED651900D60722 /* AppDelegate.swift in Sources */,
 				B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */,
+				B94E25751C067C7600B52062 /* LoxoneManager.swift in Sources */,
 				B985B5A71BF986EC003C715B /* ThemeManager.swift in Sources */,
 				B984D1271BFFF98A0081158E /* ColorName.swift in Sources */,
 				B99594631C0279D1007EE098 /* UITextField+RAC.swift in Sources */,
