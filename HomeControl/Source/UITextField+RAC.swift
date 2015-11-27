@@ -9,7 +9,7 @@
 import ReactiveCocoa
 
 public extension UITextField {
-    public func rac_textSignalProducer() -> SignalProducer<String, NoError> {
+    public func textSignalProducer() -> SignalProducer<String, NoError> {
         return rac_textSignal().toSignalProducer().map({ $0 as! String }).flatMapError { _ in SignalProducer.empty }
     }
 }
