@@ -24,11 +24,13 @@ class SetupViewModel {
     let password = MutableProperty("")
     let loadButtonEnabled = MutableProperty(false)
     var downloadAction: Action<Void, String, SetupError>!
-    let loxoneManager = LoxoneManager()
+    let loxoneManager: LoxoneManager
 
     //MARK: Initialization
 
-    init() {
+    init(loxoneManager: LoxoneManager) {
+        self.loxoneManager = loxoneManager
+        
         loadButtonEnabled <~ combineLatest(serverAddress.producer, username.producer, password.producer).map { (serverAddressText, usernameText, passwordText) in
             if serverAddressText.isEmpty || usernameText.isEmpty || passwordText.isEmpty { return false }
             return true
