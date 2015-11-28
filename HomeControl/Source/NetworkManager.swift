@@ -1,5 +1,5 @@
 //
-//  LoxoneManager.swift
+//  NetworkManager.swift
 //  HomeControl
 //
 //  Created by Julian Grosshauser on 26/11/15.
@@ -10,7 +10,7 @@ import Foundation
 import ReactiveCocoa
 import Alamofire
 
-class LoxoneManager {
+class NetworkManager {
 
     //MARK: Download Structure File
 

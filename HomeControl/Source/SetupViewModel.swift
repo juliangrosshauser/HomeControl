@@ -24,12 +24,12 @@ class SetupViewModel {
     let password = MutableProperty("")
     let loadButtonEnabled = MutableProperty(false)
     var downloadAction: Action<Void, String, SetupError>!
-    let loxoneManager: LoxoneManager
+    let networkManager: NetworkManager
 
     //MARK: Initialization
 
-    init(loxoneManager: LoxoneManager) {
-        self.loxoneManager = loxoneManager
+    init(networkManager: NetworkManager) {
+        self.networkManager = networkManager
         
         loadButtonEnabled <~ combineLatest(serverAddress.producer, username.producer, password.producer).map { (serverAddressText, usernameText, passwordText) in
             if serverAddressText.isEmpty || usernameText.isEmpty || passwordText.isEmpty { return false }
@@ -37,7 +37,7 @@ class SetupViewModel {
         }
 
         downloadAction = Action(enabledIf: loadButtonEnabled) { [unowned self] in
-            self.loxoneManager.downloadStructureFile(serverAddress: self.serverAddress.value, username: self.username.value, password: self.password.value)
+            self.networkManager.downloadStructureFile(serverAddress: self.serverAddress.value, username: self.username.value, password: self.password.value)
         }
     }
 }
