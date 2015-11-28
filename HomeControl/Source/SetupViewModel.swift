@@ -9,12 +9,6 @@
 import ReactiveCocoa
 import Alamofire
 
-enum SetupError: ErrorType {
-    case EncodingError
-    case DownloadError(NSError)
-    case FileError(ErrorType?)
-}
-
 class SetupViewModel {
 
     //MARK: Properties
@@ -23,7 +17,7 @@ class SetupViewModel {
     let username = MutableProperty("")
     let password = MutableProperty("")
     let loadButtonEnabled = MutableProperty(false)
-    var downloadAction: Action<Void, String, SetupError>!
+    var downloadAction: Action<Void, String, NetworkError>!
     let networkManager: NetworkManager
 
     //MARK: Initialization

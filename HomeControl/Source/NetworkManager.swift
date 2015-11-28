@@ -14,7 +14,7 @@ class NetworkManager {
 
     //MARK: Download Structure File
 
-    func downloadStructureFile(serverAddress serverAddress: String, username: String, password: String) -> SignalProducer<String, SetupError> {
+    func downloadStructureFile(serverAddress serverAddress: String, username: String, password: String) -> SignalProducer<String, NetworkError> {
         guard let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first,
             structureFilePath = NSURL.fileURLWithPath(documentDirectory).URLByAppendingPathComponent("LoxAPP2.xml").path else {
                 return SignalProducer(error: .FileError(nil))
