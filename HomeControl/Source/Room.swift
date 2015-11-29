@@ -14,4 +14,5 @@ struct Room {
     let name: String
     let lights: [Light]
     let blinds: [Blind]
+    let consumers: [Consumer]
 }
