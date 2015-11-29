@@ -18,8 +18,8 @@ class SetupViewModel {
     let password = MutableProperty("")
     let loadButtonEnabled = MutableProperty(false)
     var downloadAction: Action<Void, String, NetworkError>!
-    let networkManager: NetworkManager
-    let store: Store
+    private let networkManager: NetworkManager
+    private let store: Store
 
     //MARK: Initialization
 
