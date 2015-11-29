@@ -11,6 +11,7 @@
 		B91ED9741BFAA1EE0070EB8E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91ED9731BFAA1EE0070EB8E /* Theme.swift */; };
 		B9220F881C0A98050095A206 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9220F871C0A98050095A206 /* Room.swift */; };
 		B9220F8A1C0A98BF0095A206 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9220F891C0A98BF0095A206 /* Light.swift */; };
+		B9220F8C1C0A9A8C0095A206 /* Blind.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9220F8B1C0A9A8C0095A206 /* Blind.swift */; };
 		B92F3E681C012F2000B3CD32 /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92F3E671C012F2000B3CD32 /* SetupViewModel.swift */; };
 		B94E25751C067C7600B52062 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E25741C067C7600B52062 /* NetworkManager.swift */; };
 		B95A466F1BFBF4F20057225E /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95A46561BFBF4CD0057225E /* ReactiveCocoa.framework */; };
@@ -348,6 +349,7 @@
 		B91ED9731BFAA1EE0070EB8E /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B9220F871C0A98050095A206 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		B9220F891C0A98BF0095A206 /* Light.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
+		B9220F8B1C0A9A8C0095A206 /* Blind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blind.swift; sourceTree = "<group>"; };
 		B92F3E671C012F2000B3CD32 /* SetupViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
 		B94E25741C067C7600B52062 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B95A460E1BFBF46C0057225E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Carthage/Checkouts/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
@@ -573,6 +575,7 @@
 				B94E25741C067C7600B52062 /* NetworkManager.swift */,
 				B9220F871C0A98050095A206 /* Room.swift */,
 				B9220F891C0A98BF0095A206 /* Light.swift */,
+				B9220F8B1C0A9A8C0095A206 /* Blind.swift */,
 				B985B5A61BF986EC003C715B /* ThemeManager.swift */,
 				B91ED9731BFAA1EE0070EB8E /* Theme.swift */,
 				B91ED9711BFA9C5B0070EB8E /* Box.swift */,
@@ -1024,6 +1027,7 @@
 				B9C76A351C0927CC00B25DAC /* NetworkError.swift in Sources */,
 				B92F3E681C012F2000B3CD32 /* SetupViewModel.swift in Sources */,
 				B984D10F1BFFDC0F0081158E /* NSUserDefaults+UIColor.swift in Sources */,
+				B9220F8C1C0A9A8C0095A206 /* Blind.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
