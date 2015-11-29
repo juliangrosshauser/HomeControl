@@ -12,11 +12,23 @@ import Alamofire
 
 class NetworkManager {
 
+    //MARK: Endpoint
+
+    private enum Endpoint: String, CustomStringConvertible {
+        case StructureFile = "data/LoxAPP2.xml"
+
+        //MARK: CustomStringConvertible
+
+        var description: String {
+            return rawValue
+        }
+    }
+
     //MARK: Download Structure File
 
     func downloadStructureFile(serverAddress serverAddress: String, username: String, password: String) -> SignalProducer<String, NetworkError> {
         guard let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first,
-            structureFilePath = NSURL.fileURLWithPath(documentDirectory).URLByAppendingPathComponent("LoxAPP2.xml").path else {
+                  structureFilePath = NSURL.fileURLWithPath(documentDirectory).URLByAppendingPathComponent(NSString(string: Endpoint.StructureFile.rawValue).lastPathComponent).path else {
                 return SignalProducer(error: .FileError(nil))
         }
 
@@ -36,7 +48,7 @@ class NetworkManager {
         }
 
         let destination = Request.suggestedDownloadDestination(directory: .DocumentDirectory, domain: .UserDomainMask)
-        let url = "http://\(encodedServerAddress)/data/LoxAPP2.xml"
+        let url = "http://\(encodedServerAddress)/\(Endpoint.StructureFile)"
         let base64Credentials = credentialData.base64EncodedStringWithOptions([])
         let headers = ["Authorization": "Basic \(base64Credentials)"]
 
