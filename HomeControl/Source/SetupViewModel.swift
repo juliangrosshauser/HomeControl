@@ -19,11 +19,13 @@ class SetupViewModel {
     let loadButtonEnabled = MutableProperty(false)
     var downloadAction: Action<Void, String, NetworkError>!
     let networkManager: NetworkManager
+    let store: Store
 
     //MARK: Initialization
 
-    init(networkManager: NetworkManager) {
+    init(networkManager: NetworkManager, store: Store) {
         self.networkManager = networkManager
+        self.store = store
         
         loadButtonEnabled <~ combineLatest(serverAddress.producer, username.producer, password.producer).map { (serverAddressText, usernameText, passwordText) in
             if serverAddressText.isEmpty || usernameText.isEmpty || passwordText.isEmpty { return false }
