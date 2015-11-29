@@ -12,4 +12,5 @@ struct Room {
 
     let id: UInt
     let name: String
+    let lights: [Light]
 }
