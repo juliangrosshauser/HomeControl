@@ -23,7 +23,7 @@ class SetupViewModel {
 
     //MARK: Initialization
 
-    init(networkManager: NetworkManager, store: Store) {
+    init(networkManager: NetworkManager = NetworkManager(), store: Store = Store()) {
         self.networkManager = networkManager
         self.store = store
         

@@ -80,7 +80,7 @@ class SetupController: UIViewController {
 
     //MARK: Initialization
 
-    init(viewModel: SetupViewModel) {
+    init(viewModel: SetupViewModel = SetupViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
