@@ -16,8 +16,10 @@ class SetupViewModel {
     let serverAddress = MutableProperty("")
     let username = MutableProperty("")
     let password = MutableProperty("")
+
     let loadButtonEnabled = MutableProperty(false)
     var downloadAction: Action<Void, String, NetworkError>!
+
     private let networkManager: NetworkManager
     private let store: Store
 
