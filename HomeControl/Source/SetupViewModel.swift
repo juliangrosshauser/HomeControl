@@ -35,7 +35,8 @@ class SetupViewModel {
         }
 
         downloadAction = Action(enabledIf: loadButtonEnabled) { [unowned self] in
-            self.networkManager.downloadStructureFile(serverAddress: self.serverAddress.value, username: self.username.value, password: self.password.value)
+            let authenticationData = AuthenticationData(serverAddress: self.serverAddress.value, username: self.username.value, password: self.password.value)
+            self.networkManager.downloadStructureFile(authenticationData)
         }
     }
 }

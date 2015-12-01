@@ -26,7 +26,7 @@ class NetworkManager {
 
     //MARK: Download Structure File
 
-    func downloadStructureFile(serverAddress serverAddress: String, username: String, password: String) -> SignalProducer<String, NetworkError> {
+    func downloadStructureFile(authenticationData: AuthenticationData) -> SignalProducer<String, NetworkError> {
         guard let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first,
                   structureFilePath = NSURL.fileURLWithPath(documentDirectory).URLByAppendingPathComponent(NSString(string: Endpoint.StructureFile.rawValue).lastPathComponent).path else {
                 return SignalProducer(error: .FileError(nil))
@@ -42,8 +42,8 @@ class NetworkManager {
             }
         }
 
-        guard let encodedServerAddress = serverAddress.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()),
-            credentialData = "\(username):\(password)".dataUsingEncoding(NSUTF8StringEncoding) else {
+        guard let encodedServerAddress = authenticationData.serverAddress.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()),
+            credentialData = "\(authenticationData.username):\(authenticationData.password)".dataUsingEncoding(NSUTF8StringEncoding) else {
                 return SignalProducer(error: .EncodingError)
         }
 
