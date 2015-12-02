@@ -15,4 +15,14 @@ struct Room {
     let lights: [Light]?
     let blinds: [Blind]?
     let consumers: [Consumer]?
+
+    //MARK: Initialization
+
+    init(id: UInt, name: String) {
+        self.id = id
+        self.name = name
+        lights = nil
+        blinds = nil
+        consumers = nil
+    }
 }
