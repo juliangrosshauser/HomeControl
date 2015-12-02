@@ -18,7 +18,7 @@ class SetupViewModel {
     let password = MutableProperty("")
 
     let loadButtonEnabled = MutableProperty(false)
-    var downloadAction: Action<Void, String, NetworkError>!
+    var loadAction: Action<Void, [Room], NetworkError>!
 
     private let networkManager: NetworkManager
     private let store: Store
@@ -34,7 +34,7 @@ class SetupViewModel {
             return true
         }
 
-        downloadAction = Action(enabledIf: loadButtonEnabled) { [unowned self] in
+        loadAction = Action(enabledIf: loadButtonEnabled) { [unowned self] in
             let authenticationData = AuthenticationData(serverAddress: self.serverAddress.value, username: self.username.value, password: self.password.value)
             self.networkManager.downloadStructureFile(authenticationData)
         }
