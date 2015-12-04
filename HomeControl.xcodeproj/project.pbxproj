@@ -25,7 +25,6 @@
 		B95A467B1BFBF5540057225E /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95A46661BFBF4D50057225E /* Locksmith.framework */; };
 		B95A467C1BFBF5540057225E /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B95A46661BFBF4D50057225E /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95E46F21BEEB4AE00481E51 /* SetupController.swift */; };
-		B984D10F1BFFDC0F0081158E /* NSUserDefaults+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B984D10E1BFFDC0F0081158E /* NSUserDefaults+UIColor.swift */; };
 		B984D1271BFFF98A0081158E /* ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B984D1261BFFF98A0081158E /* ColorName.swift */; };
 		B985B5A71BF986EC003C715B /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985B5A61BF986EC003C715B /* ThemeManager.swift */; };
 		B99594631C0279D1007EE098 /* UITextField+RAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99594621C0279D1007EE098 /* UITextField+RAC.swift */; };
@@ -362,7 +361,6 @@
 		B95A46481BFBF4CD0057225E /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		B95A465D1BFBF4D50057225E /* Locksmith.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Locksmith.xcodeproj; path = Carthage/Checkouts/Locksmith/Locksmith.xcodeproj; sourceTree = "<group>"; };
 		B95E46F21BEEB4AE00481E51 /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
-		B984D10E1BFFDC0F0081158E /* NSUserDefaults+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+UIColor.swift"; sourceTree = "<group>"; };
 		B984D1261BFFF98A0081158E /* ColorName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorName.swift; sourceTree = "<group>"; };
 		B985B5A61BF986EC003C715B /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		B99594621C0279D1007EE098 /* UITextField+RAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+RAC.swift"; sourceTree = "<group>"; };
@@ -591,7 +589,6 @@
 				B984D1261BFFF98A0081158E /* ColorName.swift */,
 				B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */,
 				B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */,
-				B984D10E1BFFDC0F0081158E /* NSUserDefaults+UIColor.swift */,
 				B99594621C0279D1007EE098 /* UITextField+RAC.swift */,
 			);
 			path = Source;
@@ -1038,7 +1035,6 @@
 				B91ED9741BFAA1EE0070EB8E /* Theme.swift in Sources */,
 				B9C76A351C0927CC00B25DAC /* NetworkError.swift in Sources */,
 				B92F3E681C012F2000B3CD32 /* SetupViewModel.swift in Sources */,
-				B984D10F1BFFDC0F0081158E /* NSUserDefaults+UIColor.swift in Sources */,
 				B9220F8C1C0A9A8C0095A206 /* Blind.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
