@@ -10,7 +10,6 @@ import UIKit
 
 public extension UIImage {
     public enum Asset: String {
-        case Logo = "Logo"
         case Server = "Server"
         case User = "User"
         case Lock = "Lock"
