@@ -40,6 +40,7 @@
 		B9F960A21C13A16B005670B9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F960921C13A14B005670B9 /* Nimble.framework */; };
 		B9F960A71C13A1BD005670B9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F9606B1C13A13F005670B9 /* Quick.framework */; };
 		B9F960A81C13A1C4005670B9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F960921C13A14B005670B9 /* Nimble.framework */; };
+		B9F960AA1C13A23E005670B9 /* NetworkManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F960A91C13A23E005670B9 /* NetworkManagerSpec.swift */; };
 		B9FC15591C0BBFE800FEF734 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FC15581C0BBFE800FEF734 /* Store.swift */; };
 /* End PBXBuildFile section */
 
@@ -516,6 +517,7 @@
 		B9F61EBD1BED652E00D60722 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9F9604E1C13A13F005670B9 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = Carthage/Checkouts/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
 		B9F960881C13A14B005670B9 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = Carthage/Checkouts/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
+		B9F960A91C13A23E005670B9 /* NetworkManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManagerSpec.swift; path = HomeControlTests/Source/NetworkManagerSpec.swift; sourceTree = "<group>"; };
 		B9FC15581C0BBFE800FEF734 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -742,6 +744,7 @@
 		B9F61EB71BED652500D60722 /* HomeControlTests */ = {
 			isa = PBXGroup;
 			children = (
+				B9F960AB1C13A253005670B9 /* Source */,
 				B9F61EB81BED652500D60722 /* Resources */,
 			);
 			path = HomeControlTests;
@@ -798,6 +801,15 @@
 				B9F9609C1C13A14B005670B9 /* NimbleTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B9F960AB1C13A253005670B9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B9F960A91C13A23E005670B9 /* NetworkManagerSpec.swift */,
+			);
+			name = Source;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1334,6 +1346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9F960AA1C13A23E005670B9 /* NetworkManagerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
