@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        ThemeManager.currentTheme = Theme(variant: .Light, primaryColorName: .Red)
         window?.rootViewController = UINavigationController(rootViewController: SetupController())
         window?.makeKeyAndVisible()
         return true
