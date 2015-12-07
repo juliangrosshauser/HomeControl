@@ -26,14 +26,15 @@ class Store {
         }
 
         let structureFile = SWXMLHash.parse(structureFileContent)
-        var rooms = [Room]()
+        var roomDictionary = [UInt: String]()
 
         for room in structureFile["LoxLIVE"]["Rooms"]["Room"] {
             if let idString = room.element?.attributes["n"], id = UInt(idString), name = room.element?.attributes["name"] {
-                rooms.append(Room(id: id, name: name))
+                roomDictionary[id] = name
             }
         }
 
+        let rooms = [Room]()
         return SignalProducer(value: rooms)
     }
 }
