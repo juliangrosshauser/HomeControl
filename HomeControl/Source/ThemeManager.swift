@@ -21,8 +21,15 @@ public class ThemeManager {
     public class var currentTheme: Theme {
         get {
             if let theme = theme { return theme }
-            theme = loadTheme() ?? defaultTheme
-            return theme!
+
+            if let savedTheme = loadTheme() {
+                applyTheme(savedTheme)
+                return savedTheme
+            }
+
+            saveTheme(defaultTheme)
+            applyTheme(defaultTheme)
+            return defaultTheme
         }
 
         set(newTheme) {
