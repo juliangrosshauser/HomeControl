@@ -12,17 +12,14 @@ struct Room {
 
     let id: UInt
     let name: String
-    let lights: [Light]?
-    let blinds: [Blind]?
-    let consumers: [Consumer]?
+    var lights: [Light]?
+    var blinds: [Blind]?
+    var consumers: [Consumer]?
 
     //MARK: Initialization
 
     init(id: UInt, name: String) {
         self.id = id
         self.name = name
-        lights = nil
-        blinds = nil
-        consumers = nil
     }
 }
