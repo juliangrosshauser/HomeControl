@@ -31,6 +31,7 @@
 		B99BA6F01C053A2900C8C62C /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99BA6DB1C0539A000C8C62C /* SWXMLHash.framework */; };
 		B99BA6F41C053A7900C8C62C /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B99BA6DB1C0539A000C8C62C /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9C76A351C0927CC00B25DAC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C76A341C0927CC00B25DAC /* NetworkError.swift */; };
+		B9EE8F011C1CDAEB001CB8F1 /* StoreSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE8F001C1CDAEB001CB8F1 /* StoreSpec.swift */; };
 		B9F10AFE1BF7FFB400AB23D9 /* UIColor+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */; };
 		B9F10B001BF8004200AB23D9 /* UIImage+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */; };
 		B9F61EB31BED651900D60722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F61EAD1BED651900D60722 /* Assets.xcassets */; };
@@ -504,6 +505,7 @@
 		B99594621C0279D1007EE098 /* UITextField+RAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+RAC.swift"; sourceTree = "<group>"; };
 		B99BA6BF1C0539A000C8C62C /* SWXMLHash.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SWXMLHash.xcodeproj; path = Carthage/Checkouts/SWXMLHash/SWXMLHash.xcodeproj; sourceTree = "<group>"; };
 		B9C76A341C0927CC00B25DAC /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B9EE8F001C1CDAEB001CB8F1 /* StoreSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreSpec.swift; path = HomeControlTests/Source/StoreSpec.swift; sourceTree = "<group>"; };
 		B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Name.swift"; sourceTree = "<group>"; };
 		B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Asset.swift"; sourceTree = "<group>"; };
 		B9F61E7A1BED644D00D60722 /* HomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -806,6 +808,7 @@
 		B9F960AB1C13A253005670B9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B9EE8F001C1CDAEB001CB8F1 /* StoreSpec.swift */,
 				B9F960A91C13A23E005670B9 /* NetworkManagerSpec.swift */,
 			);
 			name = Source;
@@ -1346,6 +1349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9EE8F011C1CDAEB001CB8F1 /* StoreSpec.swift in Sources */,
 				B9F960AA1C13A23E005670B9 /* NetworkManagerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
