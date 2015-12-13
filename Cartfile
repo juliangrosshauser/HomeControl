@@ -1,6 +1,6 @@
 github "ReactiveCocoa/ReactiveCocoa" "master"
 github "Alamofire/Alamofire" ~> 3.1
 github "drmohundro/SWXMLHash" ~> 2.0
-github "matthewpalmer/Locksmith" ~> 2.0
+github "matthewpalmer/Locksmith" "master"
 github "Quick/Quick" ~> 0.8
 github "Quick/Nimble" ~> 3.0
