@@ -48,6 +48,36 @@ class StoreSpec: QuickSpec {
                         expect(completed).to(beTrue())
                     }
                 }
+
+                context("invalid structure file") {
+                    let invalidStructureFilePath = structureFileFolder.URLByAppendingPathComponent("InvalidStructureFile.xml").path!
+
+                    it("returns error") {
+                        let signalProducer = store.parseStructureFile(invalidStructureFilePath)
+
+                        var values = [[Room]]()
+                        var error: StoreError?
+                        var completed = false
+
+                        signalProducer.start { event in
+                            switch event {
+                            case let .Next(value):
+                                values.append(value)
+                            case let .Failed(storeError):
+                                error = storeError
+                            case .Completed:
+                                completed = true
+                            default:
+                                break
+                            }
+                        }
+
+                        expect(values.count).to(equal(0))
+                        // TODO: Check actual error type
+                        expect(error).toNot(beNil())
+                        expect(completed).to(beFalse())
+                    }
+                }
             }
         }
     }
