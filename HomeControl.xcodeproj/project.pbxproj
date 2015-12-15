@@ -27,7 +27,6 @@
 		B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95E46F21BEEB4AE00481E51 /* SetupController.swift */; };
 		B984D1271BFFF98A0081158E /* ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B984D1261BFFF98A0081158E /* ColorName.swift */; };
 		B985B5A71BF986EC003C715B /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985B5A61BF986EC003C715B /* ThemeManager.swift */; };
-		B99594631C0279D1007EE098 /* UITextField+RAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99594621C0279D1007EE098 /* UITextField+RAC.swift */; };
 		B99BA6F01C053A2900C8C62C /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99BA6DB1C0539A000C8C62C /* SWXMLHash.framework */; };
 		B99BA6F41C053A7900C8C62C /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B99BA6DB1C0539A000C8C62C /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9C76A351C0927CC00B25DAC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C76A341C0927CC00B25DAC /* NetworkError.swift */; };
@@ -503,7 +502,6 @@
 		B95E46F21BEEB4AE00481E51 /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
 		B984D1261BFFF98A0081158E /* ColorName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorName.swift; sourceTree = "<group>"; };
 		B985B5A61BF986EC003C715B /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
-		B99594621C0279D1007EE098 /* UITextField+RAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+RAC.swift"; sourceTree = "<group>"; };
 		B99BA6BF1C0539A000C8C62C /* SWXMLHash.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SWXMLHash.xcodeproj; path = Carthage/Checkouts/SWXMLHash/SWXMLHash.xcodeproj; sourceTree = "<group>"; };
 		B9C76A341C0927CC00B25DAC /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		B9EE8F001C1CDAEB001CB8F1 /* StoreSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreSpec.swift; path = HomeControlTests/Source/StoreSpec.swift; sourceTree = "<group>"; };
@@ -740,7 +738,6 @@
 				B984D1261BFFF98A0081158E /* ColorName.swift */,
 				B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */,
 				B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */,
-				B99594621C0279D1007EE098 /* UITextField+RAC.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -1337,7 +1334,6 @@
 				B985B5A71BF986EC003C715B /* ThemeManager.swift in Sources */,
 				B984D1271BFFF98A0081158E /* ColorName.swift in Sources */,
 				B9220F8A1C0A98BF0095A206 /* Light.swift in Sources */,
-				B99594631C0279D1007EE098 /* UITextField+RAC.swift in Sources */,
 				B91ED9721BFA9C5B0070EB8E /* Box.swift in Sources */,
 				B9220F8E1C0A9B300095A206 /* Consumer.swift in Sources */,
 				B9F10B001BF8004200AB23D9 /* UIImage+Asset.swift in Sources */,
