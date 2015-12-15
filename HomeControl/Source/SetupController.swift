@@ -154,6 +154,5 @@ class SetupController: UIViewController {
         UIView.animateWithDuration(0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .CurveEaseInOut, animations: {
             button.layer.transform = CATransform3DIdentity
         }, completion: nil)
-        viewModel.loadAction.apply().start()
     }
 }

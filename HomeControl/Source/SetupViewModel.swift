@@ -18,7 +18,6 @@ class SetupViewModel {
     let password = MutableProperty("")
 
     let loadButtonEnabled = MutableProperty(false)
-    var loadAction: Action<Void, [Room], StoreError>!
 
     private let networkManager: NetworkManager
     private let store: Store
@@ -32,26 +31,6 @@ class SetupViewModel {
         loadButtonEnabled <~ combineLatest(serverAddress.producer, username.producer, password.producer).map { (serverAddressText, usernameText, passwordText) in
             if serverAddressText.isEmpty || usernameText.isEmpty || passwordText.isEmpty { return false }
             return true
-        }
-
-        loadAction = Action(enabledIf: loadButtonEnabled) { [unowned self] in
-            let authenticationData = AuthenticationData(serverAddress: self.serverAddress.value, username: self.username.value, password: self.password.value)
-            self.networkManager.downloadStructureFile(authenticationData)
-            
-            let structureFilePathProducer = self.networkManager.downloadStructureFile(authenticationData).mapError { networkError -> StoreError in
-                switch networkError {
-                case .EncodingError:
-                    return .NetworkError(nil)
-                case .DownloadError(let error):
-                    return .NetworkError(error)
-                case .FileError(let error):
-                    return .NetworkError(error)
-                }
-            }
-
-            return structureFilePathProducer.flatMap(.Latest) { structureFilePath in
-                self.store.parseStructureFile(structureFilePath)
-            }
         }
     }
 }
