@@ -7,11 +7,18 @@
 //
 
 import UIKit
-import ReactiveCocoa
 
-private final class TextField: UITextField {
-    private convenience init(placeholder: String, asset: UIImage.Asset) {
-        self.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+final class SetupTextField: UITextField {
+
+    //MARK: Properties
+
+    let asset: UIImage.Asset
+
+    //MARK: Initialization
+
+    private init(placeholder: String, asset: UIImage.Asset) {
+        self.asset = asset
+        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         widthAnchor.constraintEqualToConstant(300).active = true
         heightAnchor.constraintEqualToConstant(50).active = true
         borderStyle = .RoundedRect
@@ -27,7 +34,11 @@ private final class TextField: UITextField {
         leftViewMode = .Always
     }
 
-    private override func leftViewRectForBounds(bounds: CGRect) -> CGRect {
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func leftViewRectForBounds(bounds: CGRect) -> CGRect {
         var rect = super.leftViewRectForBounds(bounds)
         rect.origin.x += 10
         return rect
@@ -58,10 +69,11 @@ class SetupController: UIViewController {
     //MARK: Properties
 
     private let viewModel: SetupViewModel
+    private let notificationCenter = NSNotificationCenter.defaultCenter()
 
-    private let serverAddressTextField = TextField(placeholder: "192.168.0.100", asset: .Server)
-    private let usernameTextField = TextField(placeholder: "Username", asset: .User)
-    private let passwordTextField = TextField(placeholder: "Password", asset: .Lock)
+    private let serverAddressTextField = SetupTextField(placeholder: "192.168.0.100", asset: .Server)
+    private let usernameTextField = SetupTextField(placeholder: "Username", asset: .User)
+    private let passwordTextField = SetupTextField(placeholder: "Password", asset: .Lock)
 
     private let loadButton: UIButton = {
         let loadButton = UIButton(type: .System)
@@ -83,6 +95,14 @@ class SetupController: UIViewController {
     init(viewModel: SetupViewModel = SetupViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+
+        notificationCenter.addObserverForName(SetupViewModel.LoadButtonStatusChanged, object: viewModel, queue: NSOperationQueue.mainQueue()) { [unowned self] notification in
+            guard let userInfo = notification.userInfo, loadButtonEnabled = userInfo[SetupViewModel.LoadButtonEnabledKey] as? Bool else {
+                return
+            }
+
+            self.loadButton.enabled = loadButtonEnabled
+        }
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -111,14 +131,13 @@ class SetupController: UIViewController {
         NSLayoutConstraint(item: wrapperStackView, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0).active = true
         NSLayoutConstraint(item: wrapperStackView, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0).active = true
 
+        loadButton.enabled = viewModel.loadButtonEnabled
         loadButton.addTarget(self, action: "loadButtonTouchDown:", forControlEvents: .TouchDown)
         loadButton.addTarget(self, action: "loadButtonTouchUpInside:", forControlEvents: .TouchUpInside)
 
-        viewModel.serverAddress <~ serverAddressTextField.textSignalProducer()
-        viewModel.username <~ usernameTextField.textSignalProducer()
-        viewModel.password <~ passwordTextField.textSignalProducer()
-
-        viewModel.loadButtonEnabled.producer.startWithNext { [unowned self] in self.loadButton.enabled = $0 }
+        for textField in [serverAddressTextField, usernameTextField, passwordTextField] {
+            textField.addTarget(viewModel, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
+        }
 
         self.view = view
     }

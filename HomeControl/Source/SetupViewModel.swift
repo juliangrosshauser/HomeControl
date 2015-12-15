@@ -6,31 +6,66 @@
 //  Copyright © 2015 Julian Grosshauser. All rights reserved.
 //
 
-import ReactiveCocoa
 import Alamofire
 
 class SetupViewModel {
 
+    //MARK: Class Properties
+
+    static let LoadButtonStatusChanged = "HomeControlLoadButtonStatusChanged"
+    static let LoadButtonEnabledKey = "HomeControlLoadButtonEnabledKey"
+
     //MARK: Properties
 
-    let serverAddress = MutableProperty("")
-    let username = MutableProperty("")
-    let password = MutableProperty("")
+    private(set) var serverAddress = ""
+    private(set) var username = ""
+    private(set) var password = ""
 
-    let loadButtonEnabled = MutableProperty(false)
+    private(set) var loadButtonEnabled = false {
+        didSet {
+            guard loadButtonEnabled != oldValue else {
+                return
+            }
+
+            notificationCenter.postNotificationName(SetupViewModel.LoadButtonStatusChanged, object: self, userInfo: [SetupViewModel.LoadButtonEnabledKey: loadButtonEnabled])
+        }
+    }
 
     private let networkManager: NetworkManager
     private let store: Store
+    private let notificationCenter = NSNotificationCenter.defaultCenter()
 
     //MARK: Initialization
 
     init(networkManager: NetworkManager = NetworkManager(), store: Store = Store()) {
         self.networkManager = networkManager
         self.store = store
-        
-        loadButtonEnabled <~ combineLatest(serverAddress.producer, username.producer, password.producer).map { (serverAddressText, usernameText, passwordText) in
-            if serverAddressText.isEmpty || usernameText.isEmpty || passwordText.isEmpty { return false }
-            return true
+    }
+
+    //MARK: Text Field Actions
+
+    @objc
+    private func textFieldDidChange(textField: SetupTextField) {
+        guard let text = textField.text else {
+            return
+        }
+
+        switch textField.asset {
+        case .Server:
+            serverAddress = text
+        case .User:
+            username = text
+        case .Lock:
+            password = text
+        default:
+            return
+        }
+
+        // Load button is enabled iff all text fields contain text
+        loadButtonEnabled = [serverAddress, username, password].map({
+            !$0.isEmpty
+        }).reduce(true) { (allTextFieldContainText, textFieldContainsText) in
+            allTextFieldContainText && textFieldContainsText
         }
     }
 }
