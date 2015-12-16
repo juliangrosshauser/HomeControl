@@ -6,23 +6,22 @@
 //  Copyright © 2015 Julian Grosshauser. All rights reserved.
 //
 
-import ReactiveCocoa
 import SWXMLHash
 
 enum StoreError: ErrorType {
-    case NetworkError(ErrorType?)
     case ReadError(ErrorType)
 }
 
 class Store {
 
-    func parseStructureFile(path: String) -> SignalProducer<[Room], StoreError> {
+    func parseStructureFile(path: String, completionHandler: (() throws -> [Room]) -> ()) {
         let structureFileContent: String
 
         do {
             structureFileContent = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
         } catch {
-            return SignalProducer(error: .ReadError(error))
+            completionHandler { throw StoreError.ReadError(error) }
+            return
         }
 
         let structureFile = SWXMLHash.parse(structureFileContent)
@@ -34,6 +33,6 @@ class Store {
             }
         }
 
-        return SignalProducer(value: rooms)
+        completionHandler { rooms }
     }
 }
