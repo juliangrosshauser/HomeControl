@@ -1,0 +1,9 @@
+[submodule "Alamofire"]
+	path = Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
+[submodule "SWXMLHash"]
+	path = SWXMLHash
+	url = https://github.com/drmohundro/SWXMLHash.git
+[submodule "Locksmith"]
+	path = Locksmith
+	url = https://github.com/matthewpalmer/Locksmith.git
