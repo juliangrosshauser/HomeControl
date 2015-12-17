@@ -37,6 +37,7 @@ class StoreTests: XCTestCase {
         store.parseStructureFile(invalidStructureFilePath) { result in
             do {
                 try result()
+                XCTFail("Parsing invalid structure file didn't threw error")
             } catch {
                 expectation.fulfill()
             }
