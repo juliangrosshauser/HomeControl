@@ -11,12 +11,8 @@ import XCTest
 
 class StoreTests: XCTestCase {
 
-    var store: Store!
+    let store = Store()
     let structureFileFolder = NSBundle(forClass: StoreTests.self).resourceURL!.URLByAppendingPathComponent("StructureFiles")
-
-    override func setUp() {
-        store = Store()
-    }
 
     func testParsingValidStructureFileDoesntThrow() {
         let validStructureFilePath = structureFileFolder.URLByAppendingPathComponent("ValidStructureFile.xml").path!
