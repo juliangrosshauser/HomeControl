@@ -13,6 +13,7 @@ class StoreTests: XCTestCase {
 
     let store = Store()
     let structureFileFolder = NSBundle(forClass: StoreTests.self).resourceURL!.URLByAppendingPathComponent("StructureFiles")
+    let expectationTimeout: Double = 1
 
     func testParsingValidStructureFileDoesntThrow() {
         let validStructureFilePath = structureFileFolder.URLByAppendingPathComponent("ValidStructureFile.xml").path!
@@ -27,7 +28,7 @@ class StoreTests: XCTestCase {
             }
         }
 
-        waitForExpectationsWithTimeout(1, handler: nil)
+        waitForExpectationsWithTimeout(expectationTimeout, handler: nil)
     }
 
     func testParsingInvalidStructureFileThrows() {
@@ -43,6 +44,6 @@ class StoreTests: XCTestCase {
             }
         }
 
-        waitForExpectationsWithTimeout(1, handler: nil)
+        waitForExpectationsWithTimeout(expectationTimeout, handler: nil)
     }
 }
