@@ -14,6 +14,33 @@ enum StoreError: ErrorType {
 
 class Store {
 
+    /// Parses a structure file.
+    ///
+    /// - Parameters:
+    ///     - path: Structure file path.
+    ///     - completionHandler: This closure will be called after parsing is completed.
+    ///
+    /// - Throws: Parameter of `completionHandler` throws `StoreError`.
+    ///
+    /// - Returns: `Void`
+    ///
+    /// - Note: The parameter of the `completionHandler` closure is itself a closure that either returns `[Room]` or throws.
+    /// 
+    /// This example shows how to use `completionHandler`:
+    ///
+    ///         let store = Store()
+    ///         store.parseStructureFile(structureFilePath) { result in
+    ///             let rooms: [Room]
+    ///
+    ///             do {
+    ///                 rooms = try result()
+    ///             } catch {
+    ///                 // Handle `StoreError`
+    ///             }
+    ///
+    ///             // Do something with `rooms`
+    ///         }
+    ///
     func parseStructureFile(path: String, completionHandler: (() throws -> [Room]) -> ()) {
         let structureFileContent: String
 
