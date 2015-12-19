@@ -9,7 +9,7 @@
 import Foundation
 
 enum NetworkError: ErrorType {
-    case EncodingError
-    case DownloadError(NSError)
-    case FileError(ErrorType?)
+    case AuthenticationDataError
+    case DownloadError
+    case FileManagmentError
 }

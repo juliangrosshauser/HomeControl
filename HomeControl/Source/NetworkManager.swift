@@ -28,7 +28,7 @@ class NetworkManager {
     /// Downloads structure file from server.
     ///
     /// - Parameters:
-    ///     - authenticationData: Contains all necessary authentication data.
+    ///     - authenticationData: Contains all necessary data to authenticate a user at the server.
     ///     - completionHandler: This closure will be called after downloading is completed.
     ///
     /// - Throws: Parameter of `completionHandler` throws `NetworkError`.
@@ -44,7 +44,7 @@ class NetworkManager {
     func downloadStructureFile(authenticationData: AuthenticationData, completionHandler: (() throws -> String) -> ()) {
         guard let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first,
                   structureFilePath = NSURL.fileURLWithPath(documentDirectory).URLByAppendingPathComponent(NSString(string: Endpoint.StructureFile.rawValue).lastPathComponent).path else {
-                    completionHandler { throw NetworkError.FileError(nil) }
+                    completionHandler { throw NetworkError.FileManagmentError }
                     return
         }
 
@@ -54,14 +54,14 @@ class NetworkManager {
             do {
                 try fileManager.removeItemAtPath(structureFilePath)
             } catch {
-                completionHandler { throw NetworkError.FileError(error) }
+                completionHandler { throw NetworkError.FileManagmentError }
                 return
             }
         }
 
         guard let encodedServerAddress = authenticationData.serverAddress.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()),
             credentialData = "\(authenticationData.username):\(authenticationData.password)".dataUsingEncoding(NSUTF8StringEncoding) else {
-                completionHandler { throw NetworkError.EncodingError }
+                completionHandler { throw NetworkError.AuthenticationDataError }
                 return
         }
 
@@ -71,8 +71,8 @@ class NetworkManager {
         let headers = ["Authorization": "Basic \(base64Credentials)"]
 
         download(.GET, url, headers: headers, destination: destination).response { _, _, _, error in
-            if let error = error {
-                completionHandler { throw NetworkError.DownloadError(error) }
+            guard error == nil else {
+                completionHandler { throw NetworkError.DownloadError }
                 return
             }
 

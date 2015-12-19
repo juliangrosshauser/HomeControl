@@ -9,7 +9,7 @@
 import SWXMLHash
 
 enum StoreError: ErrorType {
-    case ReadError(ErrorType)
+    case ReadError
 }
 
 class Store {
@@ -47,7 +47,7 @@ class Store {
         do {
             structureFileContent = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
         } catch {
-            completionHandler { throw StoreError.ReadError(error) }
+            completionHandler { throw StoreError.ReadError }
             return
         }
 
