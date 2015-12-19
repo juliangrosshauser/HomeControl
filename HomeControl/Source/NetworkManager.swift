@@ -25,6 +25,22 @@ class NetworkManager {
 
     //MARK: Download Structure File
 
+    /// Downloads structure file from server.
+    ///
+    /// - Parameters:
+    ///     - authenticationData: Contains all necessary authentication data.
+    ///     - completionHandler: This closure will be called after downloading is completed.
+    ///
+    /// - Throws: Parameter of `completionHandler` throws `NetworkError`.
+    ///
+    /// - Returns: `Void`
+    ///
+    /// - Note: The parameter of the `completionHandler` closure is itself a closure that either
+    /// returns the path to the downloaded structure file or throws.
+    ///
+    /// - SeeAlso: Take a look at the documentation of `Store.parseStructureFile(_:completionHandler:)`
+    /// for a usage example of the `completionHandler` parameter.
+    ///
     func downloadStructureFile(authenticationData: AuthenticationData, completionHandler: (() throws -> String) -> ()) {
         guard let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first,
                   structureFilePath = NSURL.fileURLWithPath(documentDirectory).URLByAppendingPathComponent(NSString(string: Endpoint.StructureFile.rawValue).lastPathComponent).path else {
