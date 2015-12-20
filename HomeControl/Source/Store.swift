@@ -8,6 +8,7 @@
 
 import SWXMLHash
 
+/// Responsible for reading and persisting information.
 class Store {
 
     /// Parses a structure file.
@@ -27,7 +28,6 @@ class Store {
     ///         let store = Store()
     ///         store.parseStructureFile(structureFilePath) { result in
     ///             let rooms: [Room]
-    ///
     ///             do {
     ///                 rooms = try result()
     ///             } catch {
@@ -38,8 +38,8 @@ class Store {
     ///         }
     ///
     func parseStructureFile(path: String, completionHandler: (() throws -> [Room]) -> ()) {
+        // Read structure file content.
         let structureFileContent: String
-
         do {
             structureFileContent = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
         } catch {
@@ -47,15 +47,18 @@ class Store {
             return
         }
 
+        // Parse structure file XML and convert it into a dictionary.
         let structureFile = SWXMLHash.parse(structureFileContent)
-        var rooms = [Room]()
 
+        // Create rooms based on structure file information.
+        var rooms = [Room]()
         for room in structureFile["LoxLIVE"]["Rooms"]["Room"] {
             if let idString = room.element?.attributes["n"], id = UInt(idString), name = room.element?.attributes["name"] {
                 rooms.append(Room(id: id, name: name))
             }
         }
 
+        // Return rooms in completion handler.
         completionHandler { rooms }
     }
 }
