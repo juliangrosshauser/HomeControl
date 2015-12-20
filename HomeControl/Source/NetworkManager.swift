@@ -9,15 +9,23 @@
 import Foundation
 import Alamofire
 
+/// Handles all network tasks.
 class NetworkManager {
 
     //MARK: Endpoint
 
+    /// Server endpoints.
+    ///
+    /// - StructureFile: Points to structure file.
+    ///
     private enum Endpoint: String, CustomStringConvertible {
+
+        /// Points to structure file.
         case StructureFile = "data/LoxAPP2.xml"
 
         //MARK: CustomStringConvertible
 
+        /// Returns endpoint paths.
         var description: String {
             return rawValue
         }
@@ -42,14 +50,15 @@ class NetworkManager {
     /// for a usage example of the `completionHandler` parameter.
     ///
     func downloadStructureFile(authenticationData: AuthenticationData, completionHandler: (() throws -> String) -> ()) {
+        // Create structure file path in document directory.
         guard let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first,
                   structureFilePath = NSURL.fileURLWithPath(documentDirectory).URLByAppendingPathComponent(NSString(string: Endpoint.StructureFile.rawValue).lastPathComponent).path else {
                     completionHandler { throw NetworkError.FileManagmentError }
                     return
         }
 
+        // Remove existing structure file.
         let fileManager = NSFileManager.defaultManager()
-
         if fileManager.fileExistsAtPath(structureFilePath) {
             do {
                 try fileManager.removeItemAtPath(structureFilePath)
@@ -59,12 +68,14 @@ class NetworkManager {
             }
         }
 
+        // Encode authentication data.
         guard let encodedServerAddress = authenticationData.serverAddress.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()),
             credentialData = "\(authenticationData.username):\(authenticationData.password)".dataUsingEncoding(NSUTF8StringEncoding) else {
                 completionHandler { throw NetworkError.AuthenticationDataError }
                 return
         }
 
+        // Set up authorization header and download structure file into document directory.
         let destination = Request.suggestedDownloadDestination(directory: .DocumentDirectory, domain: .UserDomainMask)
         let url = "http://\(encodedServerAddress)/\(Endpoint.StructureFile)"
         let base64Credentials = credentialData.base64EncodedStringWithOptions([])
