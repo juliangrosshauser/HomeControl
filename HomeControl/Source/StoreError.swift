@@ -8,6 +8,12 @@
 
 import Foundation
 
+/// Contains the different errors `Store` can throw.
+///
+/// - ReadError: File can't be read.
+///
 enum StoreError: ErrorType {
+
+    /// File can't be read.
     case ReadError
 }
