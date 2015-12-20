@@ -62,10 +62,6 @@ class SetupViewModel {
         }
 
         // Load button is enabled iff all text fields contain text
-        loadButtonEnabled = [serverAddress, username, password].map({
-            !$0.isEmpty
-        }).reduce(true) { (allTextFieldContainText, textFieldContainsText) in
-            allTextFieldContainText && textFieldContainsText
-        }
+        loadButtonEnabled = ![serverAddress, username, password].containsEmptyElement
     }
 }
