@@ -8,10 +8,6 @@
 
 import SWXMLHash
 
-enum StoreError: ErrorType {
-    case ReadError
-}
-
 class Store {
 
     /// Parses a structure file.

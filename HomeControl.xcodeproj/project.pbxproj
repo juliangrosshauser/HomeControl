@@ -19,6 +19,7 @@
 		B95BD9B01C20F01000AB74D1 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95BD9AF1C20F01000AB74D1 /* StoreTests.swift */; };
 		B95BD9B21C20F37200AB74D1 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95BD9B11C20F37200AB74D1 /* NetworkManagerTests.swift */; };
 		B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95E46F21BEEB4AE00481E51 /* SetupController.swift */; };
+		B96E75FA1C27121800279A45 /* StoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E75F91C27121800279A45 /* StoreError.swift */; };
 		B984D1271BFFF98A0081158E /* ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B984D1261BFFF98A0081158E /* ColorName.swift */; };
 		B985B5A71BF986EC003C715B /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985B5A61BF986EC003C715B /* ThemeManager.swift */; };
 		B9C76A351C0927CC00B25DAC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C76A341C0927CC00B25DAC /* NetworkError.swift */; };
@@ -244,6 +245,7 @@
 		B95BD9AF1C20F01000AB74D1 /* StoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreTests.swift; path = HomeControlTests/Source/StoreTests.swift; sourceTree = "<group>"; };
 		B95BD9B11C20F37200AB74D1 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManagerTests.swift; path = HomeControlTests/Source/NetworkManagerTests.swift; sourceTree = "<group>"; };
 		B95E46F21BEEB4AE00481E51 /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
+		B96E75F91C27121800279A45 /* StoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreError.swift; sourceTree = "<group>"; };
 		B984D1261BFFF98A0081158E /* ColorName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorName.swift; sourceTree = "<group>"; };
 		B985B5A61BF986EC003C715B /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		B9C76A341C0927CC00B25DAC /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 				B95E46F21BEEB4AE00481E51 /* SetupController.swift */,
 				B92F3E671C012F2000B3CD32 /* SetupViewModel.swift */,
 				B9FC15581C0BBFE800FEF734 /* Store.swift */,
+				B96E75F91C27121800279A45 /* StoreError.swift */,
 				B9C76A341C0927CC00B25DAC /* NetworkError.swift */,
 				B94E25741C067C7600B52062 /* NetworkManager.swift */,
 				B93C2C221C0D2657003340EE /* AuthenticationData.swift */,
@@ -742,6 +745,7 @@
 				B9220F881C0A98050095A206 /* Room.swift in Sources */,
 				B9FC15591C0BBFE800FEF734 /* Store.swift in Sources */,
 				B94E25751C067C7600B52062 /* NetworkManager.swift in Sources */,
+				B96E75FA1C27121800279A45 /* StoreError.swift in Sources */,
 				B985B5A71BF986EC003C715B /* ThemeManager.swift in Sources */,
 				B984D1271BFFF98A0081158E /* ColorName.swift in Sources */,
 				B9220F8A1C0A98BF0095A206 /* Light.swift in Sources */,
