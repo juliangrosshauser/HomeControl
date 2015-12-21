@@ -50,6 +50,20 @@ class Store {
         // Parse structure file XML and convert it into a dictionary.
         let structureFile = SWXMLHash.parse(structureFileContent)
 
+        // Save category information in dictionary.
+        var categories = [UInt: String]()
+        for category in structureFile["LoxLIVE"]["Cats"]["Cat"] {
+            if let idString = category.element?.attributes["n"], id = UInt(idString), name = category.element?.attributes["name"] {
+                categories[id] = name
+            }
+        }
+
+        // There should be at least 3 categories: lights, blinds and consumers.
+        guard categories.count >= 3 else {
+            completionHandler { throw StoreError.CategoryError }
+            return
+        }
+
         // Create rooms based on structure file information.
         var rooms = [Room]()
         for room in structureFile["LoxLIVE"]["Rooms"]["Room"] {

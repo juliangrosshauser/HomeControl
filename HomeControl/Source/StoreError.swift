@@ -11,9 +11,13 @@ import Foundation
 /// Contains the different errors `Store` can throw.
 ///
 /// - ReadError: File can't be read.
+/// - CategoryError: Category information found in structure file is insufficient or damaged.
 ///
 enum StoreError: ErrorType {
 
     /// File can't be read.
     case ReadError
+
+    /// Category information found in structure file is insufficient or damaged.
+    case CategoryError
 }
