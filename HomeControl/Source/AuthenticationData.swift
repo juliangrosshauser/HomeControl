@@ -20,4 +20,18 @@ struct AuthenticationData {
 
     /// Password of user.
     let password: String
+
+    //MARK: Initialization
+
+    /// Construct `AuthenticationData` containing server address, username and password.
+    /// The result is `nil` iff any parameter contains no characters.
+    init?(serverAddress: String, username: String, password: String) {
+        if [serverAddress, username, password].containsEmptyElement {
+            return nil
+        }
+        
+        self.serverAddress = serverAddress
+        self.username = username
+        self.password = password
+    }
 }
