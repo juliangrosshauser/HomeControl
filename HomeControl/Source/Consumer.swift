@@ -7,7 +7,7 @@
 //
 
 /// Consumer accessory.
-struct Consumer {
+struct Consumer: Accessory {
 
     //MARK: Properties
 

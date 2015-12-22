@@ -7,7 +7,7 @@
 //
 
 /// Light accessory.
-struct Light {
+struct Light: Accessory {
 
     //MARK: Properties
 

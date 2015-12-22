@@ -7,7 +7,7 @@
 //
 
 /// Blind accessory.
-struct Blind {
+struct Blind: Accessory {
 
     //MARK: Properties
 
