@@ -6,10 +6,14 @@
 //  Copyright © 2015 Julian Grosshauser. All rights reserved.
 //
 
+/// Consumer accessory.
 struct Consumer {
 
     //MARK: Properties
 
+    /// Consumer name.
     let name: String
+    
+    /// Action ID of consumer. Can be used to turn on/off consumer.
     let actionID: String
 }

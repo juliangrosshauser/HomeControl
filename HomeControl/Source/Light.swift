@@ -6,10 +6,14 @@
 //  Copyright © 2015 Julian Grosshauser. All rights reserved.
 //
 
+/// Light accessory.
 struct Light {
 
     //MARK: Properties
 
+    /// Light name.
     let name: String
+    
+    /// Action ID of light. Can be used to turn on/off light.
     let actionID: String
 }
