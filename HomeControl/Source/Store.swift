@@ -95,7 +95,9 @@ class Store {
         var rooms = [Room]()
         for room in structureFile["LoxLIVE"]["Rooms"]["Room"] {
             if let idString = room.element?.attributes["n"], id = UInt(idString), name = room.element?.attributes["name"] {
-                rooms.append(Room(id: id, name: name))
+                var room = Room(id: id, name: name)
+                room.lights = lights[id]
+                rooms.append(room)
             }
         }
 
