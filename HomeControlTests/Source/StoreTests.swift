@@ -46,4 +46,22 @@ class StoreTests: XCTestCase {
 
         waitForExpectationsWithTimeout(expectationTimeout, handler: nil)
     }
+
+    func testParsingReturnsRooms() {
+        let structureFilePath = structureFileFolder.URLByAppendingPathComponent("ValidStructureFile.xml").path!
+        let expectation = expectationWithDescription("Parsing structure file returns rooms")
+
+        store.parseStructureFile(structureFilePath) { result in
+            do {
+                let rooms = try result()
+                if rooms.count == 5 {
+                    expectation.fulfill()
+                }
+            } catch {
+                XCTFail("Parsing structure file threw error")
+            }
+        }
+
+        waitForExpectationsWithTimeout(expectationTimeout, handler: nil)
+    }
 }
