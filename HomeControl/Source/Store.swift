@@ -79,6 +79,18 @@ class Store {
             return false
         }
 
+        // Create lights with information of XML element attributes and save them in a dictionary using room IDs as keys.
+        var lights = [UInt: [Light]]()
+        for light in lightXMLIndices {
+            if let roomIDString = light.element?.attributes["room"], roomID = UInt(roomIDString), name = light.element?.attributes["name"], actionID = light.element?.attributes["UUIDaction"] {
+                if lights[roomID] == nil {
+                    lights[roomID] = [Light]()
+                }
+                
+                lights[roomID]?.append(Light(name: name, actionID: actionID))
+            }
+        }
+
         // Create rooms based on structure file information.
         var rooms = [Room]()
         for room in structureFile["LoxLIVE"]["Rooms"]["Room"] {
