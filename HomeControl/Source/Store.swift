@@ -72,6 +72,9 @@ class Store {
             }
         }
 
+        // Get light category.
+        let lightCategory = categories["Beleuchtung"]
+
         // Return rooms in completion handler.
         completionHandler { rooms }
     }
