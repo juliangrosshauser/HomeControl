@@ -64,6 +64,9 @@ class Store {
             return
         }
 
+        // Get light category.
+        let lightCategory = categories["Beleuchtung"]
+
         // Create rooms based on structure file information.
         var rooms = [Room]()
         for room in structureFile["LoxLIVE"]["Rooms"]["Room"] {
@@ -71,9 +74,6 @@ class Store {
                 rooms.append(Room(id: id, name: name))
             }
         }
-
-        // Get light category.
-        let lightCategory = categories["Beleuchtung"]
 
         // Return rooms in completion handler.
         completionHandler { rooms }
