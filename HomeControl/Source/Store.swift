@@ -70,6 +70,15 @@ class Store {
             return
         }
 
+        // Find all light XML elements by checking the category attribute.
+        let lightXMLIndices = structureFile["LoxLIVE"]["Functions"]["Function"].filter {
+            if let categoryString = $0.element?.attributes["cat"] {
+                return UInt(categoryString) == lightCategory
+            }
+
+            return false
+        }
+
         // Create rooms based on structure file information.
         var rooms = [Room]()
         for room in structureFile["LoxLIVE"]["Rooms"]["Room"] {
