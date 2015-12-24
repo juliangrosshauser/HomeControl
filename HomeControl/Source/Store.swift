@@ -51,10 +51,10 @@ class Store {
         let structureFile = SWXMLHash.parse(structureFileContent)
 
         // Save category information in dictionary.
-        var categories = [UInt: String]()
+        var categories = [String: UInt]()
         for category in structureFile["LoxLIVE"]["Cats"]["Cat"] {
             if let idString = category.element?.attributes["n"], id = UInt(idString), name = category.element?.attributes["name"] {
-                categories[id] = name
+                categories[name] = id
             }
         }
 
