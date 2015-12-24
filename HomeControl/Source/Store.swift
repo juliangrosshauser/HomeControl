@@ -65,7 +65,10 @@ class Store {
         }
 
         // Get light category.
-        let lightCategory = categories["Beleuchtung"]
+        guard let lightCategory = categories["Beleuchtung"] else {
+            completionHandler { throw StoreError.CategoryError }
+            return
+        }
 
         // Create rooms based on structure file information.
         var rooms = [Room]()
