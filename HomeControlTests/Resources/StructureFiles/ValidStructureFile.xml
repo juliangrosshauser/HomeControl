@@ -36,7 +36,7 @@
 			<StatePos UUID="83f11180-a4a8-11e1-8bd4a8db7e3248a3"/>
 			<StateShade UUID="83f11181-a4a8-11e1-8bd4a8db7e3248a3"/>
 		</Function>
-		<Function  name="Blinds 2" room="9" cat="2" UUIDaction="0848e76a-a4df-11e1-94a1a8db7e3248a3" Type="Jalousie" Animation="Blind">
+		<Function  name="Blinds 2" room="5" cat="2" UUIDaction="0848e76a-a4df-11e1-94a1a8db7e3248a3" Type="Jalousie" Animation="Blind">
 			<StateUp UUID="0848e76a-a4df-11e1-94a9a8db7e3248a3"/>
 			<StateDown UUID="0848e76b-a4df-11e1-94a9a8db7e3248a3"/>
 			<StatePos UUID="0848e76a-a4df-11e1-94aaa8db7e3248a3"/>
