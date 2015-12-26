@@ -65,16 +65,7 @@ class Store {
         }
 
         let lights = parseLights(structureFile, category: lightCategory)
-
-        // Create rooms based on structure file information.
-        var rooms = [Room]()
-        for room in structureFile["LoxLIVE"]["Rooms"]["Room"] {
-            if let idString = room.element?.attributes["n"], id = UInt(idString), name = room.element?.attributes["name"] {
-                var room = Room(id: id, name: name)
-                room.lights = lights[id]
-                rooms.append(room)
-            }
-        }
+        let rooms = parseRooms(structureFile, lights: lights)
 
         // Return rooms in completion handler.
         completionHandler { rooms }
@@ -129,5 +120,27 @@ class Store {
         }
 
         return lights
+    }
+
+    /// Parses a structure file for room information.
+    ///
+    /// - Parameters:
+    ///     - structureFile: The structure file to parse.
+    ///     - lights: Dictionary containing room IDs and matching light information.
+    ///
+    /// - Returns: Array containing all found rooms.
+    ///
+    private func parseRooms(structureFile: XMLIndexer, lights: [UInt: [Light]]) -> [Room] {
+        // Create rooms based on structure file information.
+        var rooms = [Room]()
+        for room in structureFile["LoxLIVE"]["Rooms"]["Room"] {
+            if let idString = room.element?.attributes["n"], id = UInt(idString), name = room.element?.attributes["name"] {
+                var room = Room(id: id, name: name)
+                room.lights = lights[id]
+                rooms.append(room)
+            }
+        }
+
+        return rooms
     }
 }
