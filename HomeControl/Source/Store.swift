@@ -50,13 +50,7 @@ class Store {
         // Parse structure file XML and convert it into a dictionary.
         let structureFile = SWXMLHash.parse(structureFileContent)
 
-        // Save category information in dictionary.
-        var categories = [String: UInt]()
-        for category in structureFile["LoxLIVE"]["Cats"]["Cat"] {
-            if let idString = category.element?.attributes["n"], id = UInt(idString), name = category.element?.attributes["name"] {
-                categories[name] = id
-            }
-        }
+        let categories = parseCategories(structureFile)
 
         // There should be at least 3 categories: lights, blinds and consumers.
         guard categories.count >= 3 else {
@@ -84,6 +78,24 @@ class Store {
 
         // Return rooms in completion handler.
         completionHandler { rooms }
+    }
+
+    /// Parses a structure file for category information.
+    ///
+    /// - Parameter structureFile: The structure file to parse.
+    ///
+    /// - Returns: Dictionary using category names as keys and category IDs as values.
+    ///
+    private func parseCategories(structureFile: XMLIndexer) -> [String: UInt] {
+        // Save category information in dictionary.
+        var categories = [String: UInt]()
+        for category in structureFile["LoxLIVE"]["Cats"]["Cat"] {
+            if let idString = category.element?.attributes["n"], id = UInt(idString), name = category.element?.attributes["name"] {
+                categories[name] = id
+            }
+        }
+
+        return categories
     }
 
     /// Parses a structure file for light information.
