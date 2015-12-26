@@ -70,26 +70,7 @@ class Store {
             return
         }
 
-        // Find all light XML elements by checking the category attribute.
-        let lightXMLIndices = structureFile["LoxLIVE"]["Functions"]["Function"].filter {
-            if let categoryString = $0.element?.attributes["cat"] {
-                return UInt(categoryString) == lightCategory
-            }
-
-            return false
-        }
-
-        // Create lights with information of XML element attributes and save them in a dictionary using room IDs as keys.
-        var lights = [UInt: [Light]]()
-        for light in lightXMLIndices {
-            if let roomIDString = light.element?.attributes["room"], roomID = UInt(roomIDString), name = light.element?.attributes["name"], actionID = light.element?.attributes["UUIDaction"] {
-                if lights[roomID] == nil {
-                    lights[roomID] = [Light]()
-                }
-                
-                lights[roomID]?.append(Light(name: name, actionID: actionID))
-            }
-        }
+        let lights = parseLights(structureFile, category: lightCategory)
 
         // Create rooms based on structure file information.
         var rooms = [Room]()
@@ -103,5 +84,38 @@ class Store {
 
         // Return rooms in completion handler.
         completionHandler { rooms }
+    }
+
+    /// Parses a structure file for light information.
+    ///
+    /// - Parameters:
+    ///     - structureFile: The structure file to parse.
+    ///     - category: Light category.
+    ///
+    /// - Returns: Dictionary using room IDs as keys and light arrays as values.
+    ///
+    private func parseLights(structureFile: XMLIndexer, category: UInt) -> [UInt: [Light]] {
+        // Find all light XML elements by checking the category attribute.
+        let lightXMLIndices = structureFile["LoxLIVE"]["Functions"]["Function"].filter {
+            if let categoryString = $0.element?.attributes["cat"] {
+                return UInt(categoryString) == category
+            }
+
+            return false
+        }
+
+        // Create lights with information of XML element attributes and save them in a dictionary using room IDs as keys.
+        var lights = [UInt: [Light]]()
+        for light in lightXMLIndices {
+            if let roomIDString = light.element?.attributes["room"], roomID = UInt(roomIDString), name = light.element?.attributes["name"], actionID = light.element?.attributes["UUIDaction"] {
+                if lights[roomID] == nil {
+                    lights[roomID] = [Light]()
+                }
+
+                lights[roomID]?.append(Light(name: name, actionID: actionID))
+            }
+        }
+
+        return lights
     }
 }
