@@ -64,7 +64,7 @@ class Store {
             return
         }
 
-        let lights = parseLights(parseAccessoryIndices(structureFile, category: lightCategory))
+        let lights = parseAccessories(parseAccessoryIndices(structureFile, category: lightCategory), accessoryType: Light.self)
         let rooms = parseRooms(structureFile, lights: lights)
 
         // Return rooms in completion handler.
@@ -110,28 +110,30 @@ class Store {
         return accessoryIndices
     }
 
-    /// Parses a structure file for light information.
+    /// Parses a structure file for accessory information.
     ///
-    /// - Parameter indices: Light indices to parse. These indices are found by `Store.parseAccessoryIndices(_:category:)`.
+    /// - Parameters:
+    ///     - indices: Accessory indices to parse. These indices are found by `Store.parseAccessoryIndices(_:category:)`.
+    ///     - accessoryType: Type of accessory to parse.
     ///
-    /// - Returns: Dictionary using room IDs as keys and light arrays as values.
+    /// - Returns: Dictionary using room IDs as keys and accessory arrays as values.
     ///
     /// - SeeAlso: `Store.parseAccessoryIndices(_:category:)`.
     ///
-    private func parseLights(indices: [XMLIndexer]) -> [UInt: [Light]] {
-        // Create lights with information of XML element attributes and save them in a dictionary using room IDs as keys.
-        var lights = [UInt: [Light]]()
-        for light in indices {
-            if let roomIDString = light.element?.attributes["room"], roomID = UInt(roomIDString), name = light.element?.attributes["name"], actionID = light.element?.attributes["UUIDaction"] {
-                if lights[roomID] == nil {
-                    lights[roomID] = [Light]()
+    private func parseAccessories<T: Accessory>(indices: [XMLIndexer], accessoryType: T.Type) -> [UInt: [T]] {
+        // Create accessories with information of XML element attributes and save them in a dictionary using room IDs as keys.
+        var accessories = [UInt: [T]]()
+        for accessory in indices {
+            if let roomIDString = accessory.element?.attributes["room"], roomID = UInt(roomIDString), name = accessory.element?.attributes["name"], actionID = accessory.element?.attributes["UUIDaction"] {
+                if accessories[roomID] == nil {
+                    accessories[roomID] = [T]()
                 }
 
-                lights[roomID]?.append(Light(name: name, actionID: actionID))
+                accessories[roomID]?.append(T(name: name, actionID: actionID))
             }
         }
 
-        return lights
+        return accessories
     }
 
     /// Parses a structure file for room information.
