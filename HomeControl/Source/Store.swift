@@ -64,7 +64,7 @@ class Store {
             return
         }
 
-        let lights = parseLights(structureFile, category: lightCategory)
+        let lights = parseLights(parseAccessoryIndices(structureFile, category: lightCategory))
         let rooms = parseRooms(structureFile, lights: lights)
 
         // Return rooms in completion handler.
@@ -89,17 +89,17 @@ class Store {
         return categories
     }
 
-    /// Parses a structure file for light information.
+    /// Parses a structure file for accessory XML elements.
     ///
     /// - Parameters:
     ///     - structureFile: The structure file to parse.
-    ///     - category: Light category.
+    ///     - category: The accessory category.
     ///
-    /// - Returns: Dictionary using room IDs as keys and light arrays as values.
+    /// - Returns: Array of `XMLIndixer` with specified category.
     ///
-    private func parseLights(structureFile: XMLIndexer, category: UInt) -> [UInt: [Light]] {
-        // Find all light XML elements by checking the category attribute.
-        let lightXMLIndices = structureFile["LoxLIVE"]["Functions"]["Function"].filter {
+    private func parseAccessoryIndices(structureFile: XMLIndexer, category: UInt) -> [XMLIndexer] {
+        // Find all accessory XML elements by checking the category attribute.
+        let accessoryIndices = structureFile["LoxLIVE"]["Functions"]["Function"].filter {
             if let categoryString = $0.element?.attributes["cat"] {
                 return UInt(categoryString) == category
             }
@@ -107,9 +107,21 @@ class Store {
             return false
         }
 
+        return accessoryIndices
+    }
+
+    /// Parses a structure file for light information.
+    ///
+    /// - Parameter indices: Light indices to parse. These indices are found by `Store.parseAccessoryIndices(_:category:)`.
+    ///
+    /// - Returns: Dictionary using room IDs as keys and light arrays as values.
+    ///
+    /// - SeeAlso: `Store.parseAccessoryIndices(_:category:)`.
+    ///
+    private func parseLights(indices: [XMLIndexer]) -> [UInt: [Light]] {
         // Create lights with information of XML element attributes and save them in a dictionary using room IDs as keys.
         var lights = [UInt: [Light]]()
-        for light in lightXMLIndices {
+        for light in indices {
             if let roomIDString = light.element?.attributes["room"], roomID = UInt(roomIDString), name = light.element?.attributes["name"], actionID = light.element?.attributes["UUIDaction"] {
                 if lights[roomID] == nil {
                     lights[roomID] = [Light]()
