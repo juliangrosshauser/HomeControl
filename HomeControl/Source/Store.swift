@@ -81,7 +81,8 @@ class Store {
         let blinds = parseAccessories(parseAccessoryIndices(structureFile, category: blindCategory), accessoryType: Blind.self)
         let consumers = parseAccessories(parseAccessoryIndices(structureFile, category: consumerCategory), accessoryType: Consumer.self)
 
-        let rooms = parseRooms(structureFile, lights: lights)
+        // Construct rooms by parsing structure file and adding accessory information.
+        let rooms = parseRooms(structureFile, lights: lights, blinds: blinds, consumers: consumers)
 
         // Return rooms in completion handler.
         completionHandler { rooms }
@@ -157,17 +158,17 @@ class Store {
     /// - Parameters:
     ///     - structureFile: The structure file to parse.
     ///     - lights: Dictionary containing room IDs and matching light information.
+    ///     - blinds: Dictionary containing room IDs and matching blind information.
+    ///     - consumers: Dictionary containing room IDs and matching consumer information.
     ///
     /// - Returns: Array containing all found rooms.
     ///
-    private func parseRooms(structureFile: XMLIndexer, lights: [UInt: [Light]]) -> [Room] {
+    private func parseRooms(structureFile: XMLIndexer, lights: [UInt: [Light]], blinds: [UInt: [Blind]], consumers: [UInt: [Consumer]]) -> [Room] {
         // Create rooms based on structure file information.
         var rooms = [Room]()
         for room in structureFile["LoxLIVE"]["Rooms"]["Room"] {
             if let idString = room.element?.attributes["n"], id = UInt(idString), name = room.element?.attributes["name"] {
-                var room = Room(id: id, name: name)
-                room.lights = lights[id]
-                rooms.append(room)
+                rooms.append(Room(id: id, name: name, lights: lights[id], blinds: blinds[id], consumers: consumers[id]))
             }
         }
 

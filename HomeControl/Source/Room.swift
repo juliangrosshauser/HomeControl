@@ -19,19 +19,22 @@ struct Room {
     let name: String
     
     /// Lights.
-    var lights: [Light]?
+    let lights: [Light]?
     
     /// Blinds.
-    var blinds: [Blind]?
+    let blinds: [Blind]?
     
     /// Consumers.
-    var consumers: [Consumer]?
+    let consumers: [Consumer]?
 
     //MARK: Initialization
 
-    /// Construct a `Room` without any lights, blinds or consumers.
-    init(id: UInt, name: String) {
+    /// Construct a `Room` with the specified lights, blinds and consumers.
+    init(id: UInt, name: String, lights: [Light]?, blinds: [Blind]?, consumers: [Consumer]?) {
         self.id = id
         self.name = name
+        self.lights = lights
+        self.blinds = blinds
+        self.consumers = consumers
     }
 }
