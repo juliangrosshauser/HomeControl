@@ -50,6 +50,7 @@ class Store {
         // Parse structure file XML and convert it into a dictionary.
         let structureFile = SWXMLHash.parse(structureFileContent)
 
+        // Get categories by parsing structure file.
         let categories = parseCategories(structureFile)
 
         // There should be at least 3 categories: lights, blinds and consumers.
