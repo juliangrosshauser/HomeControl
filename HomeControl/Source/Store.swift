@@ -64,7 +64,23 @@ class Store {
             return
         }
 
+        // Get blind category.
+        guard let blindCategory = categories["Beschattung"] else {
+            completionHandler { throw StoreError.CategoryError }
+            return
+        }
+
+        // Get consumer category.
+        guard let consumerCategory = categories["Verbraucher"] else {
+            completionHandler { throw StoreError.CategoryError }
+            return
+        }
+
+        // Find all accessories.
         let lights = parseAccessories(parseAccessoryIndices(structureFile, category: lightCategory), accessoryType: Light.self)
+        let blinds = parseAccessories(parseAccessoryIndices(structureFile, category: blindCategory), accessoryType: Blind.self)
+        let consumers = parseAccessories(parseAccessoryIndices(structureFile, category: consumerCategory), accessoryType: Consumer.self)
+
         let rooms = parseRooms(structureFile, lights: lights)
 
         // Return rooms in completion handler.
