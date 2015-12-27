@@ -46,8 +46,17 @@ class NetworkManager {
     /// - Note: The parameter of the `completionHandler` closure is itself a closure that either
     /// returns the path to the downloaded structure file or throws.
     ///
-    /// - SeeAlso: Take a look at the documentation of `Store.parseStructureFile(_:completionHandler:)`
-    /// for a usage example of the `completionHandler` parameter.
+    /// This example shows how to use `completionHandler`:
+    ///
+    ///         let networkManager = NetworkManager()
+    ///         networkManager.downloadStructureFile(authenticationData) { result in
+    ///             do {
+    ///                 let structureFilePath = try result()
+    ///                 // Do something with `structureFilePath`
+    ///             } catch {
+    ///                 // Handle `NetworkError`
+    ///             }
+    ///         }
     ///
     func downloadStructureFile(authenticationData: AuthenticationData, completionHandler: (() throws -> String) -> ()) {
         // Create structure file path in document directory.

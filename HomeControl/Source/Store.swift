@@ -13,38 +13,19 @@ class Store {
 
     /// Parses a structure file.
     ///
-    /// - Parameters:
-    ///     - path: Structure file path.
-    ///     - completionHandler: This closure will be called after parsing is completed.
+    /// - Parameter path: Structure file path.
     ///
-    /// - Throws: Parameter of `completionHandler` throws `StoreError`.
+    /// - Throws: `StoreError`.
     ///
-    /// - Returns: `Void`
+    /// - Returns: All found rooms with their accessories.
     ///
-    /// - Note: The parameter of the `completionHandler` closure is itself a closure that either returns `[Room]` or throws.
-    /// 
-    /// This example shows how to use `completionHandler`:
-    ///
-    ///         let store = Store()
-    ///         store.parseStructureFile(structureFilePath) { result in
-    ///             let rooms: [Room]
-    ///             do {
-    ///                 rooms = try result()
-    ///             } catch {
-    ///                 // Handle `StoreError`
-    ///             }
-    ///
-    ///             // Do something with `rooms`
-    ///         }
-    ///
-    func parseStructureFile(path: String, completionHandler: (() throws -> [Room]) -> ()) {
+    func parseStructureFile(path: String) throws -> [Room] {
         // Read structure file content.
         let structureFileContent: String
         do {
             structureFileContent = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
         } catch {
-            completionHandler { throw StoreError.ReadError }
-            return
+            throw StoreError.ReadError
         }
 
         // Parse structure file XML and convert it into a dictionary.
@@ -55,26 +36,22 @@ class Store {
 
         // There should be at least 3 categories: lights, blinds and consumers.
         guard categories.count >= 3 else {
-            completionHandler { throw StoreError.CategoryError }
-            return
+            throw StoreError.CategoryError
         }
 
         // Get light category.
         guard let lightCategory = categories["Beleuchtung"] else {
-            completionHandler { throw StoreError.CategoryError }
-            return
+            throw StoreError.CategoryError
         }
 
         // Get blind category.
         guard let blindCategory = categories["Beschattung"] else {
-            completionHandler { throw StoreError.CategoryError }
-            return
+            throw StoreError.CategoryError
         }
 
         // Get consumer category.
         guard let consumerCategory = categories["Verbraucher"] else {
-            completionHandler { throw StoreError.CategoryError }
-            return
+            throw StoreError.CategoryError
         }
 
         // Find all accessories.
@@ -83,10 +60,7 @@ class Store {
         let consumers = parseAccessories(parseAccessoryIndices(structureFile, category: consumerCategory), accessoryType: Consumer.self)
 
         // Construct rooms by parsing structure file and adding accessory information.
-        let rooms = parseRooms(structureFile, lights: lights, blinds: blinds, consumers: consumers)
-
-        // Return rooms in completion handler.
-        completionHandler { rooms }
+        return parseRooms(structureFile, lights: lights, blinds: blinds, consumers: consumers)
     }
 
     /// Parses a structure file for category information.
