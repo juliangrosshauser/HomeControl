@@ -18,4 +18,9 @@ protocol Accessory {
     
     /// Action ID of accessory. Can be used to trigger accessory actions.
     var actionID: String { get }
+
+    //MARK: Initialization
+
+    /// Construct an `Accessory` with a name and action ID.
+    init(name: String, actionID: String)
 }
