@@ -39,18 +39,8 @@ class Store {
             throw StoreError.CategoryError
         }
 
-        // Get light category.
-        guard let lightCategory = categories["Beleuchtung"] else {
-            throw StoreError.CategoryError
-        }
-
-        // Get blind category.
-        guard let blindCategory = categories["Beschattung"] else {
-            throw StoreError.CategoryError
-        }
-
-        // Get consumer category.
-        guard let consumerCategory = categories["Verbraucher"] else {
+        // Get accessory category.
+        guard let lightCategory = categories["Beleuchtung"], blindCategory = categories["Beschattung"], consumerCategory = categories["Verbraucher"] else {
             throw StoreError.CategoryError
         }
 
