@@ -90,8 +90,8 @@ class NetworkManager {
         let base64Credentials = credentialData.base64EncodedStringWithOptions([])
         let headers = ["Authorization": "Basic \(base64Credentials)"]
 
-        download(.GET, url, headers: headers, destination: destination).response { _, _, _, error in
-            guard error == nil else {
+        download(.GET, url, headers: headers, destination: destination).response { _, response, _, error in
+            guard response?.statusCode == 200 && error == nil else {
                 completionHandler { throw NetworkError.DownloadError }
                 return
             }
