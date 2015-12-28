@@ -6,7 +6,7 @@
 //  Copyright © 2015 Julian Grosshauser. All rights reserved.
 //
 
-import Alamofire
+import Foundation
 
 /// Abstracts `SetupController`s state and behavior.
 class SetupViewModel {
