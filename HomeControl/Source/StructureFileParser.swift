@@ -1,5 +1,5 @@
 //
-//  Store.swift
+//  StructureFileParser.swift
 //  HomeControl
 //
 //  Created by Julian Grosshauser on 30/11/15.
@@ -8,14 +8,14 @@
 
 import SWXMLHash
 
-/// Responsible for reading and persisting information.
-class Store {
+/// Parses structure files.
+class StructureFileParser {
 
     /// Parses a structure file.
     ///
     /// - Parameter path: Structure file path.
     ///
-    /// - Throws: `StoreError`.
+    /// - Throws: `StuctureFileParserError`.
     ///
     /// - Returns: All found rooms with their accessories.
     ///
@@ -25,7 +25,7 @@ class Store {
         do {
             structureFileContent = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
         } catch {
-            throw StoreError.ReadError
+            throw StructureFileParserError.ReadError
         }
 
         // Parse structure file XML and convert it into a dictionary.
@@ -36,12 +36,12 @@ class Store {
 
         // There should be at least 3 categories: lights, blinds and consumers.
         guard categories.count >= 3 else {
-            throw StoreError.CategoryError
+            throw StructureFileParserError.CategoryError
         }
 
         // Get accessory category.
         guard let lightCategory = categories["Beleuchtung"], blindCategory = categories["Beschattung"], consumerCategory = categories["Verbraucher"] else {
-            throw StoreError.CategoryError
+            throw StructureFileParserError.CategoryError
         }
 
         // Find all accessories.
@@ -95,12 +95,12 @@ class Store {
     /// Parses a structure file for accessory information.
     ///
     /// - Parameters:
-    ///     - indices: Accessory indices to parse. These indices are found by `Store.parseAccessoryIndices(_:category:)`.
+    ///     - indices: Accessory indices to parse. These indices are found by `StructureFileParser.parseAccessoryIndices(_:category:)`.
     ///     - accessoryType: Type of accessory to parse.
     ///
     /// - Returns: Dictionary using room IDs as keys and accessory arrays as values.
     ///
-    /// - SeeAlso: `Store.parseAccessoryIndices(_:category:)`.
+    /// - SeeAlso: `StructureFileParser.parseAccessoryIndices(_:category:)`.
     ///
     private func parseAccessories<T: Accessory>(indices: [XMLIndexer], accessoryType: T.Type) -> [UInt: [T]] {
         // Create accessories with information of XML element attributes and save them in a dictionary using room IDs as keys.

@@ -44,18 +44,18 @@ class SetupViewModel {
     /// `NetworkManager` instance.
     private let networkManager: NetworkManager
 
-    /// `Store` instance.
-    private let store: Store
+    /// `StructureFileParser` instance.
+    private let structureFileParser: StructureFileParser
 
     /// Default notification center.
     private let notificationCenter = NSNotificationCenter.defaultCenter()
 
     //MARK: Initialization
 
-    /// Construct `SetupViewModel` using specific `NetworkManager` and `Store` instances.
-    init(networkManager: NetworkManager = NetworkManager(), store: Store = Store()) {
+    /// Construct `SetupViewModel` using specific `NetworkManager` and `StructureFileParser` instances.
+    init(networkManager: NetworkManager = NetworkManager(), structureFileParser: StructureFileParser = StructureFileParser()) {
         self.networkManager = networkManager
-        self.store = store
+        self.structureFileParser = structureFileParser
     }
 
     //MARK: Text Field Actions

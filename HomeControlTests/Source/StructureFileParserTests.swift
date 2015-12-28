@@ -1,5 +1,5 @@
 //
-//  StoreTests.swift
+//  StructureFileParserTests.swift
 //  HomeControl
 //
 //  Created by Julian Grosshauser on 16/12/15.
@@ -9,17 +9,17 @@
 import XCTest
 @testable import HomeControl
 
-class StoreTests: XCTestCase {
+class StructureFileParserTests: XCTestCase {
 
-    let store = Store()
-    let structureFileFolder = NSBundle(forClass: StoreTests.self).resourceURL!.URLByAppendingPathComponent("StructureFiles")
+    let structureFileParser = StructureFileParser()
+    let structureFileFolder = NSBundle(forClass: StructureFileParserTests.self).resourceURL!.URLByAppendingPathComponent("StructureFiles")
     let expectationTimeout: Double = 1
 
     func testParsingValidStructureFileDoesntThrow() {
         let validStructureFilePath = structureFileFolder.URLByAppendingPathComponent("ValidStructureFile.xml").path!
 
         do {
-            try store.parseStructureFile(validStructureFilePath)
+            try structureFileParser.parseStructureFile(validStructureFilePath)
         } catch {
             XCTFail("Parsing structure file threw error")
         }
@@ -30,7 +30,7 @@ class StoreTests: XCTestCase {
         let expectation = expectationWithDescription("Parsing invalid structure file throws")
 
         do {
-            try store.parseStructureFile(invalidStructureFilePath)
+            try structureFileParser.parseStructureFile(invalidStructureFilePath)
             XCTFail("Parsing invalid structure file didn't threw error")
         } catch {
             expectation.fulfill()
@@ -43,7 +43,7 @@ class StoreTests: XCTestCase {
         let structureFilePath = structureFileFolder.URLByAppendingPathComponent("ValidStructureFile.xml").path!
 
         do {
-            let rooms = try store.parseStructureFile(structureFilePath)
+            let rooms = try structureFileParser.parseStructureFile(structureFilePath)
             XCTAssertEqual(rooms.count, 5)
         } catch {
             XCTFail("Parsing structure file threw error")
@@ -54,7 +54,7 @@ class StoreTests: XCTestCase {
         let structureFilePath = structureFileFolder.URLByAppendingPathComponent("ValidStructureFile.xml").path!
 
         do {
-            let rooms = try store.parseStructureFile(structureFilePath)
+            let rooms = try structureFileParser.parseStructureFile(structureFilePath)
             XCTAssertEqual(rooms.first?.lights?.count, 2)
 
             // Rooms with IDs from 2 to 4 contain only one light.
