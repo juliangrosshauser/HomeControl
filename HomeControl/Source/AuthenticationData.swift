@@ -6,9 +6,10 @@
 //  Copyright © 2015 Julian Grosshauser. All rights reserved.
 //
 
+import Locksmith
 
 /// Contains all data necessary to authenticate a user at the server.
-struct AuthenticationData {
+struct AuthenticationData: ReadableSecureStorable, CreateableSecureStorable, DeleteableSecureStorable, GenericPasswordSecureStorable {
 
     //MARK: Properties
 
@@ -20,6 +21,21 @@ struct AuthenticationData {
 
     /// Password of user.
     let password: String
+
+    //MARK: GenericPasswordSecureStorable
+
+    /// The service that the authentication data is saved under in the keychain.
+    let service = "HomeControl"
+
+    /// The account that identifies the authentication data in the keychain.
+    var account: String { return username }
+
+    //MARK: CreateableSecureStorable
+
+    /// Data that's saved in the keychain.
+    var data: [String: AnyObject] {
+        return ["password": password, "serverAddress": serverAddress]
+    }
 
     //MARK: Initialization
 
