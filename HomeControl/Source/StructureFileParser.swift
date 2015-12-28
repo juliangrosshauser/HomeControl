@@ -19,7 +19,7 @@ class StructureFileParser {
     ///
     /// - Returns: All found rooms with their accessories.
     ///
-    func parseStructureFile(path: String) throws -> [Room] {
+    func parse(path: String) throws -> [Room] {
         // Read structure file content.
         let structureFileContent: String
         do {

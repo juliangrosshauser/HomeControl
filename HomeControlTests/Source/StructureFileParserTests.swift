@@ -19,7 +19,7 @@ class StructureFileParserTests: XCTestCase {
         let validStructureFilePath = structureFileFolder.URLByAppendingPathComponent("ValidStructureFile.xml").path!
 
         do {
-            try structureFileParser.parseStructureFile(validStructureFilePath)
+            try structureFileParser.parse(validStructureFilePath)
         } catch {
             XCTFail("Parsing structure file threw error")
         }
@@ -30,7 +30,7 @@ class StructureFileParserTests: XCTestCase {
         let expectation = expectationWithDescription("Parsing invalid structure file throws")
 
         do {
-            try structureFileParser.parseStructureFile(invalidStructureFilePath)
+            try structureFileParser.parse(invalidStructureFilePath)
             XCTFail("Parsing invalid structure file didn't threw error")
         } catch {
             expectation.fulfill()
@@ -43,7 +43,7 @@ class StructureFileParserTests: XCTestCase {
         let structureFilePath = structureFileFolder.URLByAppendingPathComponent("ValidStructureFile.xml").path!
 
         do {
-            let rooms = try structureFileParser.parseStructureFile(structureFilePath)
+            let rooms = try structureFileParser.parse(structureFilePath)
             XCTAssertEqual(rooms.count, 5)
         } catch {
             XCTFail("Parsing structure file threw error")
@@ -54,7 +54,7 @@ class StructureFileParserTests: XCTestCase {
         let structureFilePath = structureFileFolder.URLByAppendingPathComponent("ValidStructureFile.xml").path!
 
         do {
-            let rooms = try structureFileParser.parseStructureFile(structureFilePath)
+            let rooms = try structureFileParser.parse(structureFilePath)
             XCTAssertEqual(rooms.first?.lights?.count, 2)
 
             // Rooms with IDs from 2 to 4 contain only one light.
