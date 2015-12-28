@@ -24,6 +24,7 @@ final class SetupTextField: UITextField {
         borderStyle = .RoundedRect
         self.placeholder = placeholder
         textColor = ThemeManager.currentTheme.gray
+        autocapitalizationType = .None
 
         let image = UIImage(asset: asset).imageWithRenderingMode(.AlwaysTemplate)
         let imageView = UIImageView(image: image)
