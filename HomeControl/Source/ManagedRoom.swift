@@ -21,3 +21,16 @@ public final class ManagedRoom: NSManagedObject {
     @NSManaged public private(set) var blinds: Set<ManagedBlind>?
     @NSManaged public private(set) var consumers: Set<ManagedConsumer>?
 }
+
+//MARK: ManagedObjectType
+
+extension ManagedRoom: ManagedObjectType {
+
+    public static var entityName: String {
+        return "Room"
+    }
+
+    public static var defaultSortDescriptors: [NSSortDescriptor] {
+        return [NSSortDescriptor(key: "name", ascending: false)]
+    }
+}
