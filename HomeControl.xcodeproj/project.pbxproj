@@ -29,6 +29,7 @@
 		B9AB7A0F1C33222000C696FF /* ManagedAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB7A0E1C33222000C696FF /* ManagedAccessory.swift */; };
 		B9AB7A111C33225600C696FF /* ManagedBlind.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB7A101C33225600C696FF /* ManagedBlind.swift */; };
 		B9AB7A131C33226A00C696FF /* ManagedConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB7A121C33226A00C696FF /* ManagedConsumer.swift */; };
+		B9AB7A151C33274400C696FF /* ManagedObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB7A141C33274400C696FF /* ManagedObjectType.swift */; };
 		B9ACC4E71C321C1F00155C46 /* HomeControl.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9ACC4E51C321C1F00155C46 /* HomeControl.xcdatamodeld */; };
 		B9ACC4FA1C322F8100155C46 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACC4F91C322F8100155C46 /* Store.swift */; };
 		B9ACC4FC1C32368300155C46 /* NSURL+DocumentDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACC4FB1C32368300155C46 /* NSURL+DocumentDirectory.swift */; };
@@ -265,6 +266,7 @@
 		B9AB7A0E1C33222000C696FF /* ManagedAccessory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedAccessory.swift; sourceTree = "<group>"; };
 		B9AB7A101C33225600C696FF /* ManagedBlind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedBlind.swift; sourceTree = "<group>"; };
 		B9AB7A121C33226A00C696FF /* ManagedConsumer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedConsumer.swift; sourceTree = "<group>"; };
+		B9AB7A141C33274400C696FF /* ManagedObjectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectType.swift; sourceTree = "<group>"; };
 		B9ACC4E61C321C1F00155C46 /* HomeControl.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeControl.xcdatamodel; sourceTree = "<group>"; };
 		B9ACC4F91C322F8100155C46 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		B9ACC4FB1C32368300155C46 /* NSURL+DocumentDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+DocumentDirectory.swift"; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 			children = (
 				B9F61EB21BED651900D60722 /* AppDelegate.swift */,
 				B9ACC4F91C322F8100155C46 /* Store.swift */,
+				B9AB7A141C33274400C696FF /* ManagedObjectType.swift */,
 				B9AB79F51C331F9A00C696FF /* ManagedRoom.swift */,
 				B9AB7A0E1C33222000C696FF /* ManagedAccessory.swift */,
 				B9AB7A0A1C3320FD00C696FF /* ManagedLight.swift */,
@@ -797,6 +800,7 @@
 				B9ACC4E71C321C1F00155C46 /* HomeControl.xcdatamodeld in Sources */,
 				B9AB79F61C331F9A00C696FF /* ManagedRoom.swift in Sources */,
 				B9220F8C1C0A9A8C0095A206 /* Blind.swift in Sources */,
+				B9AB7A151C33274400C696FF /* ManagedObjectType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
