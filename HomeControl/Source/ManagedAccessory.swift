@@ -8,7 +8,7 @@
 
 import CoreData
 
-public protocol ManagedAccessory: class {
+public protocol ManagedAccessory: ManagedObjectType {
 
     //MARK: Properties
 
@@ -18,4 +18,13 @@ public protocol ManagedAccessory: class {
     //MARK: Relationships
 
     var room: ManagedRoom { get }
+}
+
+//MARK: ManagedObjectType
+
+extension ManagedAccessory {
+
+    public static var defaultSortDescriptors: [NSSortDescriptor] {
+        return [NSSortDescriptor(key: "name", ascending: false)]
+    }
 }

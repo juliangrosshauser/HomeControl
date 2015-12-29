@@ -19,3 +19,12 @@ public final class ManagedBlind: NSManagedObject, ManagedAccessory {
 
     @NSManaged public private(set) var room: ManagedRoom
 }
+
+//MARK: ManagedObjectType
+
+extension ManagedBlind {
+
+    public static var entityName: String {
+        return "Blind"
+    }
+}

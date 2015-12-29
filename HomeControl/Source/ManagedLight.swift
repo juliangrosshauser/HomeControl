@@ -19,3 +19,12 @@ public final class ManagedLight: NSManagedObject, ManagedAccessory {
 
     @NSManaged public private(set) var room: ManagedRoom
 }
+
+//MARK: ManagedObjectType
+
+extension ManagedLight {
+
+    public static var entityName: String {
+        return "Light"
+    }
+}
