@@ -4,18 +4,27 @@
         <attribute name="actionID" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Blind" parentEntity="Accessory" syncable="YES"/>
-    <entity name="Consumer" parentEntity="Accessory" syncable="YES"/>
-    <entity name="Light" parentEntity="Accessory" syncable="YES"/>
+    <entity name="Blind" parentEntity="Accessory" syncable="YES">
+        <relationship name="room" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="blinds" inverseEntity="Room" syncable="YES"/>
+    </entity>
+    <entity name="Consumer" parentEntity="Accessory" syncable="YES">
+        <relationship name="room" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="consumers" inverseEntity="Room" syncable="YES"/>
+    </entity>
+    <entity name="Light" parentEntity="Accessory" syncable="YES">
+        <relationship name="room" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="lights" inverseEntity="Room" syncable="YES"/>
+    </entity>
     <entity name="Room" syncable="YES">
         <attribute name="id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="blinds" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Blind" inverseName="room" inverseEntity="Blind" syncable="YES"/>
+        <relationship name="consumers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Consumer" inverseName="room" inverseEntity="Consumer" syncable="YES"/>
+        <relationship name="lights" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Light" inverseName="room" inverseEntity="Light" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Room" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="Accessory" positionX="-45" positionY="18" width="128" height="75"/>
-        <element name="Light" positionX="-27" positionY="45" width="128" height="45"/>
-        <element name="Blind" positionX="-9" positionY="54" width="128" height="45"/>
-        <element name="Consumer" positionX="9" positionY="63" width="128" height="45"/>
+        <element name="Blind" positionX="-9" positionY="54" width="128" height="58"/>
+        <element name="Consumer" positionX="9" positionY="63" width="128" height="58"/>
+        <element name="Light" positionX="-27" positionY="45" width="128" height="58"/>
+        <element name="Room" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>
