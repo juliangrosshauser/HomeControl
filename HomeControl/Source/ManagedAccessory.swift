@@ -8,14 +8,14 @@
 
 import CoreData
 
-public class ManagedAccessory: NSManagedObject {
+public protocol ManagedAccessory: class {
 
     //MARK: Properties
 
-    @NSManaged public private(set) var name: String
-    @NSManaged public private(set) var actionID: String
+    var name: String { get }
+    var actionID: String { get }
 
     //MARK: Relationships
-    
-    @NSManaged public private(set) var room: ManagedRoom
+
+    var room: ManagedRoom { get }
 }
