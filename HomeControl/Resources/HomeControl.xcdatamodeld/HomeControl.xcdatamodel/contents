@@ -4,6 +4,9 @@
         <attribute name="actionID" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Blind" parentEntity="Accessory" syncable="YES"/>
+    <entity name="Consumer" parentEntity="Accessory" syncable="YES"/>
+    <entity name="Light" parentEntity="Accessory" syncable="YES"/>
     <entity name="Room" syncable="YES">
         <attribute name="id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
@@ -11,5 +14,8 @@
     <elements>
         <element name="Room" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="Accessory" positionX="-45" positionY="18" width="128" height="75"/>
+        <element name="Light" positionX="-27" positionY="45" width="128" height="45"/>
+        <element name="Blind" positionX="-9" positionY="54" width="128" height="45"/>
+        <element name="Consumer" positionX="9" positionY="63" width="128" height="45"/>
     </elements>
 </model>
