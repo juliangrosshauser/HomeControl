@@ -24,6 +24,11 @@
 		B96EF12C1C29E480001C4D40 /* Accessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96EF12B1C29E480001C4D40 /* Accessory.swift */; };
 		B984D1271BFFF98A0081158E /* ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B984D1261BFFF98A0081158E /* ColorName.swift */; };
 		B985B5A71BF986EC003C715B /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985B5A61BF986EC003C715B /* ThemeManager.swift */; };
+		B9AB79F61C331F9A00C696FF /* ManagedRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB79F51C331F9A00C696FF /* ManagedRoom.swift */; };
+		B9AB7A0B1C3320FD00C696FF /* ManagedLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB7A0A1C3320FD00C696FF /* ManagedLight.swift */; };
+		B9AB7A0F1C33222000C696FF /* ManagedAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB7A0E1C33222000C696FF /* ManagedAccessory.swift */; };
+		B9AB7A111C33225600C696FF /* ManagedBlind.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB7A101C33225600C696FF /* ManagedBlind.swift */; };
+		B9AB7A131C33226A00C696FF /* ManagedConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB7A121C33226A00C696FF /* ManagedConsumer.swift */; };
 		B9ACC4E71C321C1F00155C46 /* HomeControl.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9ACC4E51C321C1F00155C46 /* HomeControl.xcdatamodeld */; };
 		B9ACC4FA1C322F8100155C46 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACC4F91C322F8100155C46 /* Store.swift */; };
 		B9ACC4FC1C32368300155C46 /* NSURL+DocumentDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACC4FB1C32368300155C46 /* NSURL+DocumentDirectory.swift */; };
@@ -255,6 +260,11 @@
 		B96EF12B1C29E480001C4D40 /* Accessory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accessory.swift; sourceTree = "<group>"; };
 		B984D1261BFFF98A0081158E /* ColorName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorName.swift; sourceTree = "<group>"; };
 		B985B5A61BF986EC003C715B /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		B9AB79F51C331F9A00C696FF /* ManagedRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedRoom.swift; sourceTree = "<group>"; };
+		B9AB7A0A1C3320FD00C696FF /* ManagedLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedLight.swift; sourceTree = "<group>"; };
+		B9AB7A0E1C33222000C696FF /* ManagedAccessory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedAccessory.swift; sourceTree = "<group>"; };
+		B9AB7A101C33225600C696FF /* ManagedBlind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedBlind.swift; sourceTree = "<group>"; };
+		B9AB7A121C33226A00C696FF /* ManagedConsumer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedConsumer.swift; sourceTree = "<group>"; };
 		B9ACC4E61C321C1F00155C46 /* HomeControl.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeControl.xcdatamodel; sourceTree = "<group>"; };
 		B9ACC4F91C322F8100155C46 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		B9ACC4FB1C32368300155C46 /* NSURL+DocumentDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+DocumentDirectory.swift"; sourceTree = "<group>"; };
@@ -394,6 +404,11 @@
 			children = (
 				B9F61EB21BED651900D60722 /* AppDelegate.swift */,
 				B9ACC4F91C322F8100155C46 /* Store.swift */,
+				B9AB79F51C331F9A00C696FF /* ManagedRoom.swift */,
+				B9AB7A0E1C33222000C696FF /* ManagedAccessory.swift */,
+				B9AB7A0A1C3320FD00C696FF /* ManagedLight.swift */,
+				B9AB7A101C33225600C696FF /* ManagedBlind.swift */,
+				B9AB7A121C33226A00C696FF /* ManagedConsumer.swift */,
 				B95E46F21BEEB4AE00481E51 /* SetupController.swift */,
 				B92F3E671C012F2000B3CD32 /* SetupViewModel.swift */,
 				B9FC15581C0BBFE800FEF734 /* StructureFileParser.swift */,
@@ -758,6 +773,7 @@
 				B93C2C231C0D2657003340EE /* AuthenticationData.swift in Sources */,
 				B96EF12C1C29E480001C4D40 /* Accessory.swift in Sources */,
 				B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */,
+				B9AB7A0F1C33222000C696FF /* ManagedAccessory.swift in Sources */,
 				B9220F881C0A98050095A206 /* Room.swift in Sources */,
 				B9FC15591C0BBFE800FEF734 /* StructureFileParser.swift in Sources */,
 				B94E25751C067C7600B52062 /* NetworkManager.swift in Sources */,
@@ -766,16 +782,20 @@
 				B984D1271BFFF98A0081158E /* ColorName.swift in Sources */,
 				B9ACC4FC1C32368300155C46 /* NSURL+DocumentDirectory.swift in Sources */,
 				B9220F8A1C0A98BF0095A206 /* Light.swift in Sources */,
+				B9AB7A131C33226A00C696FF /* ManagedConsumer.swift in Sources */,
 				B91ED9721BFA9C5B0070EB8E /* Box.swift in Sources */,
 				B96E760D1C2715F300279A45 /* CollectionType+String.swift in Sources */,
+				B9AB7A111C33225600C696FF /* ManagedBlind.swift in Sources */,
 				B9220F8E1C0A9B300095A206 /* Consumer.swift in Sources */,
 				B9F10B001BF8004200AB23D9 /* UIImage+Asset.swift in Sources */,
 				B9F10AFE1BF7FFB400AB23D9 /* UIColor+Name.swift in Sources */,
 				B91ED9741BFAA1EE0070EB8E /* Theme.swift in Sources */,
 				B9ACC4FA1C322F8100155C46 /* Store.swift in Sources */,
+				B9AB7A0B1C3320FD00C696FF /* ManagedLight.swift in Sources */,
 				B9C76A351C0927CC00B25DAC /* NetworkError.swift in Sources */,
 				B92F3E681C012F2000B3CD32 /* SetupViewModel.swift in Sources */,
 				B9ACC4E71C321C1F00155C46 /* HomeControl.xcdatamodeld in Sources */,
+				B9AB79F61C331F9A00C696FF /* ManagedRoom.swift in Sources */,
 				B9220F8C1C0A9A8C0095A206 /* Blind.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
