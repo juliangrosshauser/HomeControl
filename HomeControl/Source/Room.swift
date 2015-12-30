@@ -6,9 +6,8 @@
 //  Copyright © 2015 Julian Grosshauser. All rights reserved.
 //
 
-
 /// Represents a room containing lights, blinds and consumers.
-struct Room {
+public struct Room {
 
     //MARK: Properties
 

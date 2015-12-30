@@ -9,7 +9,7 @@
 import Foundation
 
 /// Representing an accessory, like lights, blinds and consumers.
-protocol Accessory {
+public protocol Accessory {
     
     //MARK: Properties
     
