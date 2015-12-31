@@ -10,6 +10,10 @@ import CoreData
 
 public final class ManagedConsumer: NSManagedObject, ManagedAccessory {
 
+    //MARK: Associated Types
+
+    public typealias AccessoryType = Consumer
+
     //MARK: Properties
 
     @NSManaged public private(set) var name: String

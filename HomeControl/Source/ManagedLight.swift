@@ -10,6 +10,10 @@ import CoreData
 
 public final class ManagedLight: NSManagedObject, ManagedAccessory {
 
+    //MARK: Associated Types
+
+    public typealias AccessoryType = Light
+
     //MARK: Properties
 
     @NSManaged public private(set) var name: String

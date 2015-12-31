@@ -10,6 +10,10 @@ import CoreData
 
 public final class ManagedBlind: NSManagedObject, ManagedAccessory {
 
+    //MARK: Associated Types
+
+    public typealias AccessoryType = Blind
+
     //MARK: Properties
 
     @NSManaged public private(set) var name: String

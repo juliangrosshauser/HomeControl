@@ -10,6 +10,10 @@ import CoreData
 
 public protocol ManagedAccessory: ManagedObjectType {
 
+    //MARK: Associated Types
+
+    typealias AccessoryType: Accessory
+
     //MARK: Properties
 
     var name: String { get }
