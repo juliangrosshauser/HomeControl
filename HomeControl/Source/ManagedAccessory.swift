@@ -22,6 +22,10 @@ public protocol ManagedAccessory: ManagedObjectType {
     //MARK: Relationships
 
     var room: ManagedRoom { get }
+
+    //MARK: ManagedAccessory
+
+    func configure(accessory: AccessoryType)
 }
 
 //MARK: ManagedObjectType
