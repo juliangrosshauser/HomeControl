@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //MARK: UIApplicationDelegate
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        window?.rootViewController = UINavigationController(rootViewController: SetupController())
+        window?.rootViewController = UINavigationController(rootViewController: setupRootViewController(fetchRooms()))
         window?.makeKeyAndVisible()
         return true
     }
