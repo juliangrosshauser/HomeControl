@@ -15,6 +15,22 @@ public final class ManagedRoom: NSManagedObject {
     @NSManaged public private(set) var id: Int32
     @NSManaged public private(set) var name: String
 
+    public var immutable: Room {
+        let immutableLights = lights?.map {
+            $0.immutable
+        }
+
+        let immutableBlinds = blinds?.map {
+            $0.immutable
+        }
+
+        let immutableConsumers = consumers?.map {
+            $0.immutable
+        }
+
+        return Room(id: UInt(id), name: name, lights: immutableLights, blinds: immutableBlinds, consumers: immutableConsumers)
+    }
+
     //MARK: Relationships
 
     @NSManaged public private(set) var lights: Set<ManagedLight>?
