@@ -36,6 +36,34 @@ public final class ManagedRoom: NSManagedObject {
     @NSManaged public private(set) var lights: Set<ManagedLight>?
     @NSManaged public private(set) var blinds: Set<ManagedBlind>?
     @NSManaged public private(set) var consumers: Set<ManagedConsumer>?
+
+    //MARK: ManagedRoom
+
+    public static func insert(room: Room, intoContext context: NSManagedObjectContext) -> ManagedRoom {
+        let managedRoom: ManagedRoom = context.insertObject()
+        managedRoom.id = Int32(room.id)
+        managedRoom.name = room.name
+
+        if let lights = room.lights {
+            managedRoom.lights = Set(lights.map {
+                ManagedLight.insert($0, intoContext: context)
+            })
+        }
+
+        if let blinds = room.blinds {
+            managedRoom.blinds = Set(blinds.map {
+                ManagedBlind.insert($0, intoContext: context)
+            })
+        }
+
+        if let consumers = room.consumers {
+            managedRoom.consumers = Set(consumers.map {
+                ManagedConsumer.insert($0, intoContext: context)
+            })
+        }
+
+        return managedRoom
+    }
 }
 
 //MARK: ManagedObjectType
