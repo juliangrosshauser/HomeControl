@@ -42,4 +42,14 @@ extension ManagedAccessory {
         return AccessoryType(name: name, actionID: actionID)
     }
 }
+
+//MARK: NSManagedObject
+
+extension ManagedAccessory where Self: NSManagedObject {
+
+    public static func insert(accessory: AccessoryType, intoContext context: NSManagedObjectContext) -> Self {
+        let managedAccessory: Self = context.insertObject()
+        managedAccessory.configure(accessory)
+        return managedAccessory
+    }
 }
