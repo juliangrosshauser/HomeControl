@@ -28,11 +28,18 @@ public protocol ManagedAccessory: ManagedObjectType {
     func configure(accessory: AccessoryType)
 }
 
-//MARK: ManagedObjectType
-
 extension ManagedAccessory {
+
+    //MARK: ManagedObjectType
 
     public static var defaultSortDescriptors: [NSSortDescriptor] {
         return [NSSortDescriptor(key: "name", ascending: false)]
     }
+
+    //MARK: ManagedAccessory
+
+    public var immutable: AccessoryType {
+        return AccessoryType(name: name, actionID: actionID)
+    }
+}
 }
