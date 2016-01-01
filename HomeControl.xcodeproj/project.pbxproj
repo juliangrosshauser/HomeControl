@@ -15,6 +15,7 @@
 		B9220F8E1C0A9B300095A206 /* Consumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9220F8D1C0A9B300095A206 /* Consumer.swift */; };
 		B92F3E681C012F2000B3CD32 /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92F3E671C012F2000B3CD32 /* SetupViewModel.swift */; };
 		B93C2C231C0D2657003340EE /* AuthenticationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93C2C221C0D2657003340EE /* AuthenticationData.swift */; };
+		B93DFD931C37348400796DA7 /* StructConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93DFD921C37348400796DA7 /* StructConvertible.swift */; };
 		B94E25751C067C7600B52062 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E25741C067C7600B52062 /* NetworkManager.swift */; };
 		B95BD9B01C20F01000AB74D1 /* StructureFileParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95BD9AF1C20F01000AB74D1 /* StructureFileParserTests.swift */; };
 		B95BD9B21C20F37200AB74D1 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95BD9B11C20F37200AB74D1 /* NetworkManagerTests.swift */; };
@@ -253,6 +254,7 @@
 		B9220F8D1C0A9B300095A206 /* Consumer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consumer.swift; sourceTree = "<group>"; };
 		B92F3E671C012F2000B3CD32 /* SetupViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
 		B93C2C221C0D2657003340EE /* AuthenticationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationData.swift; sourceTree = "<group>"; };
+		B93DFD921C37348400796DA7 /* StructConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructConvertible.swift; sourceTree = "<group>"; };
 		B94E25741C067C7600B52062 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B95BD9AF1C20F01000AB74D1 /* StructureFileParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StructureFileParserTests.swift; path = HomeControlTests/Source/StructureFileParserTests.swift; sourceTree = "<group>"; };
 		B95BD9B11C20F37200AB74D1 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManagerTests.swift; path = HomeControlTests/Source/NetworkManagerTests.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 				B9F61EB21BED651900D60722 /* AppDelegate.swift */,
 				B9ACC4F91C322F8100155C46 /* Store.swift */,
 				B9AB7A141C33274400C696FF /* ManagedObjectType.swift */,
+				B93DFD921C37348400796DA7 /* StructConvertible.swift */,
 				B9AB79F51C331F9A00C696FF /* ManagedRoom.swift */,
 				B9AB7A0E1C33222000C696FF /* ManagedAccessory.swift */,
 				B9AB7A0A1C3320FD00C696FF /* ManagedLight.swift */,
@@ -777,6 +780,7 @@
 			files = (
 				B9F61EB61BED651900D60722 /* AppDelegate.swift in Sources */,
 				B93C2C231C0D2657003340EE /* AuthenticationData.swift in Sources */,
+				B93DFD931C37348400796DA7 /* StructConvertible.swift in Sources */,
 				B96EF12C1C29E480001C4D40 /* Accessory.swift in Sources */,
 				B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */,
 				B9AB7A0F1C33222000C696FF /* ManagedAccessory.swift in Sources */,
