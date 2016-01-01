@@ -83,3 +83,14 @@ extension ManagedObjectType where Self: NSManagedObject {
         }
     }
 }
+
+//MARK: StructConvertible
+
+extension ManagedObjectType where Self: NSManagedObject, Self: StructConvertible {
+
+    public static func insert(item: StructType, intoContext context: NSManagedObjectContext) -> Self {
+        let managedObject: Self = context.insertObject()
+        managedObject.configure(item)
+        return managedObject
+    }
+}
