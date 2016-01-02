@@ -8,11 +8,7 @@
 
 import CoreData
 
-public protocol ManagedAccessory: ManagedObjectType {
-
-    //MARK: Associated Types
-
-    typealias AccessoryType: Accessory
+public protocol ManagedAccessory: ManagedObjectType, StructConvertible {
 
     //MARK: Properties
 
@@ -22,34 +18,22 @@ public protocol ManagedAccessory: ManagedObjectType {
     //MARK: Relationships
 
     var room: ManagedRoom { get }
-
-    //MARK: ManagedAccessory
-
-    func configure(accessory: AccessoryType)
 }
 
-extension ManagedAccessory {
+//MARK: ManagedObjectType
 
-    //MARK: ManagedObjectType
+extension ManagedAccessory {
 
     public static var defaultSortDescriptors: [NSSortDescriptor] {
         return [NSSortDescriptor(key: "name", ascending: false)]
     }
-
-    //MARK: ManagedAccessory
-
-    public var immutable: AccessoryType {
-        return AccessoryType(name: name, actionID: actionID)
-    }
 }
 
-//MARK: NSManagedObject
+//MARK: StructConvertible
 
-extension ManagedAccessory where Self: NSManagedObject {
+extension ManagedAccessory where StructType: Accessory {
 
-    public static func insert(accessory: AccessoryType, intoContext context: NSManagedObjectContext) -> Self {
-        let managedAccessory: Self = context.insertObject()
-        managedAccessory.configure(accessory)
-        return managedAccessory
+    public func convertToStruct() -> StructType {
+        return StructType(name: name, actionID: actionID)
     }
 }

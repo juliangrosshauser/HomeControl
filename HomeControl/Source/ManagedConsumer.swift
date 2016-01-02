@@ -10,10 +10,6 @@ import CoreData
 
 public final class ManagedConsumer: NSManagedObject, ManagedAccessory {
 
-    //MARK: Associated Types
-
-    public typealias AccessoryType = Consumer
-
     //MARK: Properties
 
     @NSManaged public private(set) var name: String
@@ -22,13 +18,6 @@ public final class ManagedConsumer: NSManagedObject, ManagedAccessory {
     //MARK: Relationships
 
     @NSManaged public private(set) var room: ManagedRoom
-
-    //MARK: ManagedAccessory
-
-    public func configure(accessory: AccessoryType) {
-        name = accessory.name
-        actionID = accessory.actionID
-    }
 }
 
 //MARK: ManagedObjectType
@@ -37,6 +26,22 @@ extension ManagedConsumer {
 
     public static var entityName: String {
         return "Consumer"
+    }
+}
+
+//MARK: StructConvertible
+
+extension ManagedConsumer {
+
+    //MARK: Associated Types
+
+    public typealias StructType = Consumer
+
+    //MARK: Methods
+
+    public func configure(item: StructType) {
+        name = item.name
+        actionID = item.actionID
     }
 }
 

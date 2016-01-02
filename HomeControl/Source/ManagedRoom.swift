@@ -46,19 +46,19 @@ extension ManagedRoom: StructConvertible {
     //MARK: Methods
 
     public func convertToStruct() -> StructType {
-        let immutableLights = lights?.map {
-            $0.immutable
+        let structLights = lights?.map {
+            $0.convertToStruct()
         }
 
-        let immutableBlinds = blinds?.map {
-            $0.immutable
+        let structBlinds = blinds?.map {
+            $0.convertToStruct()
         }
 
-        let immutableConsumers = consumers?.map {
-            $0.immutable
+        let structConsumers = consumers?.map {
+            $0.convertToStruct()
         }
 
-        return Room(id: UInt(id), name: name, lights: immutableLights, blinds: immutableBlinds, consumers: immutableConsumers)
+        return Room(id: UInt(id), name: name, lights: structLights, blinds: structBlinds, consumers: structConsumers)
     }
 
     public func configure(item: StructType) {

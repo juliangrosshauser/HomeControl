@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
 
             return rooms.map {
-                $0.immutable
+                $0.convertToStruct()
             }
         } catch {
             fatalError("Executing fetch request failed")

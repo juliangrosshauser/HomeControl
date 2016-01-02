@@ -10,10 +10,6 @@ import CoreData
 
 public final class ManagedLight: NSManagedObject, ManagedAccessory {
 
-    //MARK: Associated Types
-
-    public typealias AccessoryType = Light
-
     //MARK: Properties
 
     @NSManaged public private(set) var name: String
@@ -22,13 +18,6 @@ public final class ManagedLight: NSManagedObject, ManagedAccessory {
     //MARK: Relationships
 
     @NSManaged public private(set) var room: ManagedRoom
-
-    //MARK: ManagedAccessory
-
-    public func configure(accessory: AccessoryType) {
-        name = accessory.name
-        actionID = accessory.actionID
-    }
 }
 
 //MARK: ManagedObjectType
@@ -37,5 +26,21 @@ extension ManagedLight {
 
     public static var entityName: String {
         return "Light"
+    }
+}
+
+//MARK: StructConvertible
+
+extension ManagedLight {
+
+    //MARK: Associated Types
+
+    public typealias StructType = Light
+
+    //MARK: Methods
+
+    public func configure(item: StructType) {
+        name = item.name
+        actionID = item.actionID
     }
 }
