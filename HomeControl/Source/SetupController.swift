@@ -97,8 +97,8 @@ class SetupController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
 
-        notificationCenter.addObserverForName(SetupViewModel.LoadButtonStatusChanged, object: viewModel, queue: NSOperationQueue.mainQueue()) { [unowned self] notification in
-            guard let userInfo = notification.userInfo, loadButtonEnabled = userInfo[SetupViewModel.LoadButtonEnabledKey] as? Bool else {
+        notificationCenter.addObserverForName(SetupViewModel.NotificationName.LoadButtonStatusChanged.description, object: viewModel, queue: NSOperationQueue.mainQueue()) { [unowned self] notification in
+            guard let userInfo = notification.userInfo, loadButtonEnabled = userInfo[SetupViewModel.UserInfoKey.LoadButtonEnabled.rawValue] as? Bool else {
                 return
             }
 

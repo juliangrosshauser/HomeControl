@@ -11,13 +11,19 @@ import Foundation
 /// Abstracts `SetupController`s state and behavior.
 class SetupViewModel {
 
-    //MARK: Class Properties
+    //MARK: Enumerations
 
-    /// Notification name - used to signal that the load button needs to be enabled/disabled.
-    static let LoadButtonStatusChanged = "HomeControlLoadButtonStatusChanged"
+    enum NotificationName: String, PrefixedStringConstant {
 
-    /// Dictionary key - used in `userInfo` dictionary of `LoadButtonStatusChanged` notifications.
-    static let LoadButtonEnabledKey = "HomeControlLoadButtonEnabledKey"
+        /// Used to signal that the load button needs to be enabled/disabled.
+        case LoadButtonStatusChanged
+    }
+
+    enum UserInfoKey: String {
+
+        /// Used in `userInfo` dictionary of `NotificationName.LoadButtonStatusChanged` notifications.
+        case LoadButtonEnabled = "loadButtonEnabled"
+    }
 
     //MARK: Properties
 
@@ -37,7 +43,7 @@ class SetupViewModel {
                 return
             }
 
-            notificationCenter.postNotificationName(SetupViewModel.LoadButtonStatusChanged, object: self, userInfo: [SetupViewModel.LoadButtonEnabledKey: loadButtonEnabled])
+            notificationCenter.postNotificationName(NotificationName.LoadButtonStatusChanged.description, object: self, userInfo: [UserInfoKey.LoadButtonEnabled.rawValue: loadButtonEnabled])
         }
     }
 
