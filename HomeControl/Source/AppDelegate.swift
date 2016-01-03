@@ -37,13 +37,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         request.relationshipKeyPathsForPrefetching = ["lights", "blinds", "consumers"]
 
         do {
-            guard let rooms = try store.context.executeFetchRequest(request) as? [ManagedRoom] else {
+            guard let managedRooms = try store.context.executeFetchRequest(request) as? [ManagedRoom] else {
                 fatalError("Fetched objects should be of type ManagedRoom")
             }
 
-            return rooms.map {
-                $0.convertToStruct()
+            var rooms: [Room]?
+            store.context.performBlockAndWait {
+                rooms = managedRooms.map {
+                    $0.convertToStruct()
+                }
             }
+
+            if let rooms = rooms {
+                return rooms
+            }
+
+            fatalError("Couldn't convert managed rooms to structs")
         } catch {
             fatalError("Executing fetch request failed")
         }
