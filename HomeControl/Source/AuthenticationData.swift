@@ -9,7 +9,7 @@
 import Locksmith
 
 /// Contains all data necessary to authenticate a user at the server.
-struct AuthenticationData: ReadableSecureStorable, CreateableSecureStorable, DeleteableSecureStorable, GenericPasswordSecureStorable {
+struct AuthenticationData {
 
     //MARK: Properties
 
@@ -21,21 +21,6 @@ struct AuthenticationData: ReadableSecureStorable, CreateableSecureStorable, Del
 
     /// Password of user.
     let password: String
-
-    //MARK: GenericPasswordSecureStorable
-
-    /// The service that the authentication data is saved under in the keychain.
-    let service = "HomeControl"
-
-    /// The account that identifies the authentication data in the keychain.
-    var account: String { return username }
-
-    //MARK: CreateableSecureStorable
-
-    /// Data that's saved in the keychain.
-    var data: [String: AnyObject] {
-        return ["password": password, "serverAddress": serverAddress]
-    }
 
     //MARK: Initialization
 
@@ -51,3 +36,36 @@ struct AuthenticationData: ReadableSecureStorable, CreateableSecureStorable, Del
         self.password = password
     }
 }
+
+//MARK: GenericPasswordSecureStorable
+
+extension AuthenticationData: GenericPasswordSecureStorable {
+
+    /// The service that the authentication data is saved under in the keychain.
+    var service: String {
+        return "HomeControl"
+    }
+
+    /// The account that identifies the authentication data in the keychain.
+    var account: String {
+        return username
+    }
+}
+
+//MARK: CreateableSecureStorable
+
+extension AuthenticationData: CreateableSecureStorable {
+
+    /// Data that's saved in the keychain.
+    var data: [String: AnyObject] {
+        return ["password": password, "serverAddress": serverAddress]
+    }
+}
+
+//MARK: ReadableSecureStorable
+
+extension AuthenticationData: ReadableSecureStorable {}
+
+//MARK: DeleteableSecureStorable
+
+extension AuthenticationData: DeleteableSecureStorable {}
