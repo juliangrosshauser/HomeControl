@@ -90,11 +90,25 @@ extension AuthenticationData: CreateableSecureStorable {
     var data: [String: AnyObject] {
         return [KeychainDataKey.Password.rawValue: password]
     }
+
+    func save() throws {
+        try createInSecureStore()
+        saveInUserDefaults()
+    }
 }
 
 //MARK: ReadableSecureStorable
 
-extension AuthenticationData: ReadableSecureStorable {}
+extension AuthenticationData: ReadableSecureStorable {
+
+    static func load() -> AuthenticationData? {
+        guard let (serverAddress, username) = AuthenticationData.loadFromUserDefaults(), data = Locksmith.loadDataForUserAccount(username, inService: AuthenticationData.KeychainService), password = data[KeychainDataKey.Password.rawValue] as? String else {
+            return nil
+        }
+
+        return AuthenticationData(serverAddress: serverAddress, username: username, password: password)
+    }
+}
 
 //MARK: DeleteableSecureStorable
 
