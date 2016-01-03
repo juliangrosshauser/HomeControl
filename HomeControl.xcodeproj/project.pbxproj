@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B919150E1C38D44B009EF3CE /* PrefixedStringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B919150D1C38D44B009EF3CE /* PrefixedStringConstant.swift */; };
 		B91ED9721BFA9C5B0070EB8E /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91ED9711BFA9C5B0070EB8E /* Box.swift */; };
 		B91ED9741BFAA1EE0070EB8E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91ED9731BFAA1EE0070EB8E /* Theme.swift */; };
 		B9220F881C0A98050095A206 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9220F871C0A98050095A206 /* Room.swift */; };
@@ -246,6 +247,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B919150D1C38D44B009EF3CE /* PrefixedStringConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixedStringConstant.swift; sourceTree = "<group>"; };
 		B91ED9711BFA9C5B0070EB8E /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		B91ED9731BFAA1EE0070EB8E /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B9220F871C0A98050095A206 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 				B9AB7A121C33226A00C696FF /* ManagedConsumer.swift */,
 				B95E46F21BEEB4AE00481E51 /* SetupController.swift */,
 				B92F3E671C012F2000B3CD32 /* SetupViewModel.swift */,
+				B919150D1C38D44B009EF3CE /* PrefixedStringConstant.swift */,
 				B9FC15581C0BBFE800FEF734 /* StructureFileParser.swift */,
 				B96E75F91C27121800279A45 /* StructureFileParserError.swift */,
 				B9C76A341C0927CC00B25DAC /* NetworkError.swift */,
@@ -809,6 +812,7 @@
 				B9E9EDAF1C33731700AEF6AC /* NSManagedObjectContext+Manipulate.swift in Sources */,
 				B9220F8C1C0A9A8C0095A206 /* Blind.swift in Sources */,
 				B9AB7A151C33274400C696FF /* ManagedObjectType.swift in Sources */,
+				B919150E1C38D44B009EF3CE /* PrefixedStringConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
