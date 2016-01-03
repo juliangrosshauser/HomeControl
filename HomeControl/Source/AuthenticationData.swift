@@ -11,6 +11,17 @@ import Locksmith
 /// Contains all data necessary to authenticate a user at the server.
 struct AuthenticationData {
 
+    //MARK: Enumerations
+
+    private enum KeychainDataKey: String {
+        case Password = "password"
+        case ServerAddress = "serverAddress"
+    }
+
+    //MARK: Static Properties
+
+    private static let KeychainService = "HomeControl"
+
     //MARK: Properties
 
     /// Address of server.
@@ -43,7 +54,7 @@ extension AuthenticationData: GenericPasswordSecureStorable {
 
     /// The service that the authentication data is saved under in the keychain.
     var service: String {
-        return "HomeControl"
+        return AuthenticationData.KeychainService
     }
 
     /// The account that identifies the authentication data in the keychain.
@@ -58,7 +69,7 @@ extension AuthenticationData: CreateableSecureStorable {
 
     /// Data that's saved in the keychain.
     var data: [String: AnyObject] {
-        return ["password": password, "serverAddress": serverAddress]
+        return [KeychainDataKey.Password.rawValue: password, KeychainDataKey.ServerAddress.rawValue: serverAddress]
     }
 }
 
