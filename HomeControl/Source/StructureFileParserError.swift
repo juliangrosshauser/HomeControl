@@ -13,11 +13,11 @@ import Foundation
 /// - ReadError: File can't be read.
 /// - CategoryError: Category information found in structure file is insufficient or damaged.
 ///
-enum StructureFileParserError: ErrorType {
+enum StructureFileParserError: String, ErrorType {
 
     /// File can't be read.
-    case ReadError
+    case ReadError = "Structure file couldn't be read"
 
     /// Category information found in structure file is insufficient or damaged.
-    case CategoryError
+    case CategoryError = "Category information found in structure file is insufficient or damaged"
 }

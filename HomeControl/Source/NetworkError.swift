@@ -14,14 +14,14 @@ import Foundation
 /// - DownloadError: Error while downloading.
 /// - FileManagmentError: File can't be created or removed etc.
 ///
-enum NetworkError: ErrorType {
+enum NetworkError: String, ErrorType {
 
     /// Authentication data can't be encoded.
-    case AuthenticationDataError
+    case AuthenticationDataError = "Authentication data couldn't be encoded"
 
     /// Error while downloading.
-    case DownloadError
+    case DownloadError = "Error while downloading"
 
     /// File can't be created or removed etc.
-    case FileManagmentError
+    case FileManagmentError = "File couldn't be created or removed"
 }
