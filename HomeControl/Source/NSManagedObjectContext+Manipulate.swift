@@ -19,6 +19,10 @@ extension NSManagedObjectContext {
     }
 
     public func saveOrRollback() -> Bool {
+        guard hasChanges else {
+            return true
+        }
+        
         do {
             try save()
             return true
