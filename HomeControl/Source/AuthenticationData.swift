@@ -13,9 +13,13 @@ struct AuthenticationData {
 
     //MARK: Enumerations
 
+    private enum UserDefaultsKey: String, PrefixedStringConstant {
+        case ServerAddress
+        case Username
+    }
+
     private enum KeychainDataKey: String {
         case Password = "password"
-        case ServerAddress = "serverAddress"
     }
 
     //MARK: Static Properties
@@ -46,6 +50,13 @@ struct AuthenticationData {
         self.username = username
         self.password = password
     }
+
+    //MARK: NSUserDefaults
+
+    func saveInUserDefaults(userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()) {
+        userDefaults.setObject(serverAddress, forKey: UserDefaultsKey.ServerAddress.description)
+        userDefaults.setObject(username, forKey: UserDefaultsKey.Username.description)
+    }
 }
 
 //MARK: GenericPasswordSecureStorable
@@ -69,7 +80,7 @@ extension AuthenticationData: CreateableSecureStorable {
 
     /// Data that's saved in the keychain.
     var data: [String: AnyObject] {
-        return [KeychainDataKey.Password.rawValue: password, KeychainDataKey.ServerAddress.rawValue: serverAddress]
+        return [KeychainDataKey.Password.rawValue: password]
     }
 }
 
