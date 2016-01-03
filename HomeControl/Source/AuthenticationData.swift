@@ -57,6 +57,14 @@ struct AuthenticationData {
         userDefaults.setObject(serverAddress, forKey: UserDefaultsKey.ServerAddress.description)
         userDefaults.setObject(username, forKey: UserDefaultsKey.Username.description)
     }
+
+    static func loadFromUserDefaults(userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()) -> (serverAddress: String, username: String)? {
+        if let serverAddress = userDefaults.stringForKey(UserDefaultsKey.ServerAddress.description), username = userDefaults.stringForKey(UserDefaultsKey.Username.description) {
+            return (serverAddress, username)
+        }
+
+        return nil
+    }
 }
 
 //MARK: GenericPasswordSecureStorable
