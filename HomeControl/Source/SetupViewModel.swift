@@ -17,12 +17,21 @@ class SetupViewModel {
 
         /// Used to signal that the load button needs to be enabled/disabled.
         case LoadButtonStatusChanged
+
+        /// Used to send `loadStructureFile()` return values.
+        case LoadStructureFile
     }
 
     enum UserInfoKey: String {
 
         /// Used in `userInfo` dictionary of `NotificationName.LoadButtonStatusChanged` notifications.
         case LoadButtonEnabled = "loadButtonEnabled"
+
+        /// Used in `userInfo` dictionary of `NotificationName.LoadStructureFile` notifications.
+        case LoadStructureFileManagedRooms = "managedRooms"
+
+        /// Used in `userInfo` dictionary of `NotificationName.LoadStructureFile` notifications.
+        case LoadStructureFileError = "error"
     }
 
     //MARK: Properties
@@ -66,6 +75,39 @@ class SetupViewModel {
         self.networkManager = networkManager
         self.structureFileParser = structureFileParser
         self.store = store
+    }
+
+    func loadStructureFile() {
+        guard let authenticationData = AuthenticationData(serverAddress: serverAddress, username: username, password: password) else {
+            self.notificationCenter.postNotificationName(NotificationName.LoadStructureFile.description, object: self, userInfo: [UserInfoKey.LoadStructureFileError.rawValue: "Invalid authentication data"])
+            return
+        }
+
+        networkManager.downloadStructureFile(authenticationData) { [unowned self] result in
+            do {
+                let structureFilePath = try result()
+                let rooms = try self.structureFileParser.parse(structureFilePath)
+
+                // If parsing the structure file was successfull we can be sure that the authentication data is valid
+                // and therefore should be saved in the keychain. To ignore all Locksmith errors, a thrown error is
+                // converted to an optional value and then never used.
+                _ = try? authenticationData.save()
+
+                self.store.context.performChanges {
+                    let managedRooms = rooms.map {
+                        ManagedRoom.insert($0, intoContext: self.store.context)
+                    }
+
+                    self.notificationCenter.postNotificationName(NotificationName.LoadStructureFile.description, object: self, userInfo: [UserInfoKey.LoadStructureFileManagedRooms.rawValue: managedRooms])
+                }
+            } catch let error as NetworkError {
+                self.notificationCenter.postNotificationName(NotificationName.LoadStructureFile.description, object: self, userInfo: [UserInfoKey.LoadStructureFileError.rawValue: error.rawValue])
+            } catch let error as StructureFileParserError {
+                self.notificationCenter.postNotificationName(NotificationName.LoadStructureFile.description, object: self, userInfo: [UserInfoKey.LoadStructureFileError.rawValue: error.rawValue])
+            } catch {
+                self.notificationCenter.postNotificationName(NotificationName.LoadStructureFile.description, object: self, userInfo: [UserInfoKey.LoadStructureFileError.rawValue: "Error while loading structure file"])
+            }
+        }
     }
 
     //MARK: Text Field Actions
