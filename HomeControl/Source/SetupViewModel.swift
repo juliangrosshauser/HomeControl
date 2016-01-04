@@ -19,7 +19,7 @@ class SetupViewModel {
         case LoadButtonStatusChanged
 
         /// Used to send `loadStructureFile()` return values.
-        case LoadStructureFile
+        case LoadStructureFileCompleted
     }
 
     enum UserInfoKey: String {
@@ -27,10 +27,10 @@ class SetupViewModel {
         /// Used in `userInfo` dictionary of `NotificationName.LoadButtonStatusChanged` notifications.
         case LoadButtonEnabled = "loadButtonEnabled"
 
-        /// Used in `userInfo` dictionary of `NotificationName.LoadStructureFile` notifications.
+        /// Used in `userInfo` dictionary of `NotificationName.LoadStructureFileCompleted` notifications.
         case LoadStructureFileManagedRooms = "managedRooms"
 
-        /// Used in `userInfo` dictionary of `NotificationName.LoadStructureFile` notifications.
+        /// Used in `userInfo` dictionary of `NotificationName.LoadStructureFileCompleted` notifications.
         case LoadStructureFileError = "error"
     }
 
@@ -79,7 +79,7 @@ class SetupViewModel {
 
     func loadStructureFile() {
         guard let authenticationData = AuthenticationData(serverAddress: serverAddress, username: username, password: password) else {
-            self.notificationCenter.postNotificationName(NotificationName.LoadStructureFile.description, object: self, userInfo: [UserInfoKey.LoadStructureFileError.rawValue: "Invalid authentication data"])
+            self.notificationCenter.postNotificationName(NotificationName.LoadStructureFileCompleted.description, object: self, userInfo: [UserInfoKey.LoadStructureFileError.rawValue: "Invalid authentication data"])
             return
         }
 
@@ -98,14 +98,14 @@ class SetupViewModel {
                         ManagedRoom.insert($0, intoContext: self.store.context)
                     }
 
-                    self.notificationCenter.postNotificationName(NotificationName.LoadStructureFile.description, object: self, userInfo: [UserInfoKey.LoadStructureFileManagedRooms.rawValue: managedRooms])
+                    self.notificationCenter.postNotificationName(NotificationName.LoadStructureFileCompleted.description, object: self, userInfo: [UserInfoKey.LoadStructureFileManagedRooms.rawValue: managedRooms])
                 }
             } catch let error as NetworkError {
-                self.notificationCenter.postNotificationName(NotificationName.LoadStructureFile.description, object: self, userInfo: [UserInfoKey.LoadStructureFileError.rawValue: error.rawValue])
+                self.notificationCenter.postNotificationName(NotificationName.LoadStructureFileCompleted.description, object: self, userInfo: [UserInfoKey.LoadStructureFileError.rawValue: error.rawValue])
             } catch let error as StructureFileParserError {
-                self.notificationCenter.postNotificationName(NotificationName.LoadStructureFile.description, object: self, userInfo: [UserInfoKey.LoadStructureFileError.rawValue: error.rawValue])
+                self.notificationCenter.postNotificationName(NotificationName.LoadStructureFileCompleted.description, object: self, userInfo: [UserInfoKey.LoadStructureFileError.rawValue: error.rawValue])
             } catch {
-                self.notificationCenter.postNotificationName(NotificationName.LoadStructureFile.description, object: self, userInfo: [UserInfoKey.LoadStructureFileError.rawValue: "Error while loading structure file"])
+                self.notificationCenter.postNotificationName(NotificationName.LoadStructureFileCompleted.description, object: self, userInfo: [UserInfoKey.LoadStructureFileError.rawValue: "Error while loading structure file"])
             }
         }
     }
