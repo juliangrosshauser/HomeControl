@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Whisper
 
 final class SetupTextField: UITextField {
 
@@ -98,6 +99,7 @@ class SetupController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         notificationCenter.addObserver(self, selector: "loadButtonStatusChanged:", name: SetupViewModel.NotificationName.LoadButtonStatusChanged.description, object: viewModel)
+        notificationCenter.addObserver(self, selector: "loadStructureFileCompleted:", name: SetupViewModel.NotificationName.LoadStructureFileCompleted.description, object: viewModel)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -180,5 +182,17 @@ class SetupController: UIViewController {
         }
 
         self.loadButton.enabled = loadButtonEnabled
+    }
+
+    @objc
+    private func loadStructureFileCompleted(notification: NSNotification) {
+        guard let navigationController = navigationController, userInfo = notification.userInfo else {
+            return
+        }
+
+        if let errorMessage = userInfo[SetupViewModel.UserInfoKey.LoadStructureFileError.rawValue] as? String {
+            let message = Message(title: errorMessage, color: UIColor(named: .Red), images: nil)
+            Whisper(message, to: navigationController, action: .Show)
+        }
     }
 }
