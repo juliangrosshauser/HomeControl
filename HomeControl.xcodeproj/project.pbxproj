@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9184D221C39EF24002A48AB /* Whisper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9184D1F1C39EF06002A48AB /* Whisper.framework */; };
+		B9184D231C39EF24002A48AB /* Whisper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9184D1F1C39EF06002A48AB /* Whisper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B919150E1C38D44B009EF3CE /* PrefixedStringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B919150D1C38D44B009EF3CE /* PrefixedStringConstant.swift */; };
 		B91ED9721BFA9C5B0070EB8E /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91ED9711BFA9C5B0070EB8E /* Box.swift */; };
 		B91ED9741BFAA1EE0070EB8E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91ED9731BFAA1EE0070EB8E /* Theme.swift */; };
@@ -53,6 +55,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B9184D1E1C39EF06002A48AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9184D091C39EF06002A48AB /* Whisper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 290530F91C20511C00FB382C;
+			remoteInfo = "Whisper-iOS";
+		};
+		B9184D201C39EF12002A48AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9184D091C39EF06002A48AB /* Whisper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 290530F81C20511C00FB382C;
+			remoteInfo = "Whisper-iOS";
+		};
+		B9184D241C39EF24002A48AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9184D091C39EF06002A48AB /* Whisper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 290530F81C20511C00FB382C;
+			remoteInfo = "Whisper-iOS";
+		};
 		B9EF55671C22437000206778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B9EF555D1C22437000206778 /* Alamofire.xcodeproj */;
@@ -240,6 +263,7 @@
 				B9EF55B41C2243D400206778 /* Locksmith.framework in Embed Frameworks */,
 				B9EF55B01C2243CF00206778 /* SWXMLHash.framework in Embed Frameworks */,
 				B9EF55AB1C2243CA00206778 /* Alamofire.framework in Embed Frameworks */,
+				B9184D231C39EF24002A48AB /* Whisper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +271,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B9184D091C39EF06002A48AB /* Whisper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Whisper.xcodeproj; path = Whisper/Whisper.xcodeproj; sourceTree = "<group>"; };
 		B919150D1C38D44B009EF3CE /* PrefixedStringConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixedStringConstant.swift; sourceTree = "<group>"; };
 		B91ED9711BFA9C5B0070EB8E /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		B91ED9731BFAA1EE0070EB8E /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -303,6 +328,7 @@
 				B9EF55AA1C2243CA00206778 /* Alamofire.framework in Frameworks */,
 				B9EF55AF1C2243CF00206778 /* SWXMLHash.framework in Frameworks */,
 				B9EF55B31C2243D400206778 /* Locksmith.framework in Frameworks */,
+				B9184D221C39EF24002A48AB /* Whisper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +349,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B9184D0A1C39EF06002A48AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9184D1F1C39EF06002A48AB /* Whisper.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B9EF555E1C22437000206778 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +408,7 @@
 				B9EF555D1C22437000206778 /* Alamofire.xcodeproj */,
 				B9EF55751C22437B00206778 /* SWXMLHash.xcodeproj */,
 				B9EF558D1C22438600206778 /* Locksmith.xcodeproj */,
+				B9184D091C39EF06002A48AB /* Whisper.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -507,6 +542,8 @@
 				B9EF55AD1C2243CA00206778 /* PBXTargetDependency */,
 				B9EF55B21C2243CF00206778 /* PBXTargetDependency */,
 				B9EF55B61C2243D400206778 /* PBXTargetDependency */,
+				B9184D211C39EF12002A48AB /* PBXTargetDependency */,
+				B9184D251C39EF24002A48AB /* PBXTargetDependency */,
 			);
 			name = HomeControl;
 			productName = HomeControl;
@@ -596,6 +633,10 @@
 					ProductGroup = B9EF55761C22437B00206778 /* Products */;
 					ProjectRef = B9EF55751C22437B00206778 /* SWXMLHash.xcodeproj */;
 				},
+				{
+					ProductGroup = B9184D0A1C39EF06002A48AB /* Products */;
+					ProjectRef = B9184D091C39EF06002A48AB /* Whisper.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -607,6 +648,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		B9184D1F1C39EF06002A48AB /* Whisper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Whisper.framework;
+			remoteRef = B9184D1E1C39EF06002A48AB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		B9EF55681C22437000206778 /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -835,6 +883,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B9184D211C39EF12002A48AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Whisper-iOS";
+			targetProxy = B9184D201C39EF12002A48AB /* PBXContainerItemProxy */;
+		};
+		B9184D251C39EF24002A48AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Whisper-iOS";
+			targetProxy = B9184D241C39EF24002A48AB /* PBXContainerItemProxy */;
+		};
 		B9EF55AD1C2243CA00206778 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
