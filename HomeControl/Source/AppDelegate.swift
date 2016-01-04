@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //MARK: UIApplicationDelegate
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        window?.rootViewController = UINavigationController(rootViewController: setupRootViewController(fetchRooms()))
+        window?.rootViewController = setupRootViewController(fetchRooms())
         window?.makeKeyAndVisible()
         return true
     }
@@ -60,10 +60,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func setupRootViewController(rooms: [Room]) -> UIViewController {
         if rooms.isEmpty {
-            return SetupController(viewModel: SetupViewModel(store: store))
+            let setupController = SetupController(viewModel: SetupViewModel(store: store))
+            return UINavigationController(rootViewController: setupController)
         }
 
-        // TODO: Set up UI
-        return UIViewController()
+        let roomController = RoomController(viewModel: RoomViewModel(rooms: rooms))
+        let accessoryController = AccessoryController(viewModel: AccessoryViewModel())
+        roomController.delegate = accessoryController
+
+        let masterViewController = UINavigationController(rootViewController: roomController)
+        let detailViewController = UINavigationController(rootViewController: accessoryController)
+
+        let splitViewController = UISplitViewController()
+        splitViewController.viewControllers = [masterViewController, detailViewController]
+        return splitViewController
     }
 }
