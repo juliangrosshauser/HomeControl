@@ -19,6 +19,15 @@ enum NetworkError: String, ErrorType {
     /// Authentication data can't be encoded.
     case AuthenticationDataError = "Authentication data couldn't be encoded"
 
+    /// Wrong username.
+    case WrongUsername = "Wrong username"
+
+    /// Wrong password.
+    case WrongPassword = "Wrong password"
+
+    /// Request timed out.
+    case TimeOut = "Request timed out"
+
     /// Error while downloading.
     case DownloadError = "Error while downloading"
 

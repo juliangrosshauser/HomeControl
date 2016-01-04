@@ -92,6 +92,23 @@ class NetworkManager {
 
         download(.GET, url, headers: headers, destination: destination).response { _, response, _, error in
             guard response?.statusCode == 200 && error == nil else {
+                // Wrong password.
+                if response?.statusCode == 401 {
+                    completionHandler { throw NetworkError.WrongPassword }
+                    return
+                }
+
+                // Wrong username.
+                if response?.statusCode == 403 {
+                    completionHandler { throw NetworkError.WrongUsername }
+                    return
+                }
+
+                if error?.code == NSURLErrorTimedOut {
+                    completionHandler { throw NetworkError.TimeOut }
+                    return
+                }
+
                 completionHandler { throw NetworkError.DownloadError }
                 return
             }
