@@ -37,3 +37,16 @@ public struct Room {
         self.consumers = consumers
     }
 }
+
+//MARK: Equatable
+
+extension Room: Equatable {}
+
+public func ==(lhs: Room, rhs: Room) -> Bool {
+    return lhs.id == rhs.id && lhs.name == rhs.name && lhs.lights == rhs.lights && lhs.blinds == rhs.blinds && lhs.consumers == rhs.consumers
+}
+
+// Necessary because `==` for `Room`s doesn't compile otherwise.
+public func ==<T: Equatable>(lhs: [T]?, rhs: [T]?) -> Bool {
+    return lhs == rhs
+}

@@ -9,7 +9,7 @@
 import Foundation
 
 /// Representing an accessory, like lights, blinds and consumers.
-public protocol Accessory {
+public protocol Accessory: Equatable {
     
     //MARK: Properties
     
@@ -23,4 +23,10 @@ public protocol Accessory {
 
     /// Construct an `Accessory` with a name and action ID.
     init(name: String, actionID: String)
+}
+
+//MARK: Equatable
+
+public func ==<T: Accessory>(lhs: T, rhs: T) -> Bool {
+    return lhs.name == rhs.name && lhs.actionID == lhs.actionID
 }
