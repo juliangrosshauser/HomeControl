@@ -97,13 +97,7 @@ class SetupController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
 
-        notificationCenter.addObserverForName(SetupViewModel.NotificationName.LoadButtonStatusChanged.description, object: viewModel, queue: NSOperationQueue.mainQueue()) { [unowned self] notification in
-            guard let userInfo = notification.userInfo, loadButtonEnabled = userInfo[SetupViewModel.UserInfoKey.LoadButtonEnabled.rawValue] as? Bool else {
-                return
-            }
-
-            self.loadButton.enabled = loadButtonEnabled
-        }
+        notificationCenter.addObserver(self, selector: "loadButtonStatusChanged:", name: SetupViewModel.NotificationName.LoadButtonStatusChanged.description, object: viewModel)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -175,5 +169,16 @@ class SetupController: UIViewController {
             button.layer.transform = CATransform3DIdentity
         }, completion: nil)
         viewModel.loadStructureFile()
+    }
+
+    //MARK: Notification Observers
+
+    @objc
+    private func loadButtonStatusChanged(notification: NSNotification) {
+        guard let userInfo = notification.userInfo, loadButtonEnabled = userInfo[SetupViewModel.UserInfoKey.LoadButtonEnabled.rawValue] as? Bool else {
+            return
+        }
+
+        self.loadButton.enabled = loadButtonEnabled
     }
 }
