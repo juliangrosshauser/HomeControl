@@ -71,7 +71,7 @@ class SetupViewModel {
     //MARK: Initialization
 
     /// Construct `SetupViewModel` using specific `NetworkManager`, `StructureFileParser` and `Store` instances.
-    init(networkManager: NetworkManager = NetworkManager(), structureFileParser: StructureFileParser = StructureFileParser(), store: Store = Store()) {
+    init(networkManager: NetworkManager = NetworkManager(), structureFileParser: StructureFileParser = StructureFileParser(), store: Store) {
         self.networkManager = networkManager
         self.structureFileParser = structureFileParser
         self.store = store
