@@ -13,6 +13,7 @@ final class RoomController: UITableViewController {
     //MARK: Properties
 
     private let viewModel: RoomViewModel
+    weak var delegate: RoomControllerDelegate?
 
     //MARK: Initialization
 
@@ -45,5 +46,26 @@ extension RoomController {
         let cell = tableView.dequeueReusableCellWithIdentifier(String(RoomCell)) as! RoomCell
         cell.configure(viewModel.rooms[indexPath.row])
         return cell
+    }
+}
+
+//MARK: UITableViewDelegate
+
+extension RoomController {
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        delegate?.roomChanged(viewModel.rooms[indexPath.row])
+
+        guard let splitViewController = splitViewController, detailViewController = delegate as? UIViewController else {
+            return
+        }
+
+        if splitViewController.collapsed {
+            splitViewController.showDetailViewController(detailViewController, sender: nil)
+        } else {
+            guard splitViewController.displayMode == .PrimaryOverlay else { return }
+            UIView.animateWithDuration(0.3) { splitViewController.preferredDisplayMode = .PrimaryHidden }
+            splitViewController.preferredDisplayMode = .Automatic
+        }
     }
 }

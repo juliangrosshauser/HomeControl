@@ -79,3 +79,12 @@ extension AccessoryController {
         return cell
     }
 }
+
+//MARK: RoomControllerDelegate
+
+extension AccessoryController: RoomControllerDelegate {
+
+    func roomChanged(room: Room) {
+        viewModel.room = room
+    }
+}
