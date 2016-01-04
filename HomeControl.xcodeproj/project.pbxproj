@@ -23,6 +23,14 @@
 		B95BD9B01C20F01000AB74D1 /* StructureFileParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95BD9AF1C20F01000AB74D1 /* StructureFileParserTests.swift */; };
 		B95BD9B21C20F37200AB74D1 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95BD9B11C20F37200AB74D1 /* NetworkManagerTests.swift */; };
 		B95C706B1C3A2DBA0012261D /* RoomControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95C706A1C3A2DBA0012261D /* RoomControllerDelegate.swift */; };
+		B95C70751C3A60450012261D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95C70741C3A60450012261D /* Alamofire.framework */; };
+		B95C70771C3A604B0012261D /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95C70761C3A604B0012261D /* SWXMLHash.framework */; };
+		B95C70791C3A604E0012261D /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95C70781C3A604E0012261D /* Locksmith.framework */; };
+		B95C707B1C3A60530012261D /* Whisper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95C707A1C3A60530012261D /* Whisper.framework */; };
+		B95C708D1C3A62760012261D /* Alamofire.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B95C70811C3A61430012261D /* Alamofire.framework.dSYM */; };
+		B95C708E1C3A62790012261D /* SWXMLHash.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B95C70831C3A61520012261D /* SWXMLHash.framework.dSYM */; };
+		B95C708F1C3A627B0012261D /* Locksmith.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B95C70851C3A615A0012261D /* Locksmith.framework.dSYM */; };
+		B95C70901C3A627F0012261D /* Whisper.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B95C70891C3A61790012261D /* Whisper.framework.dSYM */; };
 		B95E46F31BEEB4AE00481E51 /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95E46F21BEEB4AE00481E51 /* SetupController.swift */; };
 		B96E75FA1C27121800279A45 /* StructureFileParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E75F91C27121800279A45 /* StructureFileParserError.swift */; };
 		B96E760D1C2715F300279A45 /* CollectionType+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E760C1C2715F300279A45 /* CollectionType+String.swift */; };
@@ -69,6 +77,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B95C708C1C3A62570012261D /* Carthage - Copy Debug Symbols */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				B95C708D1C3A62760012261D /* Alamofire.framework.dSYM in Carthage - Copy Debug Symbols */,
+				B95C708E1C3A62790012261D /* SWXMLHash.framework.dSYM in Carthage - Copy Debug Symbols */,
+				B95C708F1C3A627B0012261D /* Locksmith.framework.dSYM in Carthage - Copy Debug Symbols */,
+				B95C70901C3A627F0012261D /* Whisper.framework.dSYM in Carthage - Copy Debug Symbols */,
+			);
+			name = "Carthage - Copy Debug Symbols";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B9184D421C3A05B2002A48AB /* RoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomController.swift; sourceTree = "<group>"; };
 		B9184D441C3A0693002A48AB /* RoomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
@@ -86,6 +111,14 @@
 		B95BD9AF1C20F01000AB74D1 /* StructureFileParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StructureFileParserTests.swift; path = HomeControlTests/Source/StructureFileParserTests.swift; sourceTree = "<group>"; };
 		B95BD9B11C20F37200AB74D1 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManagerTests.swift; path = HomeControlTests/Source/NetworkManagerTests.swift; sourceTree = "<group>"; };
 		B95C706A1C3A2DBA0012261D /* RoomControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomControllerDelegate.swift; sourceTree = "<group>"; };
+		B95C70741C3A60450012261D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		B95C70761C3A604B0012261D /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Carthage/Build/iOS/SWXMLHash.framework; sourceTree = "<group>"; };
+		B95C70781C3A604E0012261D /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
+		B95C707A1C3A60530012261D /* Whisper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Whisper.framework; path = Carthage/Build/iOS/Whisper.framework; sourceTree = "<group>"; };
+		B95C70811C3A61430012261D /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		B95C70831C3A61520012261D /* SWXMLHash.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SWXMLHash.framework.dSYM; path = Carthage/Build/iOS/SWXMLHash.framework.dSYM; sourceTree = "<group>"; };
+		B95C70851C3A615A0012261D /* Locksmith.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Locksmith.framework.dSYM; path = Carthage/Build/iOS/Locksmith.framework.dSYM; sourceTree = "<group>"; };
+		B95C70891C3A61790012261D /* Whisper.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Whisper.framework.dSYM; path = Carthage/Build/iOS/Whisper.framework.dSYM; sourceTree = "<group>"; };
 		B95E46F21BEEB4AE00481E51 /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
 		B96E75F91C27121800279A45 /* StructureFileParserError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructureFileParserError.swift; sourceTree = "<group>"; };
 		B96E760C1C2715F300279A45 /* CollectionType+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+String.swift"; sourceTree = "<group>"; };
@@ -126,6 +159,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B95C70751C3A60450012261D /* Alamofire.framework in Frameworks */,
+				B95C70771C3A604B0012261D /* SWXMLHash.framework in Frameworks */,
+				B95C70791C3A604E0012261D /* Locksmith.framework in Frameworks */,
+				B95C707B1C3A60530012261D /* Whisper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +280,21 @@
 			name = "Accessory UI";
 			sourceTree = "<group>";
 		};
+		B95C707C1C3A606D0012261D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B95C70741C3A60450012261D /* Alamofire.framework */,
+				B95C70761C3A604B0012261D /* SWXMLHash.framework */,
+				B95C70781C3A604E0012261D /* Locksmith.framework */,
+				B95C707A1C3A60530012261D /* Whisper.framework */,
+				B95C70811C3A61430012261D /* Alamofire.framework.dSYM */,
+				B95C70831C3A61520012261D /* SWXMLHash.framework.dSYM */,
+				B95C70851C3A615A0012261D /* Locksmith.framework.dSYM */,
+				B95C70891C3A61790012261D /* Whisper.framework.dSYM */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B9F61E711BED644D00D60722 = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +302,7 @@
 				B9F61EB71BED652500D60722 /* HomeControlTests */,
 				B9F61EBB1BED652E00D60722 /* HomeControlUITests */,
 				B9F61E7B1BED644D00D60722 /* Products */,
+				B95C707C1C3A606D0012261D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -353,9 +406,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9F61EA21BED644D00D60722 /* Build configuration list for PBXNativeTarget "HomeControl" */;
 			buildPhases = (
+				B95C70911C3A62DB0012261D /* Carthage - Compile Frameworks */,
 				B9F61E761BED644D00D60722 /* Sources */,
 				B9F61E771BED644D00D60722 /* Frameworks */,
 				B9F61E781BED644D00D60722 /* Resources */,
+				B95C708B1C3A62100012261D /* Carthage - Copy Frameworks */,
+				B95C708C1C3A62570012261D /* Carthage - Copy Debug Symbols */,
 			);
 			buildRules = (
 			);
@@ -471,6 +527,41 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B95C708B1C3A62100012261D /* Carthage - Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SWXMLHash.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Locksmith.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Whisper.framework",
+			);
+			name = "Carthage - Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		B95C70911C3A62DB0012261D /* Carthage - Compile Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Carthage - Compile Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ ! -d \"$SRCROOT/Carthage/Build\" ]; then\n    carthage build --platform iOS --no-use-binaries\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9F61E761BED644D00D60722 /* Sources */ = {
@@ -649,7 +740,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliangrosshauser.HomeControl;
@@ -662,7 +756,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliangrosshauser.HomeControl;

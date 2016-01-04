@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" "3.1.4"
+github "matthewpalmer/Locksmith" "6ae6aaedf2657bbf3dc68689b6b40dfe69e82bdd"
+github "drmohundro/SWXMLHash" "2.0.6"
+github "hyperoslo/Whisper" "3446d861e64d3764ec848498853f52553d34a14e"
