@@ -10,7 +10,6 @@
 		B9184D221C39EF24002A48AB /* Whisper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9184D1F1C39EF06002A48AB /* Whisper.framework */; };
 		B9184D231C39EF24002A48AB /* Whisper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9184D1F1C39EF06002A48AB /* Whisper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B919150E1C38D44B009EF3CE /* PrefixedStringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B919150D1C38D44B009EF3CE /* PrefixedStringConstant.swift */; };
-		B91ED9721BFA9C5B0070EB8E /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91ED9711BFA9C5B0070EB8E /* Box.swift */; };
 		B91ED9741BFAA1EE0070EB8E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91ED9731BFAA1EE0070EB8E /* Theme.swift */; };
 		B9220F881C0A98050095A206 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9220F871C0A98050095A206 /* Room.swift */; };
 		B9220F8A1C0A98BF0095A206 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9220F891C0A98BF0095A206 /* Light.swift */; };
@@ -273,7 +272,6 @@
 /* Begin PBXFileReference section */
 		B9184D091C39EF06002A48AB /* Whisper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Whisper.xcodeproj; path = Whisper/Whisper.xcodeproj; sourceTree = "<group>"; };
 		B919150D1C38D44B009EF3CE /* PrefixedStringConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixedStringConstant.swift; sourceTree = "<group>"; };
-		B91ED9711BFA9C5B0070EB8E /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		B91ED9731BFAA1EE0070EB8E /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B9220F871C0A98050095A206 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		B9220F891C0A98BF0095A206 /* Light.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
@@ -526,7 +524,6 @@
 				B94E25741C067C7600B52062 /* NetworkManager.swift */,
 				B93C2C221C0D2657003340EE /* AuthenticationData.swift */,
 				B919150D1C38D44B009EF3CE /* PrefixedStringConstant.swift */,
-				B91ED9711BFA9C5B0070EB8E /* Box.swift */,
 				B9184D411C3A038B002A48AB /* Setup */,
 				B9184D2A1C3A0277002A48AB /* Model */,
 				B9184D3E1C3A02D7002A48AB /* Errors */,
@@ -900,7 +897,6 @@
 				B9ACC4FC1C32368300155C46 /* NSURL+DocumentDirectory.swift in Sources */,
 				B9220F8A1C0A98BF0095A206 /* Light.swift in Sources */,
 				B9AB7A131C33226A00C696FF /* ManagedConsumer.swift in Sources */,
-				B91ED9721BFA9C5B0070EB8E /* Box.swift in Sources */,
 				B96E760D1C2715F300279A45 /* CollectionType+String.swift in Sources */,
 				B9AB7A111C33225600C696FF /* ManagedBlind.swift in Sources */,
 				B9220F8E1C0A9B300095A206 /* Consumer.swift in Sources */,
