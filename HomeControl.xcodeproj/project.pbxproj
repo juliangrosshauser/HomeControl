@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B9184D221C39EF24002A48AB /* Whisper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9184D1F1C39EF06002A48AB /* Whisper.framework */; };
-		B9184D231C39EF24002A48AB /* Whisper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9184D1F1C39EF06002A48AB /* Whisper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9184D431C3A05B2002A48AB /* RoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9184D421C3A05B2002A48AB /* RoomController.swift */; };
 		B9184D451C3A0693002A48AB /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9184D441C3A0693002A48AB /* RoomViewModel.swift */; };
 		B9184D471C3A0772002A48AB /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9184D461C3A0772002A48AB /* RoomCell.swift */; };
@@ -46,12 +44,6 @@
 		B9C76A351C0927CC00B25DAC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C76A341C0927CC00B25DAC /* NetworkError.swift */; };
 		B9E9EDAF1C33731700AEF6AC /* NSManagedObjectContext+Manipulate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E9EDAE1C33731700AEF6AC /* NSManagedObjectContext+Manipulate.swift */; };
 		B9EE8F2C1C1CDCA5001CB8F1 /* StructureFiles in Resources */ = {isa = PBXBuildFile; fileRef = B9EE8F2B1C1CDCA5001CB8F1 /* StructureFiles */; };
-		B9EF55AA1C2243CA00206778 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EF55681C22437000206778 /* Alamofire.framework */; };
-		B9EF55AB1C2243CA00206778 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9EF55681C22437000206778 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B9EF55AF1C2243CF00206778 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EF55801C22437B00206778 /* SWXMLHash.framework */; };
-		B9EF55B01C2243CF00206778 /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9EF55801C22437B00206778 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B9EF55B31C2243D400206778 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EF55971C22438600206778 /* Locksmith.framework */; };
-		B9EF55B41C2243D400206778 /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9EF55971C22438600206778 /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9F10AFE1BF7FFB400AB23D9 /* UIColor+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */; };
 		B9F10B001BF8004200AB23D9 /* UIImage+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */; };
 		B9F61EB31BED651900D60722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F61EAD1BED651900D60722 /* Assets.xcassets */; };
@@ -61,188 +53,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B9184D1E1C39EF06002A48AB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9184D091C39EF06002A48AB /* Whisper.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 290530F91C20511C00FB382C;
-			remoteInfo = "Whisper-iOS";
-		};
-		B9184D201C39EF12002A48AB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9184D091C39EF06002A48AB /* Whisper.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 290530F81C20511C00FB382C;
-			remoteInfo = "Whisper-iOS";
-		};
-		B9184D241C39EF24002A48AB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9184D091C39EF06002A48AB /* Whisper.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 290530F81C20511C00FB382C;
-			remoteInfo = "Whisper-iOS";
-		};
-		B9EF55671C22437000206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF555D1C22437000206778 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		B9EF55691C22437000206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF555D1C22437000206778 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		B9EF556B1C22437000206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF555D1C22437000206778 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
-			remoteInfo = "Alamofire OSX";
-		};
-		B9EF556D1C22437000206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF555D1C22437000206778 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
-			remoteInfo = "Alamofire OSX Tests";
-		};
-		B9EF556F1C22437000206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF555D1C22437000206778 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS";
-		};
-		B9EF55711C22437000206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF555D1C22437000206778 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS Tests";
-		};
-		B9EF55731C22437000206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF555D1C22437000206778 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4202FE01B667AA100C997FB;
-			remoteInfo = "Alamofire watchOS";
-		};
-		B9EF557F1C22437B00206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF55751C22437B00206778 /* SWXMLHash.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CD6083EF196CA106000B4F8D;
-			remoteInfo = "SWXMLHash iOS";
-		};
-		B9EF55811C22437B00206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF55751C22437B00206778 /* SWXMLHash.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CD6083FA196CA106000B4F8D;
-			remoteInfo = "SWXMLHash iOS Tests";
-		};
-		B9EF55831C22437B00206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF55751C22437B00206778 /* SWXMLHash.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CD9D052C1A757D8B003CCB21;
-			remoteInfo = "SWXMLHash OSX";
-		};
-		B9EF55851C22437B00206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF55751C22437B00206778 /* SWXMLHash.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CD9D05361A757D8B003CCB21;
-			remoteInfo = "SWXMLHash OSX Tests";
-		};
-		B9EF55871C22437B00206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF55751C22437B00206778 /* SWXMLHash.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CDDEC74C1BF6311A00AB138B;
-			remoteInfo = "SWXMLHash tvOS";
-		};
-		B9EF55891C22437B00206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF55751C22437B00206778 /* SWXMLHash.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CDDEC7551BF6311B00AB138B;
-			remoteInfo = "SWXMLHash tvOS Tests";
-		};
-		B9EF558B1C22437B00206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF55751C22437B00206778 /* SWXMLHash.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CDDEC7681BF6316C00AB138B;
-			remoteInfo = "SWXMLHash watchOS";
-		};
-		B9EF55961C22438600206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF558D1C22438600206778 /* Locksmith.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0EC25C591BA385AA004191AF;
-			remoteInfo = "Locksmith iOS";
-		};
-		B9EF55981C22438600206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF558D1C22438600206778 /* Locksmith.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0EC25C621BA385AB004191AF;
-			remoteInfo = "Locksmith iOS Tests";
-		};
-		B9EF559A1C22438600206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF558D1C22438600206778 /* Locksmith.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0EC25C751BA385F6004191AF;
-			remoteInfo = "Locksmith OS X";
-		};
-		B9EF559C1C22438600206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF558D1C22438600206778 /* Locksmith.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0EC25C7E1BA385F6004191AF;
-			remoteInfo = "Locksmith OS X Tests";
-		};
-		B9EF559E1C22438600206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF558D1C22438600206778 /* Locksmith.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0EC25CA71BA39C9F004191AF;
-			remoteInfo = "Locksmith watchOS";
-		};
-		B9EF55A01C22438600206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF558D1C22438600206778 /* Locksmith.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FBD0C9491C1866BE00291F2A;
-			remoteInfo = "Locksmith tvOS";
-		};
-		B9EF55AC1C2243CA00206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF555D1C22437000206778 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		B9EF55B11C2243CF00206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF55751C22437B00206778 /* SWXMLHash.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = CD6083EE196CA106000B4F8D;
-			remoteInfo = "SWXMLHash iOS";
-		};
-		B9EF55B51C2243D400206778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9EF558D1C22438600206778 /* Locksmith.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 0EC25C581BA385AA004191AF;
-			remoteInfo = "Locksmith iOS";
-		};
 		B9F61E8F1BED644D00D60722 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B9F61E721BED644D00D60722 /* Project object */;
@@ -259,25 +69,7 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		B9EF55AE1C2243CA00206778 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B9EF55B41C2243D400206778 /* Locksmith.framework in Embed Frameworks */,
-				B9EF55B01C2243CF00206778 /* SWXMLHash.framework in Embed Frameworks */,
-				B9EF55AB1C2243CA00206778 /* Alamofire.framework in Embed Frameworks */,
-				B9184D231C39EF24002A48AB /* Whisper.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		B9184D091C39EF06002A48AB /* Whisper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Whisper.xcodeproj; path = Whisper/Whisper.xcodeproj; sourceTree = "<group>"; };
 		B9184D421C3A05B2002A48AB /* RoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomController.swift; sourceTree = "<group>"; };
 		B9184D441C3A0693002A48AB /* RoomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
 		B9184D461C3A0772002A48AB /* RoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
@@ -315,9 +107,6 @@
 		B9C76A341C0927CC00B25DAC /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		B9E9EDAE1C33731700AEF6AC /* NSManagedObjectContext+Manipulate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Manipulate.swift"; sourceTree = "<group>"; };
 		B9EE8F2B1C1CDCA5001CB8F1 /* StructureFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = StructureFiles; sourceTree = "<group>"; };
-		B9EF555D1C22437000206778 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		B9EF55751C22437B00206778 /* SWXMLHash.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SWXMLHash.xcodeproj; path = SWXMLHash/SWXMLHash.xcodeproj; sourceTree = "<group>"; };
-		B9EF558D1C22438600206778 /* Locksmith.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Locksmith.xcodeproj; path = Locksmith/Locksmith.xcodeproj; sourceTree = "<group>"; };
 		B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Name.swift"; sourceTree = "<group>"; };
 		B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Asset.swift"; sourceTree = "<group>"; };
 		B9F61E7A1BED644D00D60722 /* HomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -337,10 +126,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9EF55AA1C2243CA00206778 /* Alamofire.framework in Frameworks */,
-				B9EF55AF1C2243CF00206778 /* SWXMLHash.framework in Frameworks */,
-				B9EF55B31C2243D400206778 /* Locksmith.framework in Frameworks */,
-				B9184D221C39EF24002A48AB /* Whisper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,14 +146,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B9184D0A1C39EF06002A48AB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B9184D1F1C39EF06002A48AB /* Whisper.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		B9184D2A1C3A0277002A48AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,47 +243,6 @@
 			name = "Accessory UI";
 			sourceTree = "<group>";
 		};
-		B9EF555E1C22437000206778 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B9EF55681C22437000206778 /* Alamofire.framework */,
-				B9EF556A1C22437000206778 /* Alamofire iOS Tests.xctest */,
-				B9EF556C1C22437000206778 /* Alamofire.framework */,
-				B9EF556E1C22437000206778 /* Alamofire OSX Tests.xctest */,
-				B9EF55701C22437000206778 /* Alamofire.framework */,
-				B9EF55721C22437000206778 /* Alamofire tvOS Tests.xctest */,
-				B9EF55741C22437000206778 /* Alamofire.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B9EF55761C22437B00206778 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B9EF55801C22437B00206778 /* SWXMLHash.framework */,
-				B9EF55821C22437B00206778 /* SWXMLHash iOS Tests.xctest */,
-				B9EF55841C22437B00206778 /* SWXMLHash.framework */,
-				B9EF55861C22437B00206778 /* SWXMLHash OSX Tests.xctest */,
-				B9EF55881C22437B00206778 /* SWXMLHash.framework */,
-				B9EF558A1C22437B00206778 /* SWXMLHash tvOS Tests.xctest */,
-				B9EF558C1C22437B00206778 /* SWXMLHash.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B9EF558E1C22438600206778 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B9EF55971C22438600206778 /* Locksmith.framework */,
-				B9EF55991C22438600206778 /* Locksmith iOS Tests.xctest */,
-				B9EF559B1C22438600206778 /* Locksmith.framework */,
-				B9EF559D1C22438600206778 /* Locksmith OS X Tests.xctest */,
-				B9EF559F1C22438600206778 /* Locksmith.framework */,
-				B9EF55A11C22438600206778 /* Locksmith.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		B9F61E711BED644D00D60722 = {
 			isa = PBXGroup;
 			children = (
@@ -514,10 +250,6 @@
 				B9F61EB71BED652500D60722 /* HomeControlTests */,
 				B9F61EBB1BED652E00D60722 /* HomeControlUITests */,
 				B9F61E7B1BED644D00D60722 /* Products */,
-				B9EF555D1C22437000206778 /* Alamofire.xcodeproj */,
-				B9EF55751C22437B00206778 /* SWXMLHash.xcodeproj */,
-				B9EF558D1C22438600206778 /* Locksmith.xcodeproj */,
-				B9184D091C39EF06002A48AB /* Whisper.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -624,16 +356,10 @@
 				B9F61E761BED644D00D60722 /* Sources */,
 				B9F61E771BED644D00D60722 /* Frameworks */,
 				B9F61E781BED644D00D60722 /* Resources */,
-				B9EF55AE1C2243CA00206778 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B9EF55AD1C2243CA00206778 /* PBXTargetDependency */,
-				B9EF55B21C2243CF00206778 /* PBXTargetDependency */,
-				B9EF55B61C2243D400206778 /* PBXTargetDependency */,
-				B9184D211C39EF12002A48AB /* PBXTargetDependency */,
-				B9184D251C39EF24002A48AB /* PBXTargetDependency */,
 			);
 			name = HomeControl;
 			productName = HomeControl;
@@ -710,24 +436,6 @@
 			mainGroup = B9F61E711BED644D00D60722;
 			productRefGroup = B9F61E7B1BED644D00D60722 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = B9EF555E1C22437000206778 /* Products */;
-					ProjectRef = B9EF555D1C22437000206778 /* Alamofire.xcodeproj */;
-				},
-				{
-					ProductGroup = B9EF558E1C22438600206778 /* Products */;
-					ProjectRef = B9EF558D1C22438600206778 /* Locksmith.xcodeproj */;
-				},
-				{
-					ProductGroup = B9EF55761C22437B00206778 /* Products */;
-					ProjectRef = B9EF55751C22437B00206778 /* SWXMLHash.xcodeproj */;
-				},
-				{
-					ProductGroup = B9184D0A1C39EF06002A48AB /* Products */;
-					ProjectRef = B9184D091C39EF06002A48AB /* Whisper.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				B9F61E791BED644D00D60722 /* HomeControl */,
@@ -736,156 +444,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		B9184D1F1C39EF06002A48AB /* Whisper.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Whisper.framework;
-			remoteRef = B9184D1E1C39EF06002A48AB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF55681C22437000206778 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = B9EF55671C22437000206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF556A1C22437000206778 /* Alamofire iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire iOS Tests.xctest";
-			remoteRef = B9EF55691C22437000206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF556C1C22437000206778 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = B9EF556B1C22437000206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF556E1C22437000206778 /* Alamofire OSX Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire OSX Tests.xctest";
-			remoteRef = B9EF556D1C22437000206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF55701C22437000206778 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = B9EF556F1C22437000206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF55721C22437000206778 /* Alamofire tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire tvOS Tests.xctest";
-			remoteRef = B9EF55711C22437000206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF55741C22437000206778 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = B9EF55731C22437000206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF55801C22437B00206778 /* SWXMLHash.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SWXMLHash.framework;
-			remoteRef = B9EF557F1C22437B00206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF55821C22437B00206778 /* SWXMLHash iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SWXMLHash iOS Tests.xctest";
-			remoteRef = B9EF55811C22437B00206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF55841C22437B00206778 /* SWXMLHash.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SWXMLHash.framework;
-			remoteRef = B9EF55831C22437B00206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF55861C22437B00206778 /* SWXMLHash OSX Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SWXMLHash OSX Tests.xctest";
-			remoteRef = B9EF55851C22437B00206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF55881C22437B00206778 /* SWXMLHash.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SWXMLHash.framework;
-			remoteRef = B9EF55871C22437B00206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF558A1C22437B00206778 /* SWXMLHash tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SWXMLHash tvOS Tests.xctest";
-			remoteRef = B9EF55891C22437B00206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF558C1C22437B00206778 /* SWXMLHash.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SWXMLHash.framework;
-			remoteRef = B9EF558B1C22437B00206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF55971C22438600206778 /* Locksmith.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Locksmith.framework;
-			remoteRef = B9EF55961C22438600206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF55991C22438600206778 /* Locksmith iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Locksmith iOS Tests.xctest";
-			remoteRef = B9EF55981C22438600206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF559B1C22438600206778 /* Locksmith.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Locksmith.framework;
-			remoteRef = B9EF559A1C22438600206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF559D1C22438600206778 /* Locksmith OS X Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Locksmith OS X Tests.xctest";
-			remoteRef = B9EF559C1C22438600206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF559F1C22438600206778 /* Locksmith.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Locksmith.framework;
-			remoteRef = B9EF559E1C22438600206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B9EF55A11C22438600206778 /* Locksmith.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Locksmith.framework;
-			remoteRef = B9EF55A01C22438600206778 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B9F61E781BED644D00D60722 /* Resources */ = {
@@ -979,31 +537,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B9184D211C39EF12002A48AB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Whisper-iOS";
-			targetProxy = B9184D201C39EF12002A48AB /* PBXContainerItemProxy */;
-		};
-		B9184D251C39EF24002A48AB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Whisper-iOS";
-			targetProxy = B9184D241C39EF24002A48AB /* PBXContainerItemProxy */;
-		};
-		B9EF55AD1C2243CA00206778 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = B9EF55AC1C2243CA00206778 /* PBXContainerItemProxy */;
-		};
-		B9EF55B21C2243CF00206778 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SWXMLHash iOS";
-			targetProxy = B9EF55B11C2243CF00206778 /* PBXContainerItemProxy */;
-		};
-		B9EF55B61C2243D400206778 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Locksmith iOS";
-			targetProxy = B9EF55B51C2243D400206778 /* PBXContainerItemProxy */;
-		};
 		B9F61E901BED644D00D60722 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B9F61E791BED644D00D60722 /* HomeControl */;
