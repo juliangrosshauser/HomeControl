@@ -357,6 +357,82 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B9184D2A1C3A0277002A48AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9ACC4F91C322F8100155C46 /* Store.swift */,
+				B9184D3C1C3A02AE002A48AB /* Managed Objects */,
+				B9184D3D1C3A02BC002A48AB /* Structs */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B9184D3C1C3A02AE002A48AB /* Managed Objects */ = {
+			isa = PBXGroup;
+			children = (
+				B9AB7A141C33274400C696FF /* ManagedObjectType.swift */,
+				B93DFD921C37348400796DA7 /* StructConvertible.swift */,
+				B9AB79F51C331F9A00C696FF /* ManagedRoom.swift */,
+				B9AB7A0E1C33222000C696FF /* ManagedAccessory.swift */,
+				B9AB7A0A1C3320FD00C696FF /* ManagedLight.swift */,
+				B9AB7A101C33225600C696FF /* ManagedBlind.swift */,
+				B9AB7A121C33226A00C696FF /* ManagedConsumer.swift */,
+				B9E9EDAE1C33731700AEF6AC /* NSManagedObjectContext+Manipulate.swift */,
+			);
+			name = "Managed Objects";
+			sourceTree = "<group>";
+		};
+		B9184D3D1C3A02BC002A48AB /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				B9220F871C0A98050095A206 /* Room.swift */,
+				B96EF12B1C29E480001C4D40 /* Accessory.swift */,
+				B9220F891C0A98BF0095A206 /* Light.swift */,
+				B9220F8B1C0A9A8C0095A206 /* Blind.swift */,
+				B9220F8D1C0A9B300095A206 /* Consumer.swift */,
+			);
+			name = Structs;
+			sourceTree = "<group>";
+		};
+		B9184D3E1C3A02D7002A48AB /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				B96E75F91C27121800279A45 /* StructureFileParserError.swift */,
+				B9C76A341C0927CC00B25DAC /* NetworkError.swift */,
+			);
+			name = Errors;
+			sourceTree = "<group>";
+		};
+		B9184D3F1C3A030C002A48AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B96E760C1C2715F300279A45 /* CollectionType+String.swift */,
+				B9ACC4FB1C32368300155C46 /* NSURL+DocumentDirectory.swift */,
+				B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */,
+				B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		B9184D401C3A0359002A48AB /* Theming */ = {
+			isa = PBXGroup;
+			children = (
+				B985B5A61BF986EC003C715B /* ThemeManager.swift */,
+				B91ED9731BFAA1EE0070EB8E /* Theme.swift */,
+				B984D1261BFFF98A0081158E /* ColorName.swift */,
+			);
+			name = Theming;
+			sourceTree = "<group>";
+		};
+		B9184D411C3A038B002A48AB /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				B95E46F21BEEB4AE00481E51 /* SetupController.swift */,
+				B92F3E671C012F2000B3CD32 /* SetupViewModel.swift */,
+			);
+			name = Setup;
+			sourceTree = "<group>";
+		};
 		B9EF555E1C22437000206778 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,36 +522,16 @@
 			isa = PBXGroup;
 			children = (
 				B9F61EB21BED651900D60722 /* AppDelegate.swift */,
-				B9ACC4F91C322F8100155C46 /* Store.swift */,
-				B9AB7A141C33274400C696FF /* ManagedObjectType.swift */,
-				B93DFD921C37348400796DA7 /* StructConvertible.swift */,
-				B9AB79F51C331F9A00C696FF /* ManagedRoom.swift */,
-				B9AB7A0E1C33222000C696FF /* ManagedAccessory.swift */,
-				B9AB7A0A1C3320FD00C696FF /* ManagedLight.swift */,
-				B9AB7A101C33225600C696FF /* ManagedBlind.swift */,
-				B9AB7A121C33226A00C696FF /* ManagedConsumer.swift */,
-				B95E46F21BEEB4AE00481E51 /* SetupController.swift */,
-				B92F3E671C012F2000B3CD32 /* SetupViewModel.swift */,
-				B919150D1C38D44B009EF3CE /* PrefixedStringConstant.swift */,
 				B9FC15581C0BBFE800FEF734 /* StructureFileParser.swift */,
-				B96E75F91C27121800279A45 /* StructureFileParserError.swift */,
-				B9C76A341C0927CC00B25DAC /* NetworkError.swift */,
 				B94E25741C067C7600B52062 /* NetworkManager.swift */,
 				B93C2C221C0D2657003340EE /* AuthenticationData.swift */,
-				B9220F871C0A98050095A206 /* Room.swift */,
-				B96EF12B1C29E480001C4D40 /* Accessory.swift */,
-				B9220F891C0A98BF0095A206 /* Light.swift */,
-				B9220F8B1C0A9A8C0095A206 /* Blind.swift */,
-				B9220F8D1C0A9B300095A206 /* Consumer.swift */,
-				B985B5A61BF986EC003C715B /* ThemeManager.swift */,
-				B91ED9731BFAA1EE0070EB8E /* Theme.swift */,
+				B919150D1C38D44B009EF3CE /* PrefixedStringConstant.swift */,
 				B91ED9711BFA9C5B0070EB8E /* Box.swift */,
-				B984D1261BFFF98A0081158E /* ColorName.swift */,
-				B96E760C1C2715F300279A45 /* CollectionType+String.swift */,
-				B9ACC4FB1C32368300155C46 /* NSURL+DocumentDirectory.swift */,
-				B9E9EDAE1C33731700AEF6AC /* NSManagedObjectContext+Manipulate.swift */,
-				B9F10AFD1BF7FFB400AB23D9 /* UIColor+Name.swift */,
-				B9F10AFF1BF8004200AB23D9 /* UIImage+Asset.swift */,
+				B9184D411C3A038B002A48AB /* Setup */,
+				B9184D2A1C3A0277002A48AB /* Model */,
+				B9184D3E1C3A02D7002A48AB /* Errors */,
+				B9184D401C3A0359002A48AB /* Theming */,
+				B9184D3F1C3A030C002A48AB /* Extensions */,
 			);
 			path = Source;
 			sourceTree = "<group>";
