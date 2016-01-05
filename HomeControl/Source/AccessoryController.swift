@@ -13,6 +13,7 @@ final class AccessoryController: UITableViewController {
     //MARK: Properties
 
     private var viewModel: AccessoryViewModel
+    private(set) var room: Room?
 
     //MARK: Initialization
 
