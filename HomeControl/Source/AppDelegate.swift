@@ -73,6 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let splitViewController = UISplitViewController()
         splitViewController.viewControllers = [masterViewController, detailViewController]
+        splitViewController.delegate = roomController
         return splitViewController
     }
 }

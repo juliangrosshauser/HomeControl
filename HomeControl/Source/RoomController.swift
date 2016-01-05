@@ -69,3 +69,17 @@ extension RoomController {
         }
     }
 }
+
+//MARK: UISplitViewControllerDelegate
+
+extension RoomController: UISplitViewControllerDelegate {
+
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+        // If detail view controller contains a `AccessoryController` and it's `room` property isn't set, show master view controller first, because the `AccessoryController` doesn't yet know what accessories to show.
+        if let navigationController = secondaryViewController as? UINavigationController, accessoryController = navigationController.topViewController as? AccessoryController where accessoryController.room == nil {
+            return true
+        }
+
+        return false
+    }
+}
